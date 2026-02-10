@@ -1,40 +1,10 @@
-name: 自动清洗订阅源
+- name: 步骤 1：抓取 1.8M 原始生肉
+        run: curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
 
-on:
-  workflow_dispatch: # 手动触发
-  schedule:
-    - cron: '0 22 * * *' # 北京时间每天早上 6 点全自动更新
+      - name: 步骤 2：执行《镇邪卷》NodeJS 清洗
+        run: node DataWashClean.js  # 这一步跑完，1.8M 的垃圾就变成了几百 KB 的精品 Candidate.json
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v3
-
-      - name: 安装自建转换引擎 (SubConverter)
+      - name: 步骤 3：真机存活检测（基于 Candidate.json）
         run: |
-          wget https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz
-          tar -xvf subconverter_linux64.tar.gz
-          ./subconverter/subconverter & 
-          sleep 5 
-
-      - name: 内部闭环转换 + 深度云端粗筛
-        run: |
-          # 核心参数说明：
-          # include: 只保留 香港、台湾、日本、美国、新加坡、韩国 (精选极品线路)
-          # exclude: 剔除 官网、流量、过期、剩余、渠道 (干净无广告)
-          curl -L "http://127.0.0.1:25500/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FEpodonios%2Fv2ray-configs%2Fmain%2FAll_Configs_Sub.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_Optimization.ini&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true&include=%E9%A6%99%E6%B8%AF%7C%E5%8F%B0%E6%B9%BE%7C%E6%97%A5%E6%9C%AC%7C%E7%BE%8E%E5%9B%BD%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E9%9F%A9%E5%9B%BD&exclude=%E7%BD%91%E7%AB%99%7C%E6%B5%81%E9%87%8F%7C%E5%89%A9%E4%BD%99%7C%E8%BF%87%E6%9C%9F%7C%E6%B8%A0%E9%81%93" -o my_clash_config.yaml
-
-      - name: 质检与提交
-        run: |
-          # 如果文件里依然包含 "No nodes"，则强行报错，不更新仓库
-          if grep -q "No nodes" my_clash_config.yaml; then
-            echo "转换失败：未找到有效节点"
-            exit 1
-          fi
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add my_clash_config.yaml
-          git commit -m "全自动精选更新: $(date)" || exit 0
-          git push
+          # 这里接入我刚才说的逻辑：不看名字，只看能不能连通。
+          # 只有活下来的，才最后生成给平板用的 YAML。
