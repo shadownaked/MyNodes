@@ -14,7 +14,7 @@ jobs:
 
      - name: 抓取并转换订阅
         run: |
-          # 换了一个更强力的后端，并加上了更真实的用户代理(User-Agent)，防止被 403 拦截
+          # 换了一个更强力的后端，并加上了更真实的用户代理(User-Agent)，防止被 403 
           curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" -L "https://sub.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FEpodonios%2Fv2ray-configs%2Fmain%2FAll_Configs_Sub.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_Optimization.ini&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true" -o my_clash_config.yaml
         run: |
           git config --local user.email "action@github.com"
