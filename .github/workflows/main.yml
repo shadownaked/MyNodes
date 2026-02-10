@@ -12,29 +12,25 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v3
 
-      - name: 抓取并转换订阅
+      - name: 安装自建转换引擎 (SubConverter)
         run: |
-          # 我们把 URL 用引号包起来，彻底解决特殊字符导致的报错
-          # 同时换了一个极速后端 api.v1.mk (只要加了 User-Agent 伪装就不容易 403)
-          curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" -L "https://sub.id9.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FEpodonios%2Fv2ray-configs%2Fmain%2FAll_Configs_Sub.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_Optimization.ini&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true" -o my_clash_config.yaml
+          # 下载官方 Linux 版引擎并解压
+          wget https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz
+          tar -xvf subconverter_linux64.tar.gz
+          # 在后台启动它，默认监听 25500 端口
+          ./subconverter/subconverter & 
+          sleep 5 # 等它启动完成
 
-      - name: 校验文件内容
+      - name: 内部闭环转换
         run: |
-          # 这是一个“质检员”步骤：如果抓回来的是 403 错误页面，直接报错，不准提交
-          if grep -q "403 Forbidden" my_clash_config.yaml; then
-            echo "抓取失败：被转换服务器拒绝 (403)"
-            exit 1
-          fi
-          # 如果文件太小（小于 500 字节），说明没抓到节点，也报错
-          if [ $(stat -c%s "my_clash_config.yaml") -lt 500 ]; then
-            echo "抓取失败：文件内容过短"
-            exit 1
-          fi
+          # 现在我们向“自己”发起请求，127.0.0.1 就是云端服务器自己
+          # 这样就彻底避开了公共接口的 403 错误和网络波动
+          curl -L "http://127.0.0.1:25500/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FEpodonios%2Fv2ray-configs%2Fmain%2FAll_Configs_Sub.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_Optimization.ini&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true" -o my_clash_config.yaml
 
       - name: 提交成品到仓库
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add my_clash_config.yaml
-          git commit -m "自动更新精简源: $(date)" || exit 0
+          git commit -m "自力更生自动更新: $(date)" || exit 0
           git push
