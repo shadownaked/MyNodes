@@ -1,0 +1,27 @@
+name: 自动清洗订阅源
+
+on:
+  workflow_dispatch: # 支持手动触发按钮
+  schedule:
+    - cron: '0 22 * * *' # 北京时间每天早上 6 点自动运行一次
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 抓取并转换订阅
+        run: |
+          # 调用云端转换引擎，把你的 TXT 翻译成带负载均衡策略的 Clash 格式
+          # 这里使用了专门优化的配置，会自动帮你剔除 3000 个源里的无效条目
+          curl -L "https://sub.id9.cc/sub?target=clash&url=https://gh.jasonzeng.dev/https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_Optimization.ini&emoji=true&list=false&udp=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true" -o my_clash_config.yaml
+
+      - name: 提交成品到仓库
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add my_clash_config.yaml
+          git commit -m "自动更新精简源: $(date)" || exit 0
+          git push
