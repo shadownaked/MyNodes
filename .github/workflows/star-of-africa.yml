@@ -1,0 +1,62 @@
+# [Strict Maintenance Mode]
+# FileName: .github/workflows/star-of-africa.yml
+# Version: 1.0.0 (African Star - Full Quality Control)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION)
+
+name: 非洲之星-全量质检站
+
+on:
+  workflow_dispatch: # 支持手动触发
+  workflow_run:
+    workflows: ["西点军校v2.2-全自动炼化厂"]
+    types:
+      - completed # 当A链路炼化完成后自动触发
+
+jobs:
+  quality_control:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: write
+    
+    steps:
+      - name: 1. 检出代码
+        uses: actions/checkout@v3
+
+      - name: 2. 物理心脏就位
+        # 逻辑：赋予bin目录下speedtest执行权限
+        run: |
+          chmod +x ./bin/speedtest
+          echo "✅ 测速核心已激活"
+
+      - name: 3. 执行非洲之星测速逻辑
+        # 逻辑：读取 Candidate_config.yaml -> 初筛 -> 细筛 -> 输出 Gold 版
+        # 包含报警逻辑：初筛少于30个记录到 hint-maybeuseful.yml
+        run: |
+          echo "🚀 启动全量扫描..."
+          
+          # [逻辑核心]：调用本地 bin/speedtest 执行测速
+          # --config 为输入源，--output 为输出路径，--ping 为初筛阈值
+          ./bin/speedtest --config Candidate_config.yaml --output Ranger/Gold_Candidate.yaml --ping 2000 --speed-test --max-concurrent 5 --min-speed 102400 || true
+          
+          # [像素级报警逻辑]
+          # 统计生成后的 Gold 节点数量
+          GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
+          echo "📊 质检完成，优质节点数: $GOLD_COUNT"
+          
+          if [ "$GOLD_COUNT" -lt 30 ]; then
+            echo "🚨 触发报警：源质量下降！"
+            TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+            # 在情报积攒文件顶部插入报警信息
+            sed -i "1i 🚨 [$TIMESTAMP] [非洲之星预警]：初筛优质节点仅余 $GOLD_COUNT 个，源质量大幅下降！" hint-maybeuseful.yml
+          fi
+
+      - name: 4. 成果归仓 (Ranger 殿堂)
+        # 逻辑：执行 rebase 确保不冲突，物理提交 Gold 结果
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull --rebase origin main
+          git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml
+          git commit -m "非洲之星：质检完成，Gold 节点入库 ($GOLD_COUNT)" || exit 0
+          git push
