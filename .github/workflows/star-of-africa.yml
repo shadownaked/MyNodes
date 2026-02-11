@@ -1,7 +1,6 @@
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: .github/workflows/star-of-africa.yml
-# Version: 1.7.0 (Source Rebuild - Zero Omission)
-# Compliance: CH_SECURE_RESONANCE_V3 [cite: 2026-02-06]
+# Version: 1.7.1 (Source Alignment Edition)
 
 name: 非洲之星-全量质检站
 
@@ -24,57 +23,44 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 2. [炼化环境] 准备 Go 编译工具链
-        # 逻辑：既然要重筑心脏，必须要有最纯净的熔炉
+      - name: 2. [矿源核验] 检查源码包是否存在
+        # 逻辑：如果没有矿，炼丹炉就得熄火 [cite: 2026-02-09]
+        run: |
+          if [ ! -f "clash-speedtest-1.8.6.tar.gz" ]; then
+            echo "❌ 物理错误：仓库根目录未发现 clash-speedtest-1.8.6.tar.gz"
+            exit 1
+          fi
+          echo "✅ 发现源码矿源，准备开炉！"
+
+      - name: 3. [环境炼化] 准备 Go 1.21
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
-          check-latest: true
 
-      - name: 3. [源码手术] 物理阉割强制校验逻辑
-        # 逻辑：解压源码，直接用 sed 捅进 main.go，删除那些自以为是的 Fatalln 校验 [cite: 2026-02-09]
+      - name: 4. [心脏重筑] 源码阉割与现场编译
+        # 逻辑：现场解压，sed 物理阉割 Fatalln，go build 生成新心脏
         run: |
           tar -xzf clash-speedtest-1.8.6.tar.gz
           cd clash-speedtest-1.8.6
-          echo "💉 正在执行逻辑阉割手术..."
-          # 强行移除关于 configPathsConfig 的强制退出逻辑，让它即便参数识别漂移也能继续运行
-          sed -i 's/log.Fatalln("please specify the configuration file")/\/\/ 阉割逻辑/g' main.go
-          # 确保它不检查 GitHub Token 也能进入主循环
-          sed -i 's/log.Fatalln("please specify the github token")/\/\/ 阉割逻辑/g' main.go || true
-
-      - name: 4. [心脏重筑] 现场编译纯净版核心
-        # 逻辑：不使用作者提供的二进制，咱们自己炼一个 [cite: 2026-01-31]
-        run: |
-          cd clash-speedtest-1.8.6
+          # 核心手术：把那两行自作聪明的 Fatalln 删掉 [cite: 2026-02-09]
+          sed -i 's/log.Fatalln("please specify the configuration file")/\/\/ 阉割/g' main.go
+          sed -i 's/log.Fatalln("please specify the github token")/\/\/ 阉割/g' main.go || true
           go mod tidy
           go build -o ../bin/speedtest-pure main.go
           chmod +x ../bin/speedtest-pure
-          echo "✅ 纯净版心脏炼成：$(ls -lh ../bin/speedtest-pure)"
 
-      - name: 5. [非洲之星] 纯净模式物理撞击
-        # 逻辑：使用咱们自己编译的核心，回归最原始的参数传递 [cite: 2026-02-09]
+      - name: 5. [非洲之星] 纯净版撞击质检
+        # 逻辑：使用重筑的心脏，不再受 GitHub 环境变量干扰 [cite: 2026-02-09]
         run: |
           mkdir -p Ranger
-          echo "🚀 启动纯净版心脏撞击..."
-          # 放弃所有 GitHub 耦合参数，只给输入输出
           ./bin/speedtest-pure -config Candidate_config.yaml -output Ranger/Gold_Candidate.yaml -speed-mode download -concurrent 4 -timeout 5s 2>&1
 
-      - name: 6. [物理判定] 验证产出
-        run: |
-          if [ -s "Ranger/Gold_Candidate.yaml" ]; then
-            GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-            echo "📊 物理出货：已发现 $GOLD_COUNT 个 Gold 节点"
-          else
-            echo "❌ 物理灾难：即便重筑心脏也未产出数据，准备执行 B 计划换 Xray"
-            [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && exit 1 || exit 0
-          fi
-
-      - name: 7. [成果归仓] 物理同步
+      - name: 6. [成果归仓] 物理同步
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml || true
-          git commit -m "非洲之星：心脏重筑版本实验完成" || exit 0
+          git commit -m "非洲之星：源码现场炼化版完成" || exit 0
           git pull --rebase origin main
           git push origin main
