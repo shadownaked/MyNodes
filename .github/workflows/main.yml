@@ -1,10 +1,38 @@
-- name: 步骤 1：抓取 1.8M 原始生肉
-        run: curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
+name: 自动清洗订阅源
 
-      - name: 步骤 2：执行《镇邪卷》NodeJS 清洗
-        run: node DataWashClean.js  # 这一步跑完，1.8M 的垃圾就变成了几百 KB 的精品 Candidate.json
+on:
+  workflow_dispatch: # 支持爸爸手动点 Run workflow
 
-      - name: 步骤 3：真机存活检测（基于 Candidate.json）
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 采集 1.8M 原始生肉
         run: |
-          # 这里接入我刚才说的逻辑：不看名字，只看能不能连通。
-          # 只有活下来的，才最后生成给平板用的 YAML。
+          mkdir -p Meet
+          curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
+
+      - name: 方案 A：运行新版 JS 生成 Candidate_config.yaml
+        run: node DataWashClean.js
+
+      - name: 方案 B：云端选拔 EliteTroops_config.yaml
+        run: |
+          # 下载测速引擎
+          wget https://github.com/xite0/LiteSpeedTest/releases/download/v0.15.0/lite_linux_amd64.tar.gz
+          tar -xvf lite_linux_amd64.tar.gz
+          chmod +x lite
+          # 执行存活测试（3秒超时）
+          ./lite -config '{"outFormat":"subscription"}' -sub Candidate_config.yaml -test http://www.google.com/generate_204 -timeout 3000 -out EliteTroops_config.yaml
+
+      - name: 提交双重成品
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Candidate_config.yaml EliteTroops_config.yaml
+          git commit -m "双管齐下：精锐选拔完毕 $(date)" || exit 0
+          git push
