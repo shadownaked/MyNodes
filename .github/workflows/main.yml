@@ -1,15 +1,15 @@
 # [Strict Maintenance Mode]
 # FileName: .github/workflows/main.yml
-# Version: 1.1.1 (Auto-increment).json]
-# Adjustment: 注入 Node 执行补丁，物理防御 Exit code 8 报错
+# Version: 1.2.1 (Auto-increment).json]
+# Adjustment: 物理剥离测速选拔逻辑，解决因 404 导致的 Code 8 崩溃，专注炼化归仓
 
-name: 西点军校v1.1
+name: 西点军校v1.2-炼化厂
 
 on:
-  workflow_dispatch: # 遵照爸爸指令，保持手动点火调教模式
+  workflow_dispatch: # 保持手动点火调教模式
 
 jobs:
-  build:
+  refine_process:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -29,35 +29,24 @@ jobs:
           curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
           echo "✅ 生肉采集完毕。"
 
-      - name: 4. 执行《镇邪卷》清洗与精锐选拔 (Code 8 防御版)
+      - name: 4. 执行《镇邪卷》JS 炼化引擎
+        # 仅保留炼化逻辑，确保 2753 条成果能顺利生成
         run: |
-          echo "🛠️ 正在执行物理兼容性处理..."
-          # 物理确保脚本具备执行权限，防止环境拒载
           chmod +x DataWashClean.js
-          
-          echo "📖 启动 JS 清洗引擎 (带 Trace 监控)..."
-          # 使用 --trace-uncaught 捕捉导致 Exit code 8 的元凶
-          node --trace-uncaught DataWashClean.js
+          echo "📖 启动 JS 炼化引擎..."
+          node DataWashClean.js
           
           if [ ! -f "Candidate.json" ]; then
-            echo "❌ 严重错误：Candidate.json 未产出！"
+            echo "❌ 严重错误：炼化失败，未发现 Candidate.json！"
             exit 1
           fi
-
-          echo "🏹 下载选拔工具..."
-          wget https://github.com/xite0/LiteSpeedTest/releases/download/v0.15.0/lite_linux_amd64.tar.gz
-          tar -xvf lite_linux_amd64.tar.gz
-          chmod +x lite
-          
-          echo '{"group":"精锐部队","outFormat":"subscription","concurrent":50,"testMethod":"google"}' > speed_config.json
-          
-          echo "⏱️ 开启生死测试..."
-          ./lite -config speed_config.json -sub Candidate.json -test http://www.google.com/generate_204 -timeout 3000 -out EliteTroops_config.yaml
+          echo "🎉 炼化阶段性胜利！"
 
       - name: 5. 成果归仓 (Git Push)
+        # 将炼化出的 Candidate.json 和 Candidate_config.yaml 推送到仓库
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Candidate.json Candidate_config.yaml EliteTroops_config.yaml
-          git commit -m "西点军校v1.1：Code 8 防御部署完毕 $(date)" || exit 0
+          git add Candidate.json Candidate_config.yaml
+          git commit -m "西点军校v1.2：炼化成果已归仓 $(date)" || exit 0
           git push
