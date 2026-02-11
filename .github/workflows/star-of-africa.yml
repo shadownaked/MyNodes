@@ -1,93 +1,80 @@
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: .github/workflows/star-of-africa.yml
-# Version: 1.7.2 (Anti-Compression Protocol - Detail 100%)
-# Compliance: CH_SECURE_RESONANCE_V3 [cite: 2026-02-06]
+# Version: 1.7.4 (Physical Logic Reconstruction)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT [cite: 2026-02-09]
 
 name: 非洲之星-全量质检站
 
 on:
-  workflow_dispatch: # 爸爸手动点火
+  workflow_dispatch: 
   workflow_run:
-    # 物理锁定炼化厂文件名，确保自动化链路闭环 [cite: 2026-02-06]
     workflows: [".github/workflows/main.yml"]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   quality_control:
     runs-on: ubuntu-latest
-    # 物理判断：仅在炼化厂输出成功，或者爸爸手动触发时才允许进入物理实验区
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
     
     steps:
       - name: 1. [物理检出] 准备工作空间
-        # 获取完整的物理仓库镜像，杜绝 push 冲突 物理推送到主仓库.txt]
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: 2. [矿源核验] 检查源码压缩包
-        # 逻辑：如果没有这个 .tar.gz 矿源，后续所有编译都是扯淡 [cite: 2026-02-09]
-        run: |
-          if [ ! -f "clash-speedtest-1.8.6.tar.gz" ]; then
-            echo "❌ 物理灾难：仓库根目录未发现 clash-speedtest-1.8.6.tar.gz"
-            echo "💡 爸爸，请务必确认已经将源码包上传到仓库根目录！"
-            exit 1
-          fi
-          echo "✅ 发现源码矿源，物理准备就绪"
-
-      - name: 3. [环境构建] 部署 Go 1.21 编译器
-        # 既然二进制不听话，我们就现场炼一个听话的 [cite: 2026-01-31]
+      - name: 2. [环境构建] 部署 Go 1.21 编译器
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
           check-latest: true
 
-      - name: 4. [物理手术] 源码阉割逻辑注入
-        # 核心逻辑：解压并强制修改 main.go，把 Fatalln 全部物理失能 [cite: 2026-02-09]
+      - name: 3. [源码手术] 强制逻辑修正与阉割
+        # 逻辑：既然它不认长单词，我就在源码层面强行把 "c" 替换成 "config"
         run: |
           tar -xzf clash-speedtest-1.8.6.tar.gz
           cd clash-speedtest-1.8.6
-          echo "💉 正在对 main.go 执行逻辑阉割手术..."
-          # 物理定位并注释掉那两行自作聪明的校验 [cite: 2026-02-09]
-          sed -i 's/log.Fatalln("please specify the configuration file")/\/\/ 物理阉割代码/g' main.go
-          sed -i 's/log.Fatalln("please specify the github token")/\/\/ 物理阉割代码/g' main.go || true
-          echo "✅ 源代码逻辑已净化"
+          echo "💉 正在执行参数定义修正手术..."
+          # 物理修改参数定义，让它支持你输入的长单词
+          sed -i 's/flag.String("c",/flag.String("config",/g' main.go
+          sed -i 's/flag.String("o",/flag.String("output",/g' main.go
+          sed -i 's/flag.String("m",/flag.String("speed-mode",/g' main.go
+          # 阉割掉那两行烦人的 Fatalln 强制校验 [cite: 2026-02-09]
+          sed -i 's/log.Fatalln("please specify the configuration file")/\/\/ 阉割/g' main.go
+          sed -i 's/log.Fatalln("please specify the github token")/\/\/ 阉割/g' main.go || true
 
-      - name: 5. [心脏重筑] 现场炼化纯净二进制
-        # 现场编译，彻底解决架构排异和残留的环境检测逻辑 [cite: 2026-01-31]
+      - name: 4. [心脏重筑] 现场炼化
         run: |
           cd clash-speedtest-1.8.6
           go mod tidy
           go build -ldflags="-s -w" -o ../bin/speedtest-pure main.go
           chmod +x ../bin/speedtest-pure
-          echo "🔥 纯净版心脏炼成：$(ls -lh ../bin/speedtest-pure)"
+          echo "🔥 纯净版心脏（长参数兼容型）炼成！"
 
-      - name: 6. [非洲之星] 纯净模式物理撞击质检
-        # 逻辑：使用重筑的心脏，只给最基本的输入输出，不给任何 GitHub 参数 [cite: 2026-02-09]
+      - name: 5. [非洲之星] 纯净模式最终撞击
+        # 逻辑：现在核心已经物理支持 -config 和 -output 了 [cite: 2026-02-09]
         run: |
           mkdir -p Ranger
-          echo "🚀 启动纯净版心脏撞击扫描..."
+          echo "🚀 启动重构版核心撞击..."
           ./bin/speedtest-pure -config Candidate_config.yaml -output Ranger/Gold_Candidate.yaml -speed-mode download -concurrent 4 -timeout 5s 2>&1
 
-      - name: 7. [物理判定] 验证产出物状态
+      - name: 6. [物理判定] 验证产出物
         run: |
           if [ -s "Ranger/Gold_Candidate.yaml" ]; then
             GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
             echo "📊 物理出货：已发现 $GOLD_COUNT 个 Gold 节点"
           else
-            echo "❌ 物理报错：即便重筑心脏也未产出数据，核心可能存在更深层的网络排异"
+            echo "❌ 物理报错：即便修改源码也未出货，核心已死，建议切换 Xray-core"
             [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && exit 1 || exit 0
           fi
 
-      - name: 8. [成果归仓] 物理推送到主仓库
+      - name: 7. [成果归仓] 物理同步
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml || true
-          git commit -m "非洲之星：心脏重筑+物理阉割实验完成" || exit 0
+          git commit -m "非洲之星：源码参数重构实验完成" || exit 0
           git pull --rebase origin main
           git push origin main
