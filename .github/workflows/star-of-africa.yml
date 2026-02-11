@@ -45,8 +45,7 @@ jobs:
           mkdir -p Ranger
           echo "🚀 启动物理致盲撞击模式（屏蔽 GitHub 环境变量干扰）..."
           # env -i 只保留基础 PATH，让核心以为自己在普通 Linux 环境下运行
-          env -i PATH="$PATH" ./bin/speedtest -c=Candidate_config.yaml -o=Ranger/Gold_Candidate.yaml -speed-mode=download -concurrent=4 -timeout=5s 2>&1
-
+          env -i PATH="$PATH" ./bin/speedtest -c=Candidate_config.yaml -o=Ranger/Gold_Candidate.yaml -repo-token="${{ secrets.GITHUB_TOKEN }}" -repo-address="${{ github.repository }}" -repo-branch="main" 2>&1
       - name: 4. [物理判定] 验证产出物状态
         # 逻辑：拒绝任何形式的“假成功”，没出货就直接报错 [cite: 2026-02-09]
         run: |
