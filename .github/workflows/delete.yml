@@ -1,0 +1,45 @@
+# [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
+# FileName: .github/workflows/delete.yml
+# Version: 1.1.0 (Geek Auto-Cleanup Edition)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION) [cite: 2026-02-09]
+
+name: 物理清理-极客全自动移除站
+
+on:
+  workflow_dispatch: # 必须由爸爸亲自授权点火
+
+jobs:
+  cleanup_and_wipe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: 1. [检出] 物理进入仓库
+        uses: actions/checkout@v3
+
+      - name: 2. [强删] 移除错误架构的核心与压缩包
+        # 严格执行爸爸的指令，抹除 arm64 相关的一切
+        run: |
+          echo "🧹 正在物理抹除错误架构物料..."
+          rm -f bin/clash-speedtest_Linux_arm64.tar.gz
+          rm -f bin/speedtest
+          echo "✅ 毒瘤已切除"
+
+      - name: 3. [置空] 极客式阅后即焚
+        # 逻辑：任务完成后，自动清空配置文件内容，不留痕迹
+        run: |
+          if [ -f "cleanup.config" ]; then
+            > cleanup.config
+            echo "✨ cleanup.config 已物理置空"
+          else
+            echo "ℹ️ 未发现 cleanup.config，跳过置空步骤"
+          fi
+
+      - name: 4. [归仓] 同步物理状态
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "极客清理：物理移除错误核心并重置配置清单" || exit 0
+          git push
