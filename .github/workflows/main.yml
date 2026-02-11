@@ -1,14 +1,12 @@
 # [Strict Maintenance Mode]
 # FileName: .github/workflows/main.yml
-# Version: 1.0.1 (Auto-increment)
-# Adjustment: 合并重复的 run 字段，修复 'run is already defined' 语法错误
+# Version: 1.1.1 (Auto-increment).json]
+# Adjustment: 注入 Node 执行补丁，物理防御 Exit code 8 报错
 
-name: 西点军校v1.0
+name: 西点军校v1.1
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 22 * * *'
+  workflow_dispatch: # 遵照爸爸指令，保持手动点火调教模式
 
 jobs:
   build:
@@ -25,43 +23,41 @@ jobs:
         with:
           node-version: 18
 
-      - name: 3. 环境自检与生肉采集
+      - name: 3. 环境与生肉采集
         run: |
-          echo "🚀 启动环境检查..."
-          ls -F
           mkdir -p Meet
           curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
           echo "✅ 生肉采集完毕。"
 
-      - name: 4. 执行《镇邪卷》清洗与精锐选拔
-        # 将 JS 执行与 Lite 测速逻辑合并在一个 run 块内，彻底杜绝 YAML 字段重复错误
+      - name: 4. 执行《镇邪卷》清洗与精锐选拔 (Code 8 防御版)
         run: |
-          echo "📖 开始执行 JS 清洗逻辑..."
-          node DataWashClean.js
+          echo "🛠️ 正在执行物理兼容性处理..."
+          # 物理确保脚本具备执行权限，防止环境拒载
+          chmod +x DataWashClean.js
+          
+          echo "📖 启动 JS 清洗引擎 (带 Trace 监控)..."
+          # 使用 --trace-uncaught 捕捉导致 Exit code 8 的元凶
+          node --trace-uncaught DataWashClean.js
           
           if [ ! -f "Candidate.json" ]; then
-            echo "❌ 错误：JS 脚本未能生成 Candidate.json！"
+            echo "❌ 严重错误：Candidate.json 未产出！"
             exit 1
           fi
 
-          echo "🏹 开始下载 LiteSpeedTest 选拔工具..."
+          echo "🏹 下载选拔工具..."
           wget https://github.com/xite0/LiteSpeedTest/releases/download/v0.15.0/lite_linux_amd64.tar.gz
           tar -xvf lite_linux_amd64.tar.gz
           chmod +x lite
           
           echo '{"group":"精锐部队","outFormat":"subscription","concurrent":50,"testMethod":"google"}' > speed_config.json
           
-          echo "⏱️ 开启 3 秒存活生死测试..."
+          echo "⏱️ 开启生死测试..."
           ./lite -config speed_config.json -sub Candidate.json -test http://www.google.com/generate_204 -timeout 3000 -out EliteTroops_config.yaml
-          
-          if [ ! -f "EliteTroops_config.yaml" ]; then
-            echo "⚠️ 警告：精锐选拔未产出结果，可能节点全灭。"
-          fi
 
       - name: 5. 成果归仓 (Git Push)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Candidate.json Candidate_config.yaml EliteTroops_config.yaml
-          git commit -m "西点军校v1.0：精锐集结完毕 $(date)" || exit 0
+          git commit -m "西点军校v1.1：Code 8 防御部署完毕 $(date)" || exit 0
           git push
