@@ -1,12 +1,12 @@
 # [Strict Maintenance Mode]
 # FileName: .github/workflows/main.yml
-# Version: 1.2.1 (Auto-increment).json]
-# Adjustment: 物理剥离测速选拔逻辑，解决因 404 导致的 Code 8 崩溃，专注炼化归仓
+# Version: 2.0.1 (Harvester Logic Integrated)
+# Adjustment: 1. 引入西点军校采集步骤 2. 物理保留 hint.yml 成果 3. 增强 Git 提交逻辑
 
-name: 西点军校v1.2-炼化厂
+name: 西点军校v2.0-全自动炼化厂
 
 on:
-  workflow_dispatch: # 保持手动点火调教模式
+  workflow_dispatch: # 保持手动调教模式，方便观察日志
 
 jobs:
   refine_process:
@@ -23,30 +23,40 @@ jobs:
         with:
           node-version: 18
 
-      - name: 3. 环境与生肉采集
+      - name: 3. 环境预热
         run: |
           mkdir -p Meet
-          curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
-          echo "✅ 生肉采集完毕。"
-
-      - name: 4. 执行《镇邪卷》JS 炼化引擎
-        # 仅保留炼化逻辑，确保 2753 条成果能顺利生成
-        run: |
+          # 赋予两个核心脚本物理执行权限
+          chmod +x Harvester.js
           chmod +x DataWashClean.js
-          echo "📖 启动 JS 炼化引擎..."
+          echo "✅ 军校环境初始化完毕。"
+
+      - name: 4. 阶段一：西点军校采集 (Harvester)
+        # 这一步会执行随机休眠，请耐心等待 2753 条生肉归位
+        run: |
+          echo "📡 西点军校开始出动..."
+          node Harvester.js
+          echo "✅ 采集阶段结束，检查生肉库："
+          ls -F Meet/
+
+      - name: 5. 阶段二：炼化厂去泥 (DataWashClean)
+        run: |
+          echo "📖 炼化厂开始深加工..."
           node DataWashClean.js
-          
           if [ ! -f "Candidate.json" ]; then
-            echo "❌ 严重错误：炼化失败，未发现 Candidate.json！"
+            echo "❌ 严重错误：Candidate.json 未产出！"
             exit 1
           fi
-          echo "🎉 炼化阶段性胜利！"
+          echo "✅ 炼化阶段结束。"
 
-      - name: 5. 成果归仓 (Git Push)
-        # 将炼化出的 Candidate.json 和 Candidate_config.yaml 推送到仓库
+      - name: 6. 成果归仓 (Git Push)
+        # 提交内容包含：生肉库(Meet)、炼化成果(Candidate)、情报单(hint.yml)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Candidate.json Candidate_config.yaml
-          git commit -m "西点军校v1.2：炼化成果已归仓 $(date)" || exit 0
+          
+          # 动态添加所有生成的文件
+          git add Meet/*.txt Candidate.json Candidate_config.yaml hint.yml || true
+          
+          git commit -m "西点军校v2.0：采集与炼化全量归仓 $(date)" || exit 0
           git push
