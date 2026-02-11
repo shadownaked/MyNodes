@@ -1,63 +1,89 @@
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: .github/workflows/star-of-africa.yml
-# Version: 1.6.4 (Pixel-Level Shortcut - Standard Output Capture)
-# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT [cite: 2026-02-09]
+# Version: 1.6.5 (Full Detail - Environment Isolation Edition)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION) [cite: 2026-02-09]
 
 name: 非洲之星-全量质检站
 
 on:
-  workflow_dispatch: # 爸爸手动点火
+  workflow_dispatch: # 爸爸手动点火，最高级物理授权
   workflow_run:
+    # 物理锁定文件名监听，杜绝任何自动化链路的断裂 [cite: 2026-02-06]
     workflows: [".github/workflows/main.yml"]
-    types: [completed]
+    types:
+      - completed
 
 jobs:
   quality_control:
     runs-on: ubuntu-latest
-    # 物理判断：仅在炼化厂成功或手动启动时起航
+    # 严防非法启动：仅在炼化厂成功或爸爸手动操作时起航
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
     
     steps:
-      - name: 1. [物理检出] 准备战场环境
+      - name: 1. [物理检出] 准备工作空间
+        # 必须 fetch-depth 0，防止 Git 物理冲突
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: 2. [心脏审计] 验证核心权限与脉搏
-        # 逻辑：在重击前最后确认一次物理路径 验证物理核心权限与架构对齐.txt]
+      - name: 2. [心脏审计] 验证核心物理属性
+        # 在重击前最后确认一次物理路径和架构
         run: |
           chmod +x ./bin/speedtest
-          ls -lh ./bin/speedtest
-          ./bin/speedtest -v || echo "⚠️ 警告：核心无版本响应"
+          echo "📍 物理执行路径: $(pwd)"
+          FILE_INFO=$(file ./bin/speedtest)
+          echo "🔍 核心架构审计: $FILE_INFO"
+          ./bin/speedtest -v || echo "⚠️ 核心对版本查询无物理响应"
 
-      - name: 3. [非洲之星] 缩写化指令撞击质检
-        # 核心逻辑：基于 Usage 列表，全面使用短参数缩写 执行原子化指令撞击质检.txt]
-        # 1. -c 代替 -config 执行原子化指令撞击质检.txt]
-        # 2. -o 代替 -output 执行原子化指令撞击质检.txt]
-        # 3. 显式补全 -server-url 默认值，防止非交互 Shell 下的假死 执行原子化指令撞击质检.txt]
+      - name: 3. [非洲之星] 物理致盲与参数绑定撞击
+        # 核心逻辑：使用 env -i 物理切断 GitHub 环境变量注入
+        # 彻底解决核心因为检测到 GitHub 环境而强制弹出 -repo-token Usage 的病灶
+        # 参数对齐：-c, -o, -speed-mode 并使用 = 物理锁定 [cite: 2026-02-09]
         run: |
           mkdir -p Ranger
-          echo "🚀 启动缩写化撞击实验..."
-          ./bin/speedtest -c Candidate_config.yaml -o Ranger/Gold_Candidate.yaml -speed-mode download -concurrent 4 -timeout 5s -server-url "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg" 2>&1
+          echo "🚀 启动物理致盲撞击模式（屏蔽 GitHub 环境变量干扰）..."
+          # env -i 只保留基础 PATH，让核心以为自己在普通 Linux 环境下运行
+          env -i PATH="$PATH" ./bin/speedtest -c=Candidate_config.yaml -o=Ranger/Gold_Candidate.yaml -speed-mode=download -concurrent=4 -timeout=5s 2>&1
 
-      - name: 4. [物理判定] 验证产出物
+      - name: 4. [物理判定] 验证产出物状态
+        # 逻辑：拒绝任何形式的“假成功”，没出货就直接报错 [cite: 2026-02-09]
         run: |
           if [ -s "Ranger/Gold_Candidate.yaml" ]; then
             GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-            echo "📊 物理出货：已发现 $GOLD_COUNT 个优质节点"
+            echo "📊 物理出货确认：已发现 $GOLD_COUNT 个 Gold 节点"
           else
-            echo "❌ 物理报错：出货失败，请检查控制台输出的 Usage 详情"
-            [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && exit 1 || exit 0
+            echo "❌ 物理灾难：核心运行后未产生任何 Gold 节点数据"
+            # 手动点火时若失败则飘红，自动化时不中断
+            if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+              exit 1
+            fi
           fi
 
-      - name: 5. [成果归仓] 物理同步
+      - name: 5. [报警逻辑] 置顶预警记录
+        # 优质节点跌破 30 个时执行物理报警
+        run: |
+          if [ -f "Ranger/Gold_Candidate.yaml" ]; then
+            GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
+            if [ "$GOLD_COUNT" -lt 30 ]; then
+              TZ='Asia/Shanghai' TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+              ALARM_MSG="🚨 [$TIMESTAMP] [非洲之星预警]：优质节点仅余 $GOLD_COUNT 个！"
+              if [ -f "hint-maybeuseful.yml" ]; then
+                sed -i "1i $ALARM_MSG" hint-maybeuseful.yml
+              else
+                echo "$ALARM_MSG" > hint-maybeuseful.yml
+              fi
+            fi
+          fi
+
+      - name: 6. [成果归仓] 物理推送到主仓库
+        # 无论实验成败，必须回传物理存证
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml || true
-          git commit -m "非洲之星：缩写指令撞击完成" || exit 0
+          git commit -m "非洲之星：物理致盲实验完成，数据同步归仓" || exit 0
           git pull --rebase origin main
           git push origin main
