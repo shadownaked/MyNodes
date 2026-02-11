@@ -1,58 +1,91 @@
+# [Strict Maintenance Mode]
+# FileName: .github/workflows/main.yml
+# Task: Cloud-based Node Refining & Survival Testing
+# Compliance: Gemini Development Protocol (Zero Omission)
+
 name: 自动清洗订阅源
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # 支持爸爸手动一键点火
+  schedule:
+    - cron: '0 22 * * *' # 每天定时自动开工
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # 必须开启写入权限，否则无法将成果推送到仓库
+    
     steps:
-      - name: 检出代码
+      - name: 1. 检出仓库代码
         uses: actions/checkout@v3
 
-      - name: 搭建 Node.js 环境
+      - name: 2. 初始化 Node.js 18 环境
+        # 解决之前报 Exit code 8 的核心：确保系统有 node 执行权限
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 路径与文件存量自检
+      - name: 3. 路径与文件存量自检
+        # 物理核验 DataWashClean.js 是否处于根目录
         run: |
-          echo "当前工作目录: $(pwd)"
-          ls -R
+          echo "Current Path: $(pwd)"
+          ls -F
+          if [ ! -f "DataWashClean.js" ]; then
+            echo "❌ 错误：根目录未发现 DataWashClean.js，请检查上传位置！"
+            exit 1
+          fi
 
-      - name: 步骤 1：采集 1.8M 原始生肉
+      - name: 4. 采集原始生肉 (1.8MB+)
+        # 建立 Meet 目录并拉取原始生肉数据
         run: |
           mkdir -p Meet
           curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
-
-      - name: 步骤 2：执行《镇邪卷》清洗
-        # 显式指向根目录，防止 Exit code 8 找不到文件
-        run: node ./DataWashClean.js
-
-      - name: 步骤 3：真机选拔精锐部队
+          echo "✅ 生肉采集完毕，存入 Meet/raw_meat.txt"
+          - name: 5. 方案 A：执行《镇邪卷》JS 清洗
+        # 显式使用 node 执行根目录下的脚本，产出 Candidate.json
         run: |
-          # 检查 Candidate.json 是否真的生成了
+          node DataWashClean.js
           if [ ! -f "Candidate.json" ]; then
-            echo "❌ 错误：清洗脚本未产出 Candidate.json"
+            echo "❌ 错误：DataWashClean.js 未能产出 Candidate.json，请检查脚本逻辑！"
             exit 1
           fi
-          
-          # 下载测速核心
+          echo "✅ 阶段 1 完成：清洗真本已生成。"
+
+      - name: 6. 方案 B：真机选拔精锐 (EliteTroops)
+        # 这一步负责物理抹除僵尸节点，生成最终给平板用的精锐包
+        run: |
+          # 下载测速核心工具
           wget https://github.com/xite0/LiteSpeedTest/releases/download/v0.15.0/lite_linux_amd64.tar.gz
           tar -xvf lite_linux_amd64.tar.gz
           chmod +x lite
           
-          # 启动 3 秒生死测试，将 Candidate.json 转化为 Candidate_config.yaml (精锐版)
-          # 注意：这里我们统一命名为 Candidate_config.yaml 方便你查看
-          ./lite -test http://www.google.com/generate_204 -timeout 3000 -out Candidate_config.yaml Candidate.json
+          # 创建测速配置文件：定义测试目标为 Google 204，并发 50
+          echo '{"group":"精锐部队","outFormat":"subscription","concurrent":50,"testMethod":"google"}' > speed_config.json
+          
+          # 执行生死测试：
+          # 读取 Candidate.json，设定 3000ms (3秒) 硬超时，不通的直接剔除
+          # 产出 EliteTroops_config.yaml
+          ./lite -config speed_config.json -sub Candidate.json -test http://www.google.com/generate_204 -timeout 3000 -out EliteTroops_config.yaml
+          
+          if [ ! -f "EliteTroops_config.yaml" ]; then
+            echo "⚠️ 警告：精锐选拔未产出文件，可能所有节点均未通过 3 秒测试。"
+          else
+            echo "✅ 阶段 2 完成：精锐部队已集结。"
+          fi
 
-      - name: 步骤 4：成果归仓
+      - name: 7. 成果归仓 (Git Push)
+        # 将生成的 Candidate.json, Candidate_config.yaml, EliteTroops_config.yaml 推送到仓库
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # 强制添加所有生成的成果
-          git add Candidate.json Candidate_config.yaml
-          git commit -m "精锐部队选拔完毕: $(date)" || exit 0
+          
+          # 强制添加所有清洗与选拔成果
+          git add Candidate.json Candidate_config.yaml EliteTroops_config.yaml
+          
+          # 提交更改，如果没有变化则直接退出
+          git commit -m "双管齐下：精锐选拔完毕 $(date)" || exit 0
+          
+          # 推送到远程分支
           git push
+          
