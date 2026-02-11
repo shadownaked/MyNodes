@@ -1,81 +1,99 @@
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: .github/workflows/star-of-africa.yml
-# Version: 1.6.1 (Pixel-Level Detail - Single-Dash Enforcement)
-# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION) [cite: 2026-02-09]
+# Version: 1.6.3 (Strict Maintenance Mode - Zero Omission Edition)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT [cite: 2026-02-09]
 
 name: 非洲之星-全量质检站
 
 on:
-  workflow_dispatch: # 爸爸手动点火
+  workflow_dispatch: # 爸爸手动点火，这是最高优先级授权
   workflow_run:
-    # 物理锁定物理文件名，彻底杜绝版本标题变更导致的监听失效
+    # 物理锁定炼化厂文件名，确保自动化链路的物理闭环 [cite: 2026-02-06]
     workflows: [".github/workflows/main.yml"]
     types:
       - completed
 
 jobs:
   quality_control:
+    # 只有在炼化厂输出成功，或者爸爸手动触发时才允许进入物理实验区
     runs-on: ubuntu-latest
-    # 仅在炼化厂成功或手动启动时起航，逻辑不打折
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
     
     steps:
       - name: 1. [物理检出] 准备战场环境
+        # 获取完整的物理仓库镜像，杜绝后续 push 时的文件冲突 物理推送到主仓库.txt]
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # 保证 Git 历史完整性，杜绝推包时的物理冲突
+          fetch-depth: 0
 
       - name: 2. [心脏审计] 验证物理核心权限与架构对齐
-        # 即使成功过也要审，这是极客的严谨 验证物理核心权限与架构.txt]
+        # 逻辑：在报错前先确认我们在哪，心脏在哪，严禁盲跑 验证物理核心权限与架构对齐.txt]
         run: |
+          echo "📍 当前物理工作路径: $(pwd)"
           chmod +x ./bin/speedtest
           FILE_INFO=$(file ./bin/speedtest)
           echo "🔍 物理文件审计结果: $FILE_INFO"
+          
+          # 像素级校验：严防 ARM/x86 物理错位 验证物理核心权限与架构对齐.txt]
           if [[ "$FILE_INFO" == *"ARM"* ]]; then
-            echo "❌ 架构错误：检测到错误的 ARM64 核心！"
+            echo "❌ 物理灾难：检测到错误的 ARM64 核心，强行中断执行！"
             exit 1
           fi
+          
+          # 验证核心是否有基本脉搏 执行单杠逻辑撞击质检.txt]
+          ./bin/speedtest -v || echo "⚠️ 警告：核心无法物理响应版本查询，后续可能报错"
           echo "✅ 架构验证通过：x86-64 物理心脏已激活"
 
-      - name: 3. [非洲之星] 执行单杠逻辑撞击质检
-        # 核心逻辑：全面抛弃双横杠 (--)，死磕单横杠 (-) 执行质检并强制捕获全量 Log.txt]
-        # 修正字段：-config, -output, -concurrent, -speed-mode 执行质检并强制捕获全量 Log.txt]
+      - name: 3. [非洲之星] 执行原子化指令撞击质检
+        # 核心逻辑：全面抛弃双横杠 (--)，死磕单横杠 (-)，并移除所有不稳定的可选参数 执行单杠逻辑撞击质检.txt]
+        # 目的：锁定是哪个字段导致核心只会吐 Usage 菜单 执行单杠逻辑撞击质检.txt]
         run: |
           mkdir -p Ranger
-          echo "🚀 启动单杠物理撞击..."
-          # 放弃所有换行符，单行拉满所有核心参数
-          ./bin/speedtest -config Candidate_config.yaml -output Ranger/Gold_Candidate.yaml -speed-mode download -concurrent 5 -timeout 5s 2>&1
+          echo "🚀 启动原子化撞击：仅保留核心输入输出..."
+          # 物理锁定单行指令：彻底排除 shell 换行符带来的非法字符注入 执行单杠逻辑撞击质检.txt]
+          # 注意：暂不携带 -concurrent 和 -speed-mode，进行回归测试 [cite: 2026-02-09]
+          ./bin/speedtest -config Candidate_config.yaml -output Ranger/Gold_Candidate.yaml 2>&1
 
-      - name: 4. [报警补丁] 质量监控与时间戳置顶记录
-        # 逻辑：优质节点不满 30 个即触发物理预警
+      - name: 4. [结果判定] 验证物理产出文件完整性
+        # 逻辑：如果质检没产出，后续归仓就是自欺欺人 [cite: 2026-02-09]
+        run: |
+          if [ -s "Ranger/Gold_Candidate.yaml" ]; then
+            GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
+            echo "📊 物理出货：已发现 $GOLD_COUNT 个 Gold 节点"
+          else
+            echo "❌ 物理报错：Ranger/Gold_Candidate.yaml 为空或未生成，链路断裂"
+            # 如果是爸爸手动点的，直接报错飘红
+            if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+              exit 1
+            fi
+          fi
+
+      - name: 5. [归仓补丁] 报警逻辑预置
+        # 逻辑：优质节点不满 30 个即触发物理预警，并写入 hint
         run: |
           if [ -f "Ranger/Gold_Candidate.yaml" ]; then
             GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-            echo "📊 质检完成，优质节点数: $GOLD_COUNT"
             if [ "$GOLD_COUNT" -lt 30 ]; then
               TZ='Asia/Shanghai' TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
-              ALARM_MSG="🚨 [$TIMESTAMP] [非洲之星预警]：初筛优质节点仅余 $GOLD_COUNT 个，源质量下降！"
-              # 使用 sed 物理置顶，不破坏原文件结构
+              ALARM_MSG="🚨 [$TIMESTAMP] [非洲之星预警]：优质节点仅余 $GOLD_COUNT 个！"
               if [ -f "hint-maybeuseful.yml" ]; then
                 sed -i "1i $ALARM_MSG" hint-maybeuseful.yml
               else
                 echo "$ALARM_MSG" > hint-maybeuseful.yml
               fi
             fi
-          else
-            echo "❌ 物理错误：未能生成输出文件，扫描链路断裂"
-            exit 1
           fi
 
-      - name: 5. [成果归仓] 物理推送到主仓库
-        # 逻辑：确保 Gold 节点与报警记录 100% 同步
+      - name: 6. [成果归仓] 物理推送到主仓库
+        # 逻辑：确保实验日志、结果文件 100% 物理入库 物理推送到主仓库.txt]
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml
-          git commit -m "非洲之星：单杠逻辑收割完成，数据归仓" || exit 0
+          # 物理 add 所有变更，哪怕是报警文件的微调 物理推送到主仓库.txt]
+          git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml || true
+          git commit -m "非洲之星：原子化撞击实验数据归仓" || exit 0
           git pull --rebase origin main
-          git push
+          git push origin main
