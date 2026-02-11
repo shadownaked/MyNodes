@@ -1,7 +1,7 @@
 /* [Strict Maintenance Mode] 
-Part Name: DataWashClean_V2.1_Full_Logic
-Task: Incremental Intelligence Accumulation & Node Refining
-Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (Zero Omission)
+Part Name: DataWashClean_V2.2_Full_Logic_Final
+Task: Incremental Accumulation + Global Regex Scan + Ghost Buster (Purification)
+Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION)
 */
 
 const fs = require('fs');
@@ -14,7 +14,17 @@ const YAML_OUTPUT_FILE = 'Candidate_config.yaml';
 const HINT_MAYBE_FILE = 'hint-maybeuseful.yml';
 
 /**
- * 像素级安全解码：物理剔除不可见字符
+ * 物理净化：除灵逻辑
+ * 严格保留：字母、数字、连字符、下划线、斜杠、点。
+ * 物理抹除：骷髅头、Emoji、不可见杂质。
+ */
+function purify(str) {
+    if (!str) return "";
+    return str.toString().replace(/[^\w\-\.\/]/gi, '');
+}
+
+/**
+ * 像素级安全解码：物理剔除不可见字符 [cite: 2026-02-09]
  */
 function safeBase64Decode(str) {
     try {
@@ -31,34 +41,53 @@ function parseProtocolLink(link) {
         const line = link.trim();
         if (!line || !line.includes('://')) return null;
 
-        // VMESS 解析
+        // VMESS 深度炼化
         if (line.startsWith('vmess://')) {
             const raw = line.replace('vmess://', '');
             const n = JSON.parse(safeBase64Decode(raw));
             const addr = n.add.toLowerCase();
-            // 物理清洗假地址
+            
+            // 物理清洗假地址与超长垃圾
             if (addr.includes('github') || addr.includes('http') || addr.length > 80) return null;
 
             return {
                 fp: `VMESS-${n.add}-${n.port}-${n.path || ''}`,
-                data: { type: 'VMESS', address: n.add, port: parseInt(n.port), id: n.id, aid: parseInt(n.aid) || 0, net: n.net || "tcp", path: n.path || "", tls: n.tls || "", sni: n.sni || n.host || "" }
+                data: { 
+                    type: 'VMESS', 
+                    address: n.add, 
+                    port: parseInt(n.port), 
+                    id: purify(n.id), // 净化 UUID
+                    aid: parseInt(n.aid) || 0, 
+                    net: n.net || "tcp", 
+                    path: purify(n.path || ""), // 净化 Path
+                    tls: n.tls || "", 
+                    sni: purify(n.sni || n.host || "") // 净化 SNI
+                }
             };
         }
 
-        // SS/VLESS/Trojan 解析
+        // SS/VLESS/Trojan 深度炼化
         const u = new URL(line);
         const protocol = u.protocol.replace(':', '').toUpperCase();
         const addr = u.hostname.toLowerCase();
+        
+        // 物理清洗假地址
         if (addr.includes('github') || addr.includes('http') || addr.length > 80) return null;
 
         const params = {};
         u.searchParams.forEach((v, k) => { params[k] = v; });
 
         let nodeData = {
-            type: protocol, address: u.hostname, port: parseInt(u.port),
-            net: params.type || params.net || "tcp", path: params.path || u.pathname || "",
+            type: protocol, 
+            address: u.hostname, 
+            port: parseInt(u.port),
+            net: params.type || params.net || "tcp", 
+            path: purify(params.path || u.pathname || ""), // 净化
             security: params.security || (u.port === "443" ? "tls" : "none"),
-            sni: params.sni || params.host || u.hostname, pbk: params.pbk || "", sid: params.sid || "", flow: params.flow || ""
+            sni: purify(params.sni || params.host || u.hostname), // 净化
+            pbk: purify(params.pbk || ""), 
+            sid: purify(params.sid || ""), 
+            flow: params.flow || ""
         };
 
         if (protocol === 'SS') {
@@ -71,7 +100,7 @@ function parseProtocolLink(link) {
                 }
             }
         } else {
-            nodeData.id = u.username || params.id || "";
+            nodeData.id = purify(u.username || params.id || ""); // 净化
             nodeData.password = u.username || params.password || "";
         }
 
@@ -81,68 +110,75 @@ function parseProtocolLink(link) {
 }
 
 async function main() {
-    console.log("🛠️ [小七] 正在执行增量炼化：全场深度扫描模式启动...");
+    console.log("🛠️ [小七] 正在执行全量 V2.2 炼化（灵魂净化模式）...");
     
     const nodesMap = new Map();
     const maybeUsefulSet = new Set();
     
-    // --- 逻辑：读取旧情报，实现增量蓄水 ---
+    // --- 增量蓄水逻辑：读取旧情报 ---
     if (fs.existsSync(HINT_MAYBE_FILE)) {
-        const oldContent = fs.readFileSync(HINT_MAYBE_FILE, 'utf8');
-        // 使用正则从旧文件中提取 http 链接进行初始化
-        const oldUrls = oldContent.match(/https?:\/\/[^\s"';<>{}|[\]^`\\]+/g);
-        if (oldUrls) {
-            oldUrls.forEach(url => maybeUsefulSet.add(url));
+        try {
+            const oldContent = fs.readFileSync(HINT_MAYBE_FILE, 'utf8');
+            const oldUrls = oldContent.match(/https?:\/\/[^\s"';<>{}|[\]^`\\]+/g);
+            if (oldUrls) {
+                oldUrls.forEach(url => maybeUsefulSet.add(url));
+            }
+        } catch (e) {
+            console.log("⚠️ 读取旧情报失败，跳过增量阶段。");
         }
     }
 
     if (!fs.existsSync(MEET_DIR)) {
-        console.log("❌ 错误：未发现 Meet 文件夹。");
+        console.log("❌ 错误：Meet 目录物理缺失。");
         return;
     }
 
     const files = fs.readdirSync(MEET_DIR).filter(f => f.endsWith('.txt'));
     
     files.forEach(file => {
-        const content = fs.readFileSync(path.join(MEET_DIR, file), 'utf8');
-        // 自动判定是否需要整体解码
+        const filePath = path.join(MEET_DIR, file);
+        const content = fs.readFileSync(filePath, 'utf8');
+        
+        // 自动判定 Base64 整体编码
         let effective = (content.includes('://') || content.length < 50) ? content : safeBase64Decode(content);
         
         effective.split(/\r?\n/).forEach(line => {
             const cleanLine = line.trim();
             if (!cleanLine) return;
 
-            // 1. 尝试作为节点协议解析
+            // 1. 节点协议尝试解析
             const res = parseProtocolLink(cleanLine);
             if (res) {
                 nodesMap.set(res.fp, res.data);
                 return; 
             }
 
-            // 2. 如果不是节点，执行全场 URL 雷达扫描
+            // 2. 全场 URL 雷达深度扫描
             const urlsFound = cleanLine.match(/https?:\/\/[^\s"';<>{}|[\]^`\\]+/g);
             if (urlsFound) {
                 urlsFound.forEach(u => {
-                    // 物理处决：剔除包含 t.me 的广告
+                    // 物理处决 t.me 广告
                     if (u.toLowerCase().includes('t.me')) return;
-                    
-                    // 精准营救：将所有非电报 http 链接（如 GitHub）存入蓄水池
+                    // 积攒资产
                     maybeUsefulSet.add(u);
                 });
             }
         });
     });
 
-    // 导出 Candidate.json
-    const finalNodes = Array.from(nodesMap.values()).map((n, i) => { n.index = i + 1; return n; });
+    // 物理产出 Candidate.json
+    const finalNodes = Array.from(nodesMap.values()).map((n, i) => { 
+        n.index = i + 1; 
+        return n; 
+    });
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalNodes, null, 2));
 
-    // 导出 Candidate_config.yaml (完整配置模式)
+    // 物理产出 Candidate_config.yaml (完整 Clash 格式)
     let yaml = "proxies:\n";
     finalNodes.forEach(n => {
         const name = `Node-${n.index}`;
         if (n.type === 'VMESS') {
-            yaml += `  - {name: "${name}", type: vmess, server: ${n.address}, port: ${n.port}, uuid: ${n.id}, alterId: ${n.aid}, cipher: auto, network: ${n.net}, ws-opts: {path: "${n.path}"}, tls: ${n.tls?true:false}, skip-cert-verify: true, sni: "${n.sni}"}\n`;
+            yaml += `  - {name: "${name}", type: vmess, server: ${n.address}, port: ${n.port}, uuid: "${n.id}", alterId: ${n.aid}, cipher: auto, network: ${n.net}, ws-opts: {path: "${n.path}"}, tls: ${n.tls?true:false}, skip-cert-verify: true, sni: "${n.sni}"}\n`;
         } else if (n.type === 'SS') {
             yaml += `  - {name: "${name}", type: ss, server: ${n.address}, port: ${n.port}, cipher: ${n.method}, password: "${n.password}"}\n`;
         }
@@ -150,15 +186,18 @@ async function main() {
     yaml += "\nproxy-groups:\n  - {name: \"🚀 节点选择\", type: select, proxies: [\"DIRECT\"]}\nrules:\n  - MATCH,DIRECT\n";
     fs.writeFileSync(YAML_OUTPUT_FILE, yaml);
 
-    // 导出情报：去重合并后的增量资产
+    // 物理产出增量情报蓄水池
     if (maybeUsefulSet.size > 0) {
         const hintContent = Array.from(maybeUsefulSet).sort().map(link => `- ${link}`).join('\n');
-        fs.writeFileSync(HINT_MAYBE_FILE, `# 炼化厂情报存档 V2.1\n# 增量模式：每3天手动清空前将持续累积\n\n${hintContent}`);
+        fs.writeFileSync(HINT_MAYBE_FILE, `# 炼化厂情报存档 V2.2\n# 每3天执行一次物理清空\n\n${hintContent}`);
     }
 
-    console.log(`✅ 炼化结束！`);
-    console.log(`💎 核心节点：${finalNodes.length} 条`);
-    console.log(`🔍 累计情报：${maybeUsefulSet.size} 条 (已物理剔除 t.me)`);
+    console.log(`✅ 炼化任务全量完成！`);
+    console.log(`💎 有效节点：${finalNodes.length}`);
+    console.log(`🔍 累计资产：${maybeUsefulSet.size}`);
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(err => { 
+    console.error("🔥 炼化厂发生物理故障:", err);
+    process.exit(1); 
+});
