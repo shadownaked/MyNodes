@@ -1,12 +1,12 @@
 # [Strict Maintenance Mode]
 # FileName: .github/workflows/main.yml
-# Version: 2.0.1 (Harvester Logic Integrated)
-# Adjustment: 1. 引入西点军校采集步骤 2. 物理保留 hint.yml 成果 3. 增强 Git 提交逻辑
+# Version: 2.1.0 (Cleanup & Truncate Logic Integrated)
+# Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT
 
-name: 西点军校v2.0-全自动炼化厂
+name: 西点军校v2.1-全自动炼化厂
 
 on:
-  workflow_dispatch: # 保持手动调教模式，方便观察日志
+  workflow_dispatch:
 
 jobs:
   refine_process:
@@ -23,40 +23,46 @@ jobs:
         with:
           node-version: 18
 
-      - name: 3. 环境预热
+      - name: 3. 执行物理清理任务 (基于 cleanup.config)
+        # 逻辑：非空则删除并清空，为空则跳过
+        run: |
+          if [ -s "cleanup.config" ]; then
+            echo "🚀 发现清理指令，开始物理移除旧文件..."
+            # 过滤注释行并执行删除
+            grep -v '^#' cleanup.config | xargs rm -f || true
+            grep -v '^#' cleanup.config | xargs git rm --ignore-unmatch || true
+            
+            # 物理清空文件内容，严禁删除文件本身
+            : > cleanup.config
+            echo "✅ 清理执行完毕，cleanup.config 已物理清空。"
+          else
+            echo "📭 cleanup.config 为空，无需清理。"
+          fi
+
+      - name: 4. 环境预热
         run: |
           mkdir -p Meet
-          # 赋予两个核心脚本物理执行权限
           chmod +x Harvester.js
           chmod +x DataWashClean.js
-          echo "✅ 军校环境初始化完毕。"
 
-      - name: 4. 阶段一：西点军校采集 (Harvester)
-        # 这一步会执行随机休眠，请耐心等待 2753 条生肉归位
-        run: |
-          echo "📡 西点军校开始出动..."
-          node Harvester.js
-          echo "✅ 采集阶段结束，检查生肉库："
-          ls -F Meet/
+      - name: 5. 阶段一：西点军校采集 (Harvester)
+        run: node Harvester.js
 
-      - name: 5. 阶段二：炼化厂去泥 (DataWashClean)
+      - name: 6. 阶段二：炼化厂去泥 (DataWashClean)
         run: |
-          echo "📖 炼化厂开始深加工..."
           node DataWashClean.js
           if [ ! -f "Candidate.json" ]; then
             echo "❌ 严重错误：Candidate.json 未产出！"
             exit 1
           fi
-          echo "✅ 炼化阶段结束。"
 
-      - name: 6. 成果归仓 (Git Push)
-        # 提交内容包含：生肉库(Meet)、炼化成果(Candidate)、情报单(hint.yml)
+      - name: 7. 成果归仓 (Git Push)
+        # 包含 cleanup.config 的空状态记录
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # 动态添加所有生成的文件
-          git add Meet/*.txt Candidate.json Candidate_config.yaml hint.yml || true
+          git add cleanup.config Meet/*.txt Candidate.json Candidate_config.yaml hint-maybeuseful.yml || true
           
-          git commit -m "西点军校v2.0：采集与炼化全量归仓 $(date)" || exit 0
+          git commit -m "西点军校v2.1：清理并炼化归仓 $(date)" || exit 0
           git push
