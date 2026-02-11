@@ -1,7 +1,7 @@
 name: 自动清洗订阅源
 
 on:
-  workflow_dispatch: # 支持爸爸手动点 Run workflow
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,22 +17,21 @@ jobs:
           mkdir -p Meet
           curl -L "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt" -o Meet/raw_meat.txt
 
-      - name: 方案 A：运行新版 JS 生成 Candidate_config.yaml
+      - name: 方案 A：运行 JS 生成 Candidate
         run: node DataWashClean.js
 
-      - name: 方案 B：云端选拔 EliteTroops_config.yaml
+      - name: 方案 B：选拔 EliteTroops (真机测速)
         run: |
-          # 下载测速引擎
           wget https://github.com/xite0/LiteSpeedTest/releases/download/v0.15.0/lite_linux_amd64.tar.gz
           tar -xvf lite_linux_amd64.tar.gz
           chmod +x lite
-          # 执行存活测试（3秒超时）
+          # 3秒不通直接扔掉
           ./lite -config '{"outFormat":"subscription"}' -sub Candidate_config.yaml -test http://www.google.com/generate_204 -timeout 3000 -out EliteTroops_config.yaml
 
-      - name: 提交双重成品
+      - name: 结果归仓
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Candidate_config.yaml EliteTroops_config.yaml
-          git commit -m "双管齐下：精锐选拔完毕 $(date)" || exit 0
+          git commit -m "精锐选拔完毕 $(date)" || exit 0
           git push
