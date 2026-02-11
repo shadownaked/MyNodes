@@ -1,0 +1,64 @@
+# [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
+# FileName: citizen_scan.yml
+# Version: 2.0.0 (Python Async Infrastructure)
+
+name: 非洲之星-公民核验站
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [".github/workflows/main.yml"]
+    types: [completed]
+
+jobs:
+  citizen_test:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. [物理检出]
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 2. [环境初始化] 准备 Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 3. [依赖安装] 物理部署 PyYAML
+        run: pip install pyyaml
+
+      - name: 4. [公民核验] 运行 Citizen_TEST
+        id: scanner
+        run: |
+          # 运行脚本并捕获增量为 0 的状态码
+          python Citizen_TEST.py 2>&1 || (if [ $? -eq 100 ]; then echo "EMPTY_INCREMENT=true" >> $GITHUB_ENV; else exit 1; fi)
+
+      - name: 5. [报警逻辑] 增量为 0 邮件预警
+        if: env.EMPTY_INCREMENT == 'true'
+        # 爸爸，这里需要你手动在仓库 Settings -> Secrets -> Actions 里配置你的邮件信息 [cite: 2026-01-31]
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: 🚨 [非洲之星预警] 公民增量为 0
+          body: |
+            爸爸，大事不妙！
+            时间：${{ env.CURRENT_TIME }}
+            Citizen_TEST 探测结果显示本轮增量为 0。
+            请物理检查数据源 Candidate_config.yaml 是否失效！
+          to: ${{secrets.MAIL_TO}}
+
+      - name: 6. [成果归仓] 物理同步
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Citizen_Candidate.yaml
+          git commit -m "🚀 公民核验：数据增量同步 [$(date +'%Y-%m-%d %H:%M')]" || exit 0
+          git push origin main
