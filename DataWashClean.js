@@ -1,7 +1,7 @@
 /* [Strict Maintenance Mode] 
-Part Name: DataWashClean_V4.0_Intelligence_Audit
-Task: Node Extraction & Link Triage (Discard t.me, Keep Others)
-Compliance: Gemini Development Protocol (Zero Omission, No Truncation)
+Part Name: DataWashClean_V2.1_Full_Scan
+Task: Protocol Extraction + Global Regex URL Triage
+Logic: 1. Parse Nodes 2. Scan ALL URLs 3. Discard t.me 4. Save Useful Links
 */
 
 const fs = require('fs');
@@ -13,9 +13,7 @@ const OUTPUT_FILE = 'Candidate.json';
 const YAML_OUTPUT_FILE = 'Candidate_config.yaml';
 const HINT_MAYBE_FILE = 'hint-maybeuseful.yml';
 
-/**
- * 像素级安全解码：物理剔除不可见字符与空字符
- */
+// 像素级安全解码
 function safeBase64Decode(str) {
     try {
         const normalized = str.replace(/-/g, '+').replace(/_/g, '/');
@@ -23,20 +21,17 @@ function safeBase64Decode(str) {
     } catch (e) { return str; }
 }
 
-/**
- * 协议解析核心：处理各协议并执行 AD/广告物理清洗
- */
+// 协议解析核心
 function parseProtocolLink(link) {
     try {
         const line = link.trim();
         if (!line || !line.includes('://')) return null;
 
-        // 1. VMESS 像素级解析
         if (line.startsWith('vmess://')) {
             const raw = line.replace('vmess://', '');
             const n = JSON.parse(safeBase64Decode(raw));
-            // 物理清洗非法地址 (Node-8 案例修复)
             const addr = n.add.toLowerCase();
+            // 物理清洗假节点
             if (addr.includes('github') || addr.includes('http') || addr.length > 80) return null;
 
             return {
@@ -45,11 +40,8 @@ function parseProtocolLink(link) {
             };
         }
 
-        // 2. 通用解析逻辑 (SS/VLESS/Trojan)
         const u = new URL(line);
         const protocol = u.protocol.replace(':', '').toUpperCase();
-        
-        // 物理清洗非法地址
         const addr = u.hostname.toLowerCase();
         if (addr.includes('github') || addr.includes('http') || addr.length > 80) return null;
 
@@ -69,7 +61,6 @@ function parseProtocolLink(link) {
                 if (decoded.includes(':')) {
                     const parts = decoded.split(':');
                     nodeData.method = parts[0];
-                    // 物理切除密码乱码尾部
                     nodeData.password = parts[1].replace(/[^\x20-\x7E]/g, '');
                 }
             }
@@ -83,54 +74,50 @@ function parseProtocolLink(link) {
     } catch (e) { return null; }
 }
 
-/**
- * 炼化厂主程序：集成三级分流逻辑
- */
 async function main() {
-    console.log("🛠️ [小七] 炼化厂 V4.0 启动，正在执行像素级审计...");
-    
+    console.log("🛠️ [小七] 炼化厂 V2.1 启动：执行全场深度扫描...");
     const nodesMap = new Map();
     const maybeUsefulSet = new Set();
     
-    if (!fs.existsSync(MEET_DIR)) {
-        console.log("❌ 错误：未发现 Meet 文件夹。");
-        return;
-    }
+    if (!fs.existsSync(MEET_DIR)) return;
 
     const files = fs.readdirSync(MEET_DIR).filter(f => f.endsWith('.txt'));
     
     files.forEach(file => {
         const content = fs.readFileSync(path.join(MEET_DIR, file), 'utf8');
-        // 解码逻辑保护
         let effective = (content.includes('://') || content.length < 50) ? content : safeBase64Decode(content);
         
         effective.split(/\r?\n/).forEach(line => {
             const cleanLine = line.trim();
             if (!cleanLine) return;
 
-            // --- 分流逻辑 1: 协议解析 ---
+            // 1. 尝试解析节点
             const res = parseProtocolLink(cleanLine);
             if (res) {
                 nodesMap.set(res.fp, res.data);
-                return;
+                return; // 如果是节点，处理完直接跳过
             }
 
-            // --- 分流逻辑 2: 情报审计 (非协议链接处理) ---
-            if (cleanLine.startsWith('http')) {
-                // A. 物理切除 t.me 链接 (广告/垃圾)
-                if (cleanLine.includes('t.me')) return;
-
-                // B. 记录其余有用链接 (例如 github 分享)
-                maybeUsefulSet.add(cleanLine);
+            // 2. 全场深抠链接 (正则雷达扫描)
+            // 匹配 http/https 链接，直到遇到空格、引号或常见分割符
+            const urls = cleanLine.match(/https?:\/\/[^\s"';<>{}|[\]^`\\]+/g);
+            if (urls) {
+                urls.forEach(u => {
+                    // 物理处决 t.me 链接
+                    if (u.toLowerCase().includes('t.me')) return;
+                    
+                    // 只要包含 http 且不是节点，全部记录入 maybeUsefulSet
+                    maybeUsefulSet.add(u);
+                });
             }
         });
     });
 
-    // 1. 导出 Candidate 成果
+    // 导出节点
     const finalNodes = Array.from(nodesMap.values()).map((n, i) => { n.index = i + 1; return n; });
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalNodes, null, 2));
 
-    // 2. 导出 YAML 配置文件
+    // 导出 YAML (Clash)
     let yaml = "proxies:\n";
     finalNodes.forEach(n => {
         const name = `Node-${n.index}`;
@@ -143,15 +130,13 @@ async function main() {
     yaml += "\nproxy-groups:\n  - {name: \"🚀 节点选择\", type: select, proxies: [\"DIRECT\"]}\nrules:\n  - MATCH,DIRECT\n";
     fs.writeFileSync(YAML_OUTPUT_FILE, yaml);
 
-    // 3. 导出情报文件 (一链接一行)
+    // 导出情报：一个一行，严格去重
     if (maybeUsefulSet.size > 0) {
-        const hintContent = Array.from(maybeUsefulSet).map(link => `- ${link}`).join('\n');
-        fs.writeFileSync(HINT_MAYBE_FILE, `# 炼化厂情报存档\n# 排除 t.me 后的剩余资产\n\n${hintContent}`);
+        const hintLines = Array.from(maybeUsefulSet).sort().map(link => `- ${link}`).join('\n');
+        fs.writeFileSync(HINT_MAYBE_FILE, `# 炼化厂情报 V2.1\n# 已物理剔除所有 t.me 广告\n\n${hintLines}`);
     }
 
-    console.log(`✅ 炼化完成！`);
-    console.log(`💎 核心节点：${finalNodes.length} 条`);
-    console.log(`🔍 潜在情报：${maybeUsefulSet.size} 条 (已剔除 t.me)`);
+    console.log(`✅ 炼化结束！发现节点 ${finalNodes.length} 条，情报 ${maybeUsefulSet.size} 条。`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
