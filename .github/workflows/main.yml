@@ -1,12 +1,14 @@
 # [Strict Maintenance Mode]
 # FileName: .github/workflows/main.yml
-# Version: 2.1.0 (Cleanup & Truncate Logic Integrated)
+# Version: 2.2.0 (Three-Day Harvest & Duck.com Ready)
 # Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT
 
-name: 西点军校v2.1-全自动炼化厂
+name: 西点军校v2.2-全自动炼化厂
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # 北京时间：06:00, 12:00, 18:00, 00:00 自动巡逻
 
 jobs:
   refine_process:
@@ -18,51 +20,57 @@ jobs:
       - name: 1. 检出仓库代码
         uses: actions/checkout@v3
 
-      - name: 2. 初始化 Node.js 18 环境
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 3. 执行物理清理任务 (基于 cleanup.config)
-        # 逻辑：非空则删除并清空，为空则跳过
+      - name: 2. 执行环境清理 (cleanup.config)
+        # 逻辑：物理删除名单文件并清空配置
         run: |
           if [ -s "cleanup.config" ]; then
-            echo "🚀 发现清理指令，开始物理移除旧文件..."
-            # 过滤注释行并执行删除
+            echo "🚀 执行物理清理..."
             grep -v '^#' cleanup.config | xargs rm -f || true
             grep -v '^#' cleanup.config | xargs git rm --ignore-unmatch || true
-            
-            # 物理清空文件内容，严禁删除文件本身
             : > cleanup.config
-            echo "✅ 清理执行完毕，cleanup.config 已物理清空。"
-          else
-            echo "📭 cleanup.config 为空，无需清理。"
           fi
 
-      - name: 4. 环境预热
+      - name: 3. 初始化环境与执行炼化
+        # 逻辑：Harvester 采集 -> DataWashClean 增量炼化
         run: |
           mkdir -p Meet
-          chmod +x Harvester.js
-          chmod +x DataWashClean.js
-
-      - name: 5. 阶段一：西点军校采集 (Harvester)
-        run: node Harvester.js
-
-      - name: 6. 阶段二：炼化厂去泥 (DataWashClean)
-        run: |
+          node Harvester.js
           node DataWashClean.js
-          if [ ! -f "Candidate.json" ]; then
-            echo "❌ 严重错误：Candidate.json 未产出！"
-            exit 1
+
+      - name: 4. 情报收割 (每3天上午10点触发)
+        # 逻辑：利用 GitHub Step Summary 触发邮件通知
+        # 计算：UTC 02:00 等于北京时间 10:00。使用一年中的天数 % 3 实现周期
+        run: |
+          HOUR=$(date +%H)
+          DAY_OF_YEAR=$(date +%j)
+          
+          if [ $((10#$DAY_OF_YEAR % 3)) -eq 0 ] && [ "$HOUR" -le "03" ]; then
+            if [ -s "hint-maybeuseful.yml" ]; then
+              echo "💎 [收割时刻] 发现蓄水池资产，正在生成摘要..."
+              echo "## 🚀 西点军校情报摘要 (v2.2 收割)" >> $GITHUB_STEP_SUMMARY
+              echo "爸爸，这是过去三天为你积攒的 GitHub 资产链接：" >> $GITHUB_STEP_SUMMARY
+              echo "\`\`\`yaml" >> $GITHUB_STEP_SUMMARY
+              cat hint-maybeuseful.yml >> $GITHUB_STEP_SUMMARY
+              echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+              
+              # 发送后物理清空蓄水池
+              : > hint-maybeuseful.yml
+              echo "✅ 情报已推送到 Summary，蓄水池已清空。"
+            else
+              echo "📭 蓄水池为空，本次收割跳过。"
+            fi
+          else
+            echo "🕒 非收割窗口（每3天 10:00），继续执行增量积攒模式。"
           fi
 
-      - name: 7. 成果归仓 (Git Push)
-        # 包含 cleanup.config 的空状态记录
+      - name: 5. 成果归仓 (Git Push)
+        # 逻辑：将炼化后的 Candidate 和积攒的情报状态物理同步回仓库
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          git add cleanup.config Meet/*.txt Candidate.json Candidate_config.yaml hint-maybeuseful.yml || true
+          # 必须 add 所有变动文件，确保增量状态被记录
+          git add cleanup.config Candidate.json Candidate_config.yaml hint-maybeuseful.yml || true
           
-          git commit -m "西点军校v2.1：清理并炼化归仓 $(date)" || exit 0
+          git commit -m "西点军校v2.2：增量炼化与收割存档 $(date)" || exit 0
           git push
