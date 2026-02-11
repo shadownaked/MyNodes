@@ -22,12 +22,12 @@ jobs:
         # 逻辑：进入bin目录 -> 解压 -> 重命名为 speedtest -> 赋予执行权限
         run: |
           cd bin
-          tar -xzvf clash-speedtest_Linux_arm64.tar.gz
+          tar -xzvf clash-speedtest_Linux_x86_64.tar.gz
           # 找到解压出来的二进制文件并重命名
           mv clash-speedtest speedtest
           chmod +x speedtest
           # 物理清理压缩包，节省空间
-          rm clash-speedtest_Linux_arm64.tar.gz
+          rm clash-speedtest_Linux_x86_64.tar.gz
           echo "✅ 心脏解压并命名成功。"
 
       - name: 3. 物理入库
