@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: Citizen_TEST.py
-# Version: 2.3.0 (Full Logic Integrity)
+# Version: 3.0.0 (Veteran Class & Flow Control)
 
 import asyncio
 import time
@@ -10,6 +10,7 @@ import yaml
 import os
 import sys
 import re
+from collections import OrderedDict
 
 # --- 物理参数锁定 ---
 SOURCE_CONFIG = "Candidate_config.yaml"
@@ -18,30 +19,32 @@ MAX_CITIZENS = 500
 CONCURRENT_LIMIT = 50
 FAIL_THRESHOLD = 10 
 ROUNDS = 3           
-TIMEOUT = 5          
+PING_CEILING = 5000  # 爸爸定的活人保底线
+TIMEOUT = 6          # 略微放宽超时以匹配保底线
 
 class CitizenManager:
     def __init__(self):
         self.semaphore = asyncio.Semaphore(CONCURRENT_LIMIT)
         self.current_time = time.strftime("%Y-%m-%d %H:%M")
-        self.new_citizens_count = 0
+        self.stats = {"new": 0, "class1": 0, "class2": 0, "class3": 0, "class0": 0}
 
     async def tcp_ping(self, server, port):
         """物理 TCP 握手探测"""
         try:
             async with self.semaphore:
                 start = time.perf_counter()
-                reader, writer = await asyncio.wait_for(
+                _, writer = await asyncio.wait_for(
                     asyncio.open_connection(server, int(port)), timeout=TIMEOUT
                 )
                 writer.close()
                 await writer.wait_closed()
-                return int((time.perf_counter() - start) * 1000)
+                ms = int((time.perf_counter() - start) * 1000)
+                return ms if ms <= PING_CEILING else None
         except:
             return None
 
     def robust_load(self, file_path):
-        """全量节点读取，具备 YAML 容错能力"""
+        """增强版全量读取：支持 YAML 容错与字典保持"""
         if not os.path.exists(file_path): return []
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -49,7 +52,6 @@ class CitizenManager:
                 if data and isinstance(data.get('proxies'), list):
                     return data['proxies']
         except:
-            # 暴力流式提取完整字典块
             proxies = []
             try:
                 with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -66,91 +68,102 @@ class CitizenManager:
         return []
 
     async def run(self):
-        print(f"🚀 [{self.current_time}] 终极核验开始...")
+        print(f"🚀 [{self.current_time}] 公民等级核验起飞...")
         
-        # 1. 加载现有数据
         raw_nodes = self.robust_load(SOURCE_CONFIG)
         old_nodes = self.robust_load(CITIZEN_FILE)
         
-        # 建立索引映射 (server, port) -> node_dict
         old_pool = { (str(p.get('server')), int(p.get('port', 0))): p for p in old_nodes }
-        
-        # 汇总所有待测目标 (优先保留老公民的状态)
         all_targets = {}
         for p in raw_nodes:
             key = (str(p.get('server')), int(p.get('port', 0)))
             all_targets[key] = p
         for key, p in old_pool.items():
-            all_targets[key] = p # 老公民覆盖新发现，保留 fail_count 等
+            all_targets[key] = p
 
-        results = {}
-        # 2. 三轮物理探测逻辑 (跨度约 1 分钟)
+        probe_results = {key: [] for key in all_targets.keys()}
+
+        # 3轮阶级撞击
         for r in range(1, ROUNDS + 1):
-            print(f"📡 探测轮次 {r}/{ROUNDS}...")
+            print(f"📡 阶级撞击轮次 {r}/{ROUNDS}...")
             tasks = []
-            # 找出本轮需要探测的 (还没通的)
-            test_keys = [k for k in all_targets.keys() if k not in results]
-            for k in test_keys:
-                tasks.append(self.probe_task(k, all_targets[k]))
+            for key in all_targets.keys():
+                tasks.append(self.probe_task(key, all_targets[key]))
             
-            round_res = await asyncio.gather(*tasks)
-            for res in round_res:
-                if res: results[res['key']] = res['ping']
+            round_data = await asyncio.gather(*tasks)
+            for item in round_data:
+                if item and item['ping'] is not None:
+                    probe_results[item['key']].append(item['ping'])
 
             if r < ROUNDS:
                 wait = random.randint(30, 40)
-                print(f"💤 随机休眠 {wait}s...")
+                print(f"💤 物理休眠 {wait}s...")
                 await asyncio.sleep(wait)
 
-        # 3. 准入与优胜劣汰
-        final_pool = []
+        # 等级评定与属性封装
+        final_list = []
         for key, node in all_targets.items():
-            if key in results:
-                # 探测成功：赋予/更新公民身份
-                node['ping'] = results[key]
+            pings = probe_results[key]
+            success_count = len(pings)
+            
+            # 物理阶级定义
+            if success_count > 0:
+                avg_ping = int(sum(pings) / success_count)
+                node['ping'] = avg_ping
+                node['class'] = f"class{4-success_count}" # 3次通为class1
                 node['fail_count'] = 0
                 node['last_seen'] = self.current_time
-                if key not in old_pool: self.new_citizens_count += 1
-                final_pool.append(node)
-            else:
-                # 探测失败：如果是“老兵”，允许抢救；如果是“新兵”，直接物理消失
-                if key in old_pool:
-                    p = old_pool[key]
-                    p['fail_count'] = p.get('fail_count', 0) + 1
-                    if p['fail_count'] < FAIL_THRESHOLD:
-                        p['ping'] = 9999 # 没通的排在最后
-                        final_pool.append(p)
-                    else:
-                        print(f"💀 老兵连续 {FAIL_THRESHOLD} 次失联，物理执行死刑: {p.get('name')}")
+                if key not in old_pool: self.stats["new"] += 1
+                self.stats[f"class{4-success_count}"] += 1
+                final_list.append(node)
+            elif key in old_pool:
+                # 老兵抢救逻辑 (Class 0)
+                node['fail_count'] = node.get('fail_count', 0) + 1
+                if node['fail_count'] < FAIL_THRESHOLD:
+                    node['ping'] = 9999
+                    node['class'] = "class0"
+                    self.stats["class0"] += 1
+                    final_list.append(node)
 
-        # 4. 排序与物理编号 (核心排名逻辑)
-        # 按 Ping 升序，Ping 相同按最后看到时间降序
-        final_pool.sort(key=lambda x: (x.get('ping', 9999), x.get('last_seen', "")))
-        
-        # 只取前 500 名
-        final_pool = final_pool[:MAX_CITIZENS]
+        # 排序：等级(class1>2>3>0) -> Ping(升序)
+        final_list.sort(key=lambda x: (x.get('class', 'class9'), x.get('ping', 9999)))
+        final_list = final_list[:MAX_CITIZENS]
 
-        # 物理注入编号：Citizen_001_45ms
-        for i, node in enumerate(final_pool, 1):
-            latency = f"{node['ping']}ms" if node['ping'] != 9999 else "Timeout"
-            node['name'] = f"Citizen_{i:03d}_{latency}"
+        # 物理重命名与字段重组 (保证 name 在行首)
+        ordered_final = []
+        for i, p in enumerate(final_list, 1):
+            latency = f"{p['ping']}ms" if p['ping'] < 9999 else "Timeout"
+            cls = p.get('class', 'class0')
+            new_name = f"Citizen_{i:03d}_{latency}_{cls}"
+            
+            # 强制 OrderedDict 保证 name 置顶
+            d = OrderedDict()
+            d['name'] = new_name
+            for k, v in p.items():
+                if k not in ['name', 'class', 'ping', 'fail_count', 'last_seen']:
+                    d[k] = v
+            # 附加元数据以便后续追踪
+            d['ping'] = p['ping']
+            d['class'] = cls
+            d['fail_count'] = p.get('fail_count', 0)
+            d['last_seen'] = p.get('last_seen', self.current_time)
+            ordered_final.append(d)
 
-        # 5. 归仓：强制单行横排格式 (Flow Style)
+        # 物理归仓：强制单行无限宽度
         with open(CITIZEN_FILE, 'w', encoding='utf-8') as f:
-            # 使用 default_flow_style=True 强制单行，让一个节点只占一行
-            yaml.dump({"proxies": final_pool}, f, allow_unicode=True, sort_keys=False, default_flow_style=True)
+            header = f"# [Update: {self.current_time}] | Total: {len(ordered_final)} | New: {self.stats['new']} | C1: {self.stats['class1']} | C2: {self.stats['class2']} | C3: {self.stats['class3']} | C0: {self.stats['class0']}\n"
+            f.write(header)
+            # 关键：width=float('inf') 杜绝长密码换行
+            yaml.dump({"proxies": ordered_final}, f, allow_unicode=True, sort_keys=False, default_flow_style=True, width=float('inf'))
 
-        print(f"📊 任务总结：")
-        print(f"   - 发现新公民: {self.new_citizens_count}")
-        print(f"   - 池子总容量: {len(final_pool)} / {MAX_CITIZENS}")
-        
-        if self.new_citizens_count == 0:
-            sys.exit(100)
+        print(f"📊 任务完成：{header}")
+        if self.stats["new"] == 0: sys.exit(100)
 
     async def probe_task(self, key, node):
         p = await self.tcp_ping(key[0], key[1])
-        if p: return {'key': key, 'ping': p}
-        return None
+        return {'key': key, 'ping': p}
 
 if __name__ == "__main__":
+    # 强制让 yaml 支持 OrderedDict
+    yaml.add_representer(OrderedDict, lambda dumper, data: dumper.represent_mapping('tag:yaml.org,2002:map', data.items()))
     asyncio.run(CitizenManager().run())
