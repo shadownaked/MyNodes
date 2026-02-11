@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: Citizen_TEST.py
-# Purpose: 公民核验站 - 异步 TCP 探测与增量信用维护系统 [cite: 2026-02-09]
+# Version: 2.1.0 (Violence Regex Recovery Mode)
+# Purpose: 具备物理防爆能力的公民核验系统 [cite: 2026-02-09]
 
 import asyncio
 import time
@@ -9,15 +10,16 @@ import random
 import yaml
 import os
 import sys
+import re
 
-# --- 物理参数对齐 ---
+# --- 物理参数锁定 ---
 SOURCE_CONFIG = "Candidate_config.yaml"
 CITIZEN_FILE = "Citizen_Candidate.yaml"
 MAX_CITIZENS = 500
 CONCURRENT_LIMIT = 50
-FAIL_THRESHOLD = 10  # 连续 10 次失败物理剔除
-ROUNDS = 3           # 探测轮次
-TIMEOUT = 5          # 握手超时
+FAIL_THRESHOLD = 10 
+ROUNDS = 3           
+TIMEOUT = 5          
 
 class CitizenManager:
     def __init__(self):
@@ -30,8 +32,9 @@ class CitizenManager:
         start = time.perf_counter()
         try:
             async with self.semaphore:
+                # 显式转换 port 为 int，防止正则提取出字符串导致崩溃
                 reader, writer = await asyncio.wait_for(
-                    asyncio.open_connection(server, port), timeout=TIMEOUT
+                    asyncio.open_connection(server, int(port)), timeout=TIMEOUT
                 )
                 writer.close()
                 await writer.wait_closed()
@@ -39,84 +42,98 @@ class CitizenManager:
         except:
             return None
 
-    def load_yaml(self, file_path):
+    def violent_extract(self, file_path):
+        """流氓模式：正则暴力提取所有节点字段"""
+        proxies = []
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+                # 匹配 server, port, name 的暴力正则
+                # 逻辑：寻找包含 server: xxx, port: xxx 的行
+                blocks = re.findall(r'-\s*\{(?:[^{}]*)\}', content)
+                for block in blocks:
+                    try:
+                        s = re.search(r'server:\s*([^,}]+)', block)
+                        p = re.search(r'port:\s*(\d+)', block)
+                        n = re.search(r'name:\s*([^,}]+)', block)
+                        if s and p:
+                            proxies.append({
+                                'server': s.group(1).strip().strip('"').strip("'"),
+                                'port': int(p.group(1)),
+                                'name': n.group(1).strip().strip('"').strip("'") if n else "Unknown",
+                                'type': 'ss' # 默认为粗筛基础类型
+                            })
+                    except: continue
+        except Exception as e:
+            print(f"❌ 物理读取失败: {e}")
+        return proxies
+
+    def load_smart(self, file_path):
+        """智能读取：优先 YAML，失败则暴力正则"""
         if not os.path.exists(file_path): return {"proxies": []}
-        with open(file_path, 'r', encoding='utf-8') as f:
-            return yaml.safe_load(f) or {"proxies": []}
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+                if data and "proxies" in data: return data
+        except Exception as e:
+            print(f"⚠️ YAML 解析崩溃，启动暴力提取模式... 原因: {e}")
+        
+        # 启动流氓模式
+        proxies = self.violent_extract(file_path)
+        return {"proxies": proxies}
 
     async def run(self):
-        print(f"🚀 [{self.current_time}] 公民核验起飞...")
+        print(f"🚀 [{self.current_time}] 暴力版公民核验起飞...")
         
-        # 1. 物理读取：原始矿源 + 现有池子
-        raw_data = self.load_yaml(SOURCE_CONFIG)
-        old_data = self.load_yaml(CITIZEN_FILE)
+        raw_data = self.load_smart(SOURCE_CONFIG)
+        old_data = self.load_smart(CITIZEN_FILE)
         
-        # 建立映射方便去重更新: {(server, port): proxy_dict}
-        citizen_pool = { (p['server'], p['port']): p for p in old_data.get('proxies', []) }
-        
-        # 提取所有待测节点（合并 Raw 和 Old）
+        citizen_pool = { (str(p['server']), int(p['port'])): p for p in old_data.get('proxies', []) }
         all_targets = {}
         for p in raw_data.get('proxies', []):
-            all_targets[(p['server'], p['port'])] = p
+            all_targets[(str(p['server']), int(p['port']))] = p
         for k, v in citizen_pool.items():
             if k not in all_targets: all_targets[k] = v
 
-        results = {} # 暂存本轮成功的结果
-
-        # 2. 三轮撞击逻辑
+        results = {}
         for r in range(1, ROUNDS + 1):
-            print(f"📡 正在执行第 {r}/{ROUNDS} 轮物理探测...")
+            print(f"📡 第 {r}/{ROUNDS} 轮探测 (并发: {CONCURRENT_LIMIT})...")
             tasks = []
-            keys = list(all_targets.keys())
-            for k in keys:
-                if k not in results: # 只测还没通的
+            for k in all_targets.keys():
+                if k not in results:
                     tasks.append(self.probe_node(k, all_targets[k]))
             
-            round_results = await asyncio.gather(*tasks)
-            for res in round_results:
-                if res: results[(res['server'], res['port'])] = res
+            round_res = await asyncio.gather(*tasks)
+            for res in round_res:
+                if res: results[(str(res['server']), int(res['port']))] = res
 
             if r < ROUNDS:
-                sleep_time = random.randint(30, 45)
-                print(f"💤 轮次间歇，物理休眠 {sleep_time} 秒...")
-                await asyncio.sleep(sleep_time)
+                wait = random.randint(30, 45)
+                print(f"💤 随机休眠 {wait}s...")
+                await asyncio.sleep(wait)
 
-        # 3. 信用增量合并逻辑
         final_list = []
         for k, target in all_targets.items():
             if k in results:
-                # 探测成功：更新/激活
                 p = results[k]
                 p['fail_count'] = 0
                 p['last_seen'] = self.current_time
                 p['ping'] = results[k]['ping']
                 if k not in citizen_pool: self.new_citizens_count += 1
                 final_list.append(p)
-            else:
-                # 探测失败：继承老公民并加权失败次数
-                if k in citizen_pool:
-                    p = citizen_pool[k]
-                    p['fail_count'] = p.get('fail_count', 0) + 1
-                    if p['fail_count'] < FAIL_THRESHOLD:
-                        final_list.append(p)
-                    else:
-                        print(f"💀 节点 {p['name']} 连续 {FAIL_THRESHOLD} 次失联，物理剔除")
+            elif k in citizen_pool:
+                p = citizen_pool[k]
+                p['fail_count'] = p.get('fail_count', 0) + 1
+                if p['fail_count'] < FAIL_THRESHOLD: final_list.append(p)
 
-        # 4. 排序与截断 (500 条协议)
-        # 排序权重：Ping 升序 > 时间戳降序
         final_list.sort(key=lambda x: (x.get('ping', 9999), x.get('last_seen', "")))
         final_list = final_list[:MAX_CITIZENS]
 
-        # 5. 物理落地
         with open(CITIZEN_FILE, 'w', encoding='utf-8') as f:
             yaml.dump({"proxies": final_list}, f, allow_unicode=True, sort_keys=False)
 
-        print(f"📊 本轮结束：新增 {self.new_citizens_count} 个公民，当前池子总数: {len(final_list)}")
-        
-        # 6. 报警判定
-        if self.new_citizens_count == 0:
-            print(f"⚠️ [ALARM] 2026-02-11: 本轮增量为 0")
-            sys.exit(100) # 特殊状态码表示增量为 0
+        print(f"📊 结束：新增 {self.new_citizens_count}, 总数 {len(final_list)}")
+        if self.new_citizens_count == 0: sys.exit(100)
 
     async def probe_node(self, key, proxy):
         ping = await self.tcp_ping(proxy['server'], proxy['port'])
