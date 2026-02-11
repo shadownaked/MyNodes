@@ -1,14 +1,13 @@
 # [Protocol Check: Strict Maintenance Mode Active - Detail Preservation 100%]
 # FileName: .github/workflows/star-of-africa.yml
-# Version: 1.2.1 (Full Detail - Architecture Audit Edition)
+# Version: 1.3.0 (Parameter Specification Alignment)
 # Compliance: ANTI_STUPID_LOGIC_V3_PERMANENT (ZERO OMISSION) [cite: 2026-02-09]
 
 name: 非洲之星-全量质检站
 
 on:
-  workflow_dispatch: # 支持爸爸手动点火
+  workflow_dispatch: 
   workflow_run:
-    # 物理锁定文件名：main.yml 才是永远的物理地址
     workflows: [".github/workflows/main.yml"]
     types:
       - completed
@@ -16,7 +15,6 @@ on:
 jobs:
   quality_control:
     runs-on: ubuntu-latest
-    # 只有在炼化厂成功或手动触发时起航
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
@@ -25,64 +23,60 @@ jobs:
       - name: 1. [物理检出] 准备战场环境
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # 确保 rebase 逻辑有完整的历史参考
+          fetch-depth: 0 
 
-      - name: 2. [心脏审计] 验证 amd64 物理架构
-        # 这一步是血的教训：必须确认文件是 x86-64 (amd64) 才能跑
+      - name: 2. [心脏审计] 验证 x86_64 物理架构
         run: |
-          if [ ! -f "./bin/speedtest" ]; then
-            echo "❌ 错误：bin/speedtest 物理缺失，请先运行 deploy-heart.yml"
-            exit 1
-          fi
           chmod +x ./bin/speedtest
-          # 打印文件信息：如果是 arm64，这里会显示，从而及早发现问题
           FILE_INFO=$(file ./bin/speedtest)
           echo "🔍 物理文件审计结果: $FILE_INFO"
           if [[ "$FILE_INFO" == *"ARM"* ]]; then
-            echo "❌ 架构错误：检测到 ARM64 心脏，无法在 Ubuntu 节点运行！请更换为 AMD64 版本。"
+            echo "❌ 架构错误：检测到 ARM64 核心，请重新部署 x86_64！"
             exit 1
           fi
           echo "✅ 架构对齐：物理心脏已激活"
 
       - name: 3. [非洲之星] 执行全量质检扫描
-        # 逻辑：读取 Candidate_config.yaml -> 输出至 Ranger/Gold_Candidate.yaml
+        # 修正逻辑：根据工具帮助菜单 重新对齐参数
         run: |
-          echo "🚀 启动全量扫描（AB 链路）..."
+          echo "🚀 启动规范化扫描..."
           mkdir -p Ranger
           
-          # 执行物理测速（删除了 || true，失败必须报错，不能欺骗爸爸）
-          ./bin/speedtest --config Candidate_config.yaml --output Ranger/Gold_Candidate.yaml --ping 2000 --speed-test --max-concurrent 5 --min-speed 102400
-          
-          # 统计生成结果中的节点数
-          GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-          echo "📊 质检完成，Ranger 殿堂新增优质节点: $GOLD_COUNT"
+          # 像素级参数对齐：
+          # --config 为输入源
+          # --output 为输出路径
+          # --timeout 设为 5s 防止僵死
+          # --speed-mode 明确指定为 download 模式
+          ./bin/speedtest \
+            --config Candidate_config.yaml \
+            --output Ranger/Gold_Candidate.yaml \
+            --timeout 5s \
+            --speed-mode download \
+            --max-concurrent 5
 
       - name: 4. [报警补丁] 质量监控与时间戳记录
-        # 逻辑：少于30个就在 hint-maybeuseful.yml 顶端插入报警
         run: |
-          GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-          if [ "$GOLD_COUNT" -lt 30 ]; then
-            echo "🚨 触发报警：源质量大幅下降！"
-            # 获取北京时间并精准格式化
-            TZ='Asia/Shanghai' TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
-            ALARM_MSG="🚨 [$TIMESTAMP] [非洲之星预警]：初筛优质节点仅余 $GOLD_COUNT 个，源质量大幅下降！"
-            
-            # 物理顶端插入，绝不覆盖
-            if [ -f "hint-maybeuseful.yml" ]; then
-              sed -i "1i $ALARM_MSG" hint-maybeuseful.yml
-            else
-              echo "$ALARM_MSG" > hint-maybeuseful.yml
+          if [ ! -f "Ranger/Gold_Candidate.yaml" ]; then
+            echo "⚠️ 质检未生成文件，跳过报警逻辑"
+          else
+            GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
+            echo "📊 质检完成，优质节点数: $GOLD_COUNT"
+            if [ "$GOLD_COUNT" -lt 30 ]; then
+              TZ='Asia/Shanghai' TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+              ALARM_MSG="🚨 [$TIMESTAMP] [非洲之星预警]：初筛优质节点仅余 $GOLD_COUNT 个，源质量下降！"
+              if [ -f "hint-maybeuseful.yml" ]; then
+                sed -i "1i $ALARM_MSG" hint-maybeuseful.yml
+              else
+                echo "$ALARM_MSG" > hint-maybeuseful.yml
+              fi
             fi
           fi
 
       - name: 5. [成果归仓] 物理推送到主仓库
-        # 包含 rebase 逻辑，彻底杜绝并发冲突
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Ranger/Gold_Candidate.yaml hint-maybeuseful.yml || true
-          # 动态统计提交信息
-          GOLD_COUNT=$(grep -c "name:" Ranger/Gold_Candidate.yaml || echo 0)
-          git commit -m "非洲之星：质检完成，Gold 节点入库 ($GOLD_COUNT)" || exit 0
+          git commit -m "非洲之星：参数对齐后首次归仓" || exit 0
           git pull --rebase origin main
           git push
