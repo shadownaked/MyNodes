@@ -3,7 +3,7 @@
 # Task: Cloud-based Node Refining & Survival Testing
 # Compliance: Gemini Development Protocol (Zero Omission)
 
-name: 自动清洗订阅源
+name: 西点军校v1.0
 
 on:
   workflow_dispatch: # 支持爸爸手动一键点火
