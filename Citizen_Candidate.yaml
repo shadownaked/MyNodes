@@ -1,0 +1,1576 @@
+proxies:
+- server: 144.217.164.29
+  port: 12000
+  name: Node-240
+  type: ss
+  ping: 21
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 45.154.204.7
+  port: 990
+  name: Node-243
+  type: ss
+  ping: 22
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 23.95.76.59
+  port: 990
+  name: Node-248
+  type: ss
+  ping: 22
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 92.118.112.101
+  port: 9483
+  name: Node-250
+  type: ss
+  ping: 22
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 15.204.247.49
+  port: 12000
+  name: Node-251
+  type: ss
+  ping: 22
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: liad.maf-tahas.ir
+  port: 443
+  name: Node-399
+  type: ss
+  ping: 32
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 23.95.75.146
+  port: 443
+  name: Node-255
+  type: ss
+  ping: 33
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 71.19.148.143
+  port: 443
+  name: Node-246
+  type: ss
+  ping: 52
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 79.127.233.170
+  port: 990
+  name: Node-253
+  type: ss
+  ping: 62
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: pupas-shirting-unsung.freesocks.work
+  port: 443
+  name: Node-252
+  type: ss
+  ping: 95
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.131.42.19
+  port: 8390
+  name: Node-408
+  type: ss
+  ping: 113
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.95.106.127
+  port: 11201
+  name: Node-426
+  type: ss
+  ping: 116
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 151.101.9.80
+  port: 80
+  name: Node-401
+  type: ss
+  ping: 117
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.131.42.19
+  port: 8389
+  name: Node-407
+  type: ss
+  ping: 117
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.130.28.148
+  port: 11201
+  name: Node-416
+  type: ss
+  ping: 118
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.178.85.208
+  port: 8388
+  name: Node-403
+  type: ss
+  ping: 126
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.178.85.208
+  port: 8390
+  name: Node-405
+  type: ss
+  ping: 127
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.178.85.208
+  port: 8389
+  name: Node-404
+  type: ss
+  ping: 131
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.244.137.202
+  port: 45380
+  name: Node-410
+  type: ss
+  ping: 132
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 45.15.162.92
+  port: 64351
+  name: Node-430
+  type: ss
+  ping: 136
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.95.105.163
+  port: 11201
+  name: Node-466
+  type: ss
+  ping: 143
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 45.144.31.24
+  port: 443
+  name: Node-419
+  type: ss
+  ping: 152
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 135.125.245.131
+  port: 20939
+  name: Node-422
+  type: ss
+  ping: 153
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 148.113.138.47
+  port: 48704
+  name: Node-455
+  type: ss
+  ping: 153
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: admin.c2.havij.co
+  port: 443
+  name: Node-292
+  type: ss
+  ping: 155
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 157.185.173.60
+  port: 46727
+  name: Node-433
+  type: ss
+  ping: 156
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 95.142.47.40
+  port: 62238
+  name: Node-411
+  type: ss
+  ping: 161
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.90.62.145
+  port: 46577
+  name: Node-425
+  type: ss
+  ping: 188
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 46.38.143.212
+  port: 3020
+  name: Node-400
+  type: ss
+  ping: 213
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.103.245.32
+  port: 56000
+  name: Node-398
+  type: ss
+  ping: 219
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 89.44.197.181
+  port: 31348
+  name: Node-439
+  type: ss
+  ping: 229
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 5.181.2.73
+  port: 43248
+  name: Node-2542
+  type: ss
+  ping: 232
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.26.156.99
+  port: 47385
+  name: Node-418
+  type: ss
+  ping: 237
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.253.116.95
+  port: 16673
+  name: Node-454
+  type: ss
+  ping: 242
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.95.198
+  port: 11201
+  name: Node-459
+  type: ss
+  ping: 249
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 162.19.214.191
+  port: 59724
+  name: Node-463
+  type: ss
+  ping: 262
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 62.133.63.169
+  port: 37096
+  name: Node-447
+  type: ss
+  ping: 264
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 90.156.203.62
+  port: 5112
+  name: Node-449
+  type: ss
+  ping: 264
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 54.37.77.212
+  port: 11201
+  name: Node-467
+  type: ss
+  ping: 267
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.98.4.67
+  port: 52952
+  name: Node-442
+  type: ss
+  ping: 273
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 163.171.206.24
+  port: 44235
+  name: Node-427
+  type: ss
+  ping: 277
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 5.188.4.103
+  port: 11201
+  name: Node-451
+  type: ss
+  ping: 277
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.68.83.117
+  port: 11201
+  name: Node-468
+  type: ss
+  ping: 278
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 5.188.4.103
+  port: 11202
+  name: Node-452
+  type: ss
+  ping: 279
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 62.60.233.226
+  port: 62763
+  name: Node-438
+  type: ss
+  ping: 288
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 31.3.209.106
+  port: 46551
+  name: Node-440
+  type: ss
+  ping: 305
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.1.195.148
+  port: 8313
+  name: Node-2525
+  type: ss
+  ping: 315
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 62.133.63.21
+  port: 65262
+  name: Node-448
+  type: ss
+  ping: 316
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.254.142.162
+  port: 5223
+  name: Node-472
+  type: ss
+  ping: 319
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 77.233.212.134
+  port: 21978
+  name: Node-474
+  type: ss
+  ping: 325
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: basic-ru-1.undef.network
+  port: 33386
+  name: Node-428
+  type: ss
+  ping: 330
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.176
+  port: 8080
+  name: Node-475
+  type: ss
+  ping: 336
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.140.88
+  port: 8388
+  name: Node-480
+  type: ss
+  ping: 339
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.184
+  port: 8080
+  name: Node-476
+  type: ss
+  ping: 344
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.205
+  port: 8080
+  name: Node-478
+  type: ss
+  ping: 351
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.199
+  port: 8080
+  name: Node-477
+  type: ss
+  ping: 352
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.95.38
+  port: 11201
+  name: Node-469
+  type: ss
+  ping: 354
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.210
+  port: 8080
+  name: Node-479
+  type: ss
+  ping: 355
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: kazakhstan21.clearorbitllc.com
+  port: 46551
+  name: Node-441
+  type: ss
+  ping: 358
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.100.159.79
+  port: 443
+  name: Node-473
+  type: ss
+  ping: 368
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.101
+  port: 8080
+  name: Node-487
+  type: ss
+  ping: 372
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.122
+  port: 8080
+  name: Node-488
+  type: ss
+  ping: 374
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 31.3.209.182
+  port: 52323
+  name: Node-470
+  type: ss
+  ping: 376
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.89
+  port: 8080
+  name: Node-490
+  type: ss
+  ping: 381
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 62.133.60.60
+  port: 7048
+  name: Node-493
+  type: ss
+  ping: 385
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 173.244.56.9
+  port: 443
+  name: Node-505
+  type: ss
+  ping: 391
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.112.130.53
+  port: 8316
+  name: Node-481
+  type: ss
+  ping: 393
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 54.36.174.140
+  port: 443
+  name: Node-492
+  type: ss
+  ping: 396
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 145.249.109.121
+  port: 25512
+  name: Node-495
+  type: ss
+  ping: 404
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 54.36.174.134
+  port: 443
+  name: Node-491
+  type: ss
+  ping: 405
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 172.67.180.92
+  port: 443
+  name: Node-521
+  type: ss
+  ping: 406
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.112.130.53
+  port: 8319
+  name: Node-482
+  type: ss
+  ping: 407
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.112.130.53
+  port: 8313
+  name: Node-485
+  type: ss
+  ping: 407
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 109.201.152.181
+  port: 443
+  name: Node-497
+  type: ss
+  ping: 414
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 37.19.198.244
+  port: 443
+  name: Node-1911
+  type: ss
+  ping: 434
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 104.192.227.162
+  port: 443
+  name: Node-1926
+  type: ss
+  ping: 435
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.98.101.182
+  port: 443
+  name: Node-503
+  type: ss
+  ping: 436
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 64.227.144.190
+  port: 50690
+  name: Node-446
+  type: ss
+  ping: 437
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: kazakhstan25.clearorbitllc.com
+  port: 52323
+  name: Node-471
+  type: ss
+  ping: 440
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: python.org
+  port: 80
+  name: Node-517
+  type: ss
+  ping: 448
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 94.198.220.183
+  port: 64674
+  name: Node-494
+  type: ss
+  ping: 465
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.1.195.148
+  port: 8316
+  name: Node-483
+  type: ss
+  ping: 468
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 3.1.195.148
+  port: 8319
+  name: Node-484
+  type: ss
+  ping: 470
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 149.22.87.241
+  port: 443
+  name: Node-504
+  type: ss
+  ping: 481
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 216.105.168.18
+  port: 443
+  name: Node-1927
+  type: ss
+  ping: 483
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 146.70.61.37
+  port: 8080
+  name: Node-520
+  type: ss
+  ping: 488
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 80.87.202.50
+  port: 20
+  name: Node-507
+  type: ss
+  ping: 503
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.123.101.64
+  port: 2376
+  name: Node-512
+  type: ss
+  ping: 511
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.151
+  port: 8080
+  name: Node-1893
+  type: ss
+  ping: 515
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.121.229
+  port: 8443
+  name: Node-509
+  type: ss
+  ping: 541
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.235
+  port: 8080
+  name: Node-1966
+  type: ss
+  ping: 543
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 217.30.10.18
+  port: 9011
+  name: Node-1967
+  type: ss
+  ping: 550
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.244.8.155
+  port: 5004
+  name: Node-514
+  type: ss
+  ping: 554
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 134.255.210.49
+  port: 990
+  name: Node-1877
+  type: ss
+  ping: 566
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 147.135.77.6
+  port: 11201
+  name: Node-2249
+  type: ss
+  ping: 567
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.180.146.173
+  port: 30607
+  name: Node-498
+  type: ss
+  ping: 571
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.47.252.251
+  port: 990
+  name: Node-2020
+  type: ss
+  ping: 591
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 120.236.197.2
+  port: 32420
+  name: Node-519
+  type: ss
+  ping: 617
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 120.236.197.2
+  port: 22184
+  name: Node-518
+  type: ss
+  ping: 619
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.242.222.183
+  port: 11201
+  name: Node-2250
+  type: ss
+  ping: 649
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 78.129.140.11
+  port: 443
+  name: Node-2252
+  type: ss
+  ping: 659
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.186.155.58
+  port: 38388
+  name: Node-1995
+  type: ss
+  ping: 681
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.165.231.25
+  port: 990
+  name: Node-2260
+  type: ss
+  ping: 686
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.186.155.136
+  port: 38388
+  name: Node-1996
+  type: ss
+  ping: 688
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 37.143.129.98
+  port: 990
+  name: Node-2259
+  type: ss
+  ping: 692
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 107.181.147.235
+  port: 40521
+  name: Node-2253
+  type: ss
+  ping: 693
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.237.185.89
+  port: 990
+  name: Node-2257
+  type: ss
+  ping: 693
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 173.234.29.2
+  port: 990
+  name: Node-2440
+  type: ss
+  ping: 693
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 79.127.200.169
+  port: 990
+  name: Node-2439
+  type: ss
+  ping: 699
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.135.174.135
+  port: 990
+  name: Node-2255
+  type: ss
+  ping: 700
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 137.184.174.93
+  port: 8080
+  name: Node-2441
+  type: ss
+  ping: 709
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 37.19.198.236
+  port: 443
+  name: Node-2442
+  type: ss
+  ping: 716
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.146.38.167
+  port: 443
+  name: Node-2443
+  type: ss
+  ping: 716
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.146.38.170
+  port: 443
+  name: Node-2444
+  type: ss
+  ping: 721
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.146.38.169
+  port: 443
+  name: Node-2445
+  type: ss
+  ping: 722
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 194.116.173.21
+  port: 9038
+  name: Node-2452
+  type: ss
+  ping: 752
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.75.119.38
+  port: 990
+  name: Node-2256
+  type: ss
+  ping: 756
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 173.244.56.6
+  port: 443
+  name: Node-2446
+  type: ss
+  ping: 757
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 109.61.39.28
+  port: 990
+  name: Node-2258
+  type: ss
+  ping: 761
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 79.127.233.170
+  port: 989
+  name: Node-2447
+  type: ss
+  ping: 764
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.68.146.248
+  port: 10011
+  name: Node-2266
+  type: ss
+  ping: 768
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 45.15.185.70
+  port: 990
+  name: Node-2261
+  type: ss
+  ping: 775
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.54.97.247
+  port: 28026
+  name: Node-2254
+  type: ss
+  ping: 777
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: series-a2-me.varzesh360.co
+  port: 443
+  name: Node-2002
+  type: ss
+  ping: 779
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.98.101.179
+  port: 443
+  name: Node-2268
+  type: ss
+  ping: 781
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 194.233.73.51
+  port: 14453
+  name: Node-417
+  type: ss
+  ping: 799
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.99
+  port: 8080
+  name: Node-2449
+  type: ss
+  ping: 824
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.191
+  port: 8080
+  name: Node-2450
+  type: ss
+  ping: 829
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.82
+  port: 8080
+  name: Node-2451
+  type: ss
+  ping: 830
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.60.192.176
+  port: 990
+  name: Node-2262
+  type: ss
+  ping: 835
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: series-a2-me.samanehha.co
+  port: 443
+  name: Node-1958
+  type: ss
+  ping: 845
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 45.82.252.109
+  port: 990
+  name: Node-2263
+  type: ss
+  ping: 851
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.189
+  port: 8080
+  name: Node-2453
+  type: ss
+  ping: 859
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.179
+  port: 8080
+  name: Node-2454
+  type: ss
+  ping: 863
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.227
+  port: 8080
+  name: Node-2455
+  type: ss
+  ping: 864
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.141
+  port: 8080
+  name: Node-2456
+  type: ss
+  ping: 869
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.124
+  port: 8080
+  name: Node-2457
+  type: ss
+  ping: 872
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.218
+  port: 8080
+  name: Node-2458
+  type: ss
+  ping: 875
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 104.192.226.106
+  port: 989
+  name: Node-2466
+  type: ss
+  ping: 875
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.251
+  port: 8080
+  name: Node-2459
+  type: ss
+  ping: 883
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.202
+  port: 8080
+  name: Node-2460
+  type: ss
+  ping: 883
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.157
+  port: 8080
+  name: Node-2461
+  type: ss
+  ping: 886
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.187
+  port: 8080
+  name: Node-2462
+  type: ss
+  ping: 888
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.217
+  port: 8080
+  name: Node-2463
+  type: ss
+  ping: 906
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: i.maxpn.top
+  port: 2083
+  name: Node-523
+  type: ss
+  ping: 913
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.208
+  port: 8080
+  name: Node-2464
+  type: ss
+  ping: 932
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.179
+  port: 8080
+  name: Node-2465
+  type: ss
+  ping: 937
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.217
+  port: 8080
+  name: Node-2467
+  type: ss
+  ping: 942
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.194
+  port: 8080
+  name: Node-2468
+  type: ss
+  ping: 952
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 51.159.106.175
+  port: 989
+  name: Node-2469
+  type: ss
+  ping: 955
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 138.186.142.80
+  port: 990
+  name: Node-2478
+  type: ss
+  ping: 961
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.206
+  port: 8080
+  name: Node-2470
+  type: ss
+  ping: 962
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 138.186.142.81
+  port: 990
+  name: Node-2477
+  type: ss
+  ping: 962
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 193.29.139.202
+  port: 8080
+  name: Node-2471
+  type: ss
+  ping: 967
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.214
+  port: 8080
+  name: Node-2475
+  type: ss
+  ping: 980
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 121.127.46.147
+  port: 989
+  name: Node-2473
+  type: ss
+  ping: 989
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: staging.lastilhame.monster
+  port: 49917
+  name: Node-2264
+  type: ss
+  ping: 1004
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 46.183.217.204
+  port: 990
+  name: Node-2480
+  type: ss
+  ping: 1004
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: media.mothyleela.cfd
+  port: 40521
+  name: Node-2265
+  type: ss
+  ping: 1019
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 89.223.93.176
+  port: 41348
+  name: Node-2482
+  type: ss
+  ping: 1020
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 176.123.5.253
+  port: 990
+  name: Node-2481
+  type: ss
+  ping: 1024
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 172.105.199.111
+  port: 8080
+  name: Node-2479
+  type: ss
+  ping: 1026
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 149.22.87.204
+  port: 443
+  name: Node-2483
+  type: ss
+  ping: 1048
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.98.101.178
+  port: 443
+  name: Node-2494
+  type: ss
+  ping: 1054
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 192.36.27.94
+  port: 989
+  name: Node-2510
+  type: ss
+  ping: 1071
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.54.20.59
+  port: 8881
+  name: Node-2490
+  type: ss
+  ping: 1079
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 195.154.119.77
+  port: 989
+  name: Node-2514
+  type: ss
+  ping: 1095
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 216.250.97.82
+  port: 38388
+  name: Node-2486
+  type: ss
+  ping: 1114
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.165.233.93
+  port: 989
+  name: Node-2511
+  type: ss
+  ping: 1124
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 171.22.254.17
+  port: 989
+  name: Node-2516
+  type: ss
+  ping: 1130
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 213.109.147.242
+  port: 62685
+  name: Node-2522
+  type: ss
+  ping: 1132
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 68.183.227.4
+  port: 8080
+  name: Node-2485
+  type: ss
+  ping: 1135
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 147.78.0.182
+  port: 990
+  name: Node-2489
+  type: ss
+  ping: 1136
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.38.168.58
+  port: 990
+  name: Node-2484
+  type: ss
+  ping: 1150
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 46.183.185.37
+  port: 989
+  name: Node-2517
+  type: ss
+  ping: 1154
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 176.123.1.175
+  port: 990
+  name: Node-2513
+  type: ss
+  ping: 1174
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 147.78.1.230
+  port: 989
+  name: Node-2528
+  type: ss
+  ping: 1186
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.90.63.177
+  port: 989
+  name: Node-2521
+  type: ss
+  ping: 1193
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 138.186.143.32
+  port: 989
+  name: Node-2526
+  type: ss
+  ping: 1194
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 147.78.1.230
+  port: 990
+  name: Node-2531
+  type: ss
+  ping: 1199
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.54.57.90
+  port: 989
+  name: Node-2524
+  type: ss
+  ping: 1200
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.90.62.168
+  port: 989
+  name: Node-2520
+  type: ss
+  ping: 1203
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 136.244.100.113
+  port: 443
+  name: Node-437
+  type: ss
+  ping: 1205
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 138.186.143.32
+  port: 990
+  name: Node-2527
+  type: ss
+  ping: 1210
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.164.45.187
+  port: 7001
+  name: Node-2523
+  type: ss
+  ping: 1213
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.180.146.173
+  port: 35652
+  name: Node-2501
+  type: ss
+  ping: 1217
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.47.255.22
+  port: 989
+  name: Node-2541
+  type: ss
+  ping: 1252
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 192.71.249.78
+  port: 989
+  name: Node-2535
+  type: ss
+  ping: 1253
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.60.247.151
+  port: 990
+  name: Node-2532
+  type: ss
+  ping: 1265
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.60.223.8
+  port: 989
+  name: Node-2530
+  type: ss
+  ping: 1267
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.89.142.56
+  port: 990
+  name: Node-2512
+  type: ss
+  ping: 1282
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: fr1.ssobfs.site
+  port: 1443
+  name: Node-443
+  type: ss
+  ping: 1293
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: mx2.drawnrisha.one
+  port: 55988
+  name: Node-2518
+  type: ss
+  ping: 1299
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.223.20.79
+  port: 989
+  name: Node-2534
+  type: ss
+  ping: 1324
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.106.228.247
+  port: 990
+  name: Node-2539
+  type: ss
+  ping: 1326
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.93.173.60
+  port: 990
+  name: Node-2537
+  type: ss
+  ping: 1328
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 192.71.244.150
+  port: 989
+  name: Node-2545
+  type: ss
+  ping: 1328
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 188.214.157.58
+  port: 990
+  name: Node-2544
+  type: ss
+  ping: 1335
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 37.143.130.203
+  port: 990
+  name: Node-2538
+  type: ss
+  ping: 1357
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 221.139.79.57
+  port: 13979
+  name: Node-2548
+  type: ss
+  ping: 1387
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.60.250.107
+  port: 990
+  name: Node-2556
+  type: ss
+  ping: 1390
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 154.70.207.97
+  port: 990
+  name: Node-2533
+  type: ss
+  ping: 1404
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.54.59.180
+  port: 990
+  name: Node-2543
+  type: ss
+  ping: 1404
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 82.38.31.61
+  port: 8080
+  name: Node-489
+  type: ss
+  ping: 1430
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 188.214.157.30
+  port: 990
+  name: Node-2251
+  type: ss
+  ping: 1431
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 218.237.185.230
+  port: 4652
+  name: Node-2555
+  type: ss
+  ping: 1436
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 156.59.243.6
+  port: 990
+  name: Node-2540
+  type: ss
+  ping: 1437
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 95.174.68.33
+  port: 443
+  name: Node-2549
+  type: ss
+  ping: 1443
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: de.mobileemdad.top
+  port: 42542
+  name: Node-524
+  type: ss
+  ping: 1447
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: promo18v.bystrivpn.ru
+  port: 443
+  name: Node-461
+  type: ss
+  ping: 1504
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 134.209.147.198
+  port: 989
+  name: Node-2557
+  type: ss
+  ping: 1540
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.231.233.112
+  port: 989
+  name: Node-2558
+  type: ss
+  ping: 1548
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 103.97.203.227
+  port: 990
+  name: Node-2559
+  type: ss
+  ping: 1556
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: p141.panda001.net
+  port: 4652
+  name: Node-2552
+  type: ss
+  ping: 2167
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: exchange.gameaurela.click
+  port: 52952
+  name: Node-2553
+  type: ss
+  ping: 2560
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 163.171.137.76
+  port: 47394
+  name: Node-2597
+  type: ss
+  ping: 2701
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 54.37.78.130
+  port: 11201
+  name: Node-2598
+  type: ss
+  ping: 2812
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 38.54.29.130
+  port: 11204
+  name: Node-2600
+  type: ss
+  ping: 2952
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.95.101.202
+  port: 11201
+  name: Node-2601
+  type: ss
+  ping: 3064
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.69.122
+  port: 27130
+  name: Node-2602
+  type: ss
+  ping: 3170
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.5.38.111
+  port: 55988
+  name: Node-2515
+  type: ss
+  ping: 3184
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 185.163.1.90
+  port: 11201
+  name: Node-2606
+  type: ss
+  ping: 3221
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 46.246.97.195
+  port: 23931
+  name: Node-431
+  type: ss
+  ping: 3234
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 141.95.101.9
+  port: 11201
+  name: Node-2607
+  type: ss
+  ping: 3295
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
+- server: 57.129.35.242
+  port: 11201
+  name: Node-2609
+  type: ss
+  ping: 3331
+  fail_count: 0
+  last_seen: 2026-02-11 12:30
