@@ -8,7 +8,7 @@ name: 西点军校v2.2-全自动炼化厂
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'  # 北京时间：06:00, 12:00, 18:00, 00:00 自动巡逻
+    - cron: '0 22 * * *'  # - cron: '0 */6 * * *' 北京时间：06:00, 12:00, 18:00, 00:00 自动巡逻
 
 jobs:
   refine_process:
