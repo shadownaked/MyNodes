@@ -2,393 +2,355 @@ proxies:
   - {name: "Node-3", type: ss, server: 82.38.31.204, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
   - {name: "Node-4", type: ss, server: 82.38.31.155, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
   - {name: "Node-5", type: ss, server: 82.38.31.176, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-35", type: ss, server: 172.67.2.238, port: 80, cipher: 0fb53a60-2372-412a-a693-5157b58ecc94, password: ""}
-  - {name: "Node-36", type: ss, server: 46.38.143.236, port: 60633, cipher: 2022-blake3-chacha20-poly1305, password: "HnzIN1CLGGEh+mD/uzbbvTQc/Alq+hkmrC7Po3D4k4E=7"}
-  - {name: "Node-37", type: ss, server: 80.91.86.179, port: 1070, cipher: 2022-blake3-aes-256-gcm, password: "5MnYSugw6Dp/r4HIhoRkoQI6jM3SwL9+i7GNRLxBWHo="}
-  - {name: "Node-38", type: ss, server: 65.109.219.124, port: 18269, cipher: 2022-blake3-aes-256-gcm, password: "uXSgW2m4sbfoYckTbFiGnaVnP1ygIULi12LPQvUZNjM="}
-  - {name: "Node-39", type: ss, server: 172.67.204.84, port: 443, cipher: 68a79909-65f2-4341-942e-ad75a6bd33f8, password: ""}
-  - {name: "Node-40", type: ss, server: e1.cover20.ir, port: 51570, cipher: chacha20-ietf-poly1305, password: "4KRL+3VEsmo6uKND1pwQ6m+baVdOgS3GZ11o/wWKDbA="}
-  - {name: "Node-41", type: ss, server: 205.134.180.151, port: 443, cipher: chacha20-ietf-poly1305, password: "5cp9Z3iWnJZ27"}
-  - {name: "Node-42", type: ss, server: 146.19.233.101, port: 29682, cipher: chacha20-ietf-poly1305, password: "6rlDIHwxyC4OQaKFLX2RAq"}
-  - {name: "Node-43", type: ss, server: 81.19.141.45, port: 52873, cipher: chacha20-ietf-poly1305, password: "6w4fBeiyxWotb5PXQrlrws"}
-  - {name: "Node-44", type: ss, server: 89.223.88.33, port: 11201, cipher: chacha20-ietf-poly1305, password: "7c31a67b41b18c26"}
-  - {name: "Node-45", type: ss, server: r3mrcg001286ek2.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {name: "Node-46", type: ss, server: r3mrcg001287h3p.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c47"}
-  - {name: "Node-47", type: ss, server: 89.44.193.112, port: 51348, cipher: chacha20-ietf-poly1305, password: "04yG0sOWSRVSlid9mfKUmmj8U4XgVlodu4oSRU90ey2e0CQ27"}
-  - {name: "Node-48", type: ss, server: 57.129.51.113, port: 1080, cipher: chacha20-ietf-poly1305, password: "0SSToqsKovTS52_nObMuMw"}
-  - {name: "Node-49", type: ss, server: coco2.farajet.net, port: 2020, cipher: chacha20-ietf-poly1305, password: "0u47xJvp2_pGbA5c13ASHK87DxDwk5zm"}
-  - {name: "Node-50", type: ss, server: 51.89.119.213, port: 11201, cipher: chacha20-ietf-poly1305, password: "15b0573830081d01"}
-  - {name: "Node-51", type: ss, server: 45.87.175.178, port: 8080, cipher: chacha20-ietf-poly1305, password: "1RWwXhwfAB5gAEozU4G2Pg"}
-  - {name: "Node-52", type: ss, server: 45.87.175.199, port: 8080, cipher: chacha20-ietf-poly1305, password: "1RWwXhwfAB5gAEozU4G2Pg"}
-  - {name: "Node-53", type: ss, server: 20.166.58.64, port: 443, cipher: chacha20-ietf-poly1305, password: "217Fg9zpgpVS4DGE"}
-  - {name: "Node-54", type: ss, server: 185.5.38.89, port: 57327, cipher: chacha20-ietf-poly1305, password: "2KAu9eMmGwShWTWcuyynmLE81PVkoKDvQ3fb29dPScc1bMUW5y6hpprXqVWqSqjTi234hFGdDf3ArCuWtBw5FA6zV5wBgWTP"}
-  - {name: "Node-55", type: ss, server: 80.242.58.174, port: 14249, cipher: chacha20-ietf-poly1305, password: "3GNhODxPaSK9z2E82pzI1b"}
-  - {name: "Node-56", type: ss, server: 3.28.80.139, port: 443, cipher: chacha20-ietf-poly1305, password: "u17T3BvpYaaiuW2c"}
-  - {name: "Node-57", type: ss, server: 63.181.37.22, port: 1001, cipher: chacha20-ietf-poly1305, password: "uDkIuiUYqxcyREXrmkB_Dg"}
-  - {name: "Node-58", type: ss, server: 57.129.121.230, port: 10443, cipher: chacha20-ietf-poly1305, password: "uROuEqsL8IUMMVb4wDwnGU"}
-  - {name: "Node-59", type: ss, server: 20.107.187.192, port: 443, cipher: chacha20-ietf-poly1305, password: "nHCcsXK2rEcs9lRi"}
-  - {name: "Node-60", type: ss, server: batman4.kovira2.ir, port: 25026, cipher: chacha20-ietf-poly1305, password: "xha7ina7ws1ws6yx"}
-  - {name: "Node-61", type: ss, server: soskeynets.kovira2.ir, port: 25026, cipher: chacha20-ietf-poly1305, password: "xha7ina7ws1ws6yx"}
-  - {name: "Node-62", type: ss, server: 194.164.92.198, port: 1234, cipher: chacha20-ietf-poly1305, password: "zz0dHjDfoaSaZuRFLGH-hNfBALSEJUYD"}
-  - {name: "Node-63", type: ss, server: 185.213.23.63, port: 990, cipher: chacha20-ietf-poly1305, password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {name: "Node-64", type: ss, server: 15.184.213.65, port: 443, cipher: chacha20-ietf-poly1305, password: "Bog0ELmMM9DSxDdQ"}
-  - {name: "Node-65", type: ss, server: 108.181.58.239, port: 8388, cipher: chacha20-ietf-poly1305, password: "CJmTCCx7Ltud7"}
-  - {name: "Node-66", type: ss, server: 185.172.113.182, port: 804, cipher: chacha20-ietf-poly1305, password: "G!yBwPWH3Vao7"}
-  - {name: "Node-67", type: ss, server: 185.172.113.182, port: 810, cipher: chacha20-ietf-poly1305, password: "G!yBwPWH3Vao7"}
-  - {name: "Node-68", type: ss, server: 51.178.87.37, port: 810, cipher: chacha20-ietf-poly1305, password: "G!yBwPWH3Vao7"}
-  - {name: "Node-69", type: ss, server: 108.181.0.177, port: 8388, cipher: chacha20-ietf-poly1305, password: "G5p6ww4o67HB7"}
-  - {name: "Node-70", type: ss, server: 98.71.82.228, port: 443, cipher: chacha20-ietf-poly1305, password: "juTczuCI9LbM8MUw"}
-  - {name: "Node-71", type: ss, server: 141.11.187.119, port: 1080, cipher: chacha20-ietf-poly1305, password: "GL2TepNTtcINV9DZVvHihA"}
-  - {name: "Node-72", type: ss, server: 20.164.116.218, port: 443, cipher: chacha20-ietf-poly1305, password: "GTSymW4ysHcaqH70"}
-  - {name: "Node-73", type: ss, server: 20.223.136.202, port: 443, cipher: chacha20-ietf-poly1305, password: "HeC2HzINHb4SUY8S"}
-  - {name: "Node-74", type: ss, server: 194.87.45.189, port: 40076, cipher: chacha20-ietf-poly1305, password: "KEgJ7F4qtfxt0byzKONI5s"}
-  - {name: "Node-75", type: ss, server: 62.133.63.169, port: 37096, cipher: chacha20-ietf-poly1305, password: "Y5EJZojVMENvkDVFYliEqE"}
-  - {name: "Node-76", type: ss, server: 192.248.180.96, port: 1080, cipher: chacha20-ietf-poly1305, password: "LXMsoygg8tcTSYSbTr6ttA"}
-  - {name: "Node-77", type: ss, server: 168.63.68.5, port: 443, cipher: chacha20-ietf-poly1305, password: "MfUPdkoEXSwf6JuM"}
-  - {name: "Node-78", type: ss, server: switcher-nick-croquet.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "9tqhMdIrTkgQ46PvhyAtMH"}
-  - {name: "Node-79", type: ss, server: 77.83.246.74, port: 33320, cipher: chacha20-ietf-poly1305, password: "RWQ5Ba6wPBaQjqFq1hDSx0"}
-  - {name: "Node-80", type: ss, server: 20.223.208.167, port: 443, cipher: chacha20-ietf-poly1305, password: "ScZd18TGj83TS1Wo"}
-  - {name: "Node-81", type: ss, server: 147.45.124.227, port: 30488, cipher: chacha20-ietf-poly1305, password: "SlJ5hitSE4MftV9eZHRtpZ"}
-  - {name: "Node-82", type: ss, server: 20.254.21.147, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
-  - {name: "Node-83", type: ss, server: admin.c1.webramz.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
-  - {name: "Node-84", type: ss, server: series-a1.samanehha.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
-  - {name: "Node-85", type: ss, server: series-a2.samanehha.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
-  - {name: "Node-86", type: ss, server: 108.181.121.226, port: 8388, cipher: chacha20-ietf-poly1305, password: "WSyL4XTwNsdv"}
-  - {name: "Node-87", type: ss, server: 188.41.249.20, port: 1080, cipher: chacha20-ietf-poly1305, password: "XFPpyuqk3H0Y8JVpVGqSJw"}
-  - {name: "Node-88", type: ss, server: tu1.levikogjgfdd.ir, port: 1080, cipher: chacha20-ietf-poly1305, password: "XFPpyuqk3H0Y8JVpVGqSJw"}
-  - {name: "Node-89", type: ss, server: 188.212.132.20, port: 52952, cipher: chacha20-ietf-poly1305, password: "XRUwpkSouW5HCTUFUxErfnL5AmahofrjznVrAu2iNFMFGUCrChznAULhuHGAQdC463mzcgo2jV546Ut5HKhk3pz956cHYYyc7"}
-  - {name: "Node-90", type: ss, server: 20.164.216.112, port: 443, cipher: chacha20-ietf-poly1305, password: "Y1YSWNVWfufolplK"}
-  - {name: "Node-91", type: ss, server: 216.105.168.19, port: 443, cipher: chacha20-ietf-poly1305, password: "Yq42Vx56a2SghCnLtOyOCF"}
-  - {name: "Node-92", type: ss, server: 193.124.46.226, port: 1080, cipher: chacha20-ietf-poly1305, password: "Zs07P91U4EfRisMNm8p7SQ"}
-  - {name: "Node-93", type: ss, server: 4.210.67.30, port: 443, cipher: chacha20-ietf-poly1305, password: "sCw2bhRZmJhpmgrL"}
-  - {name: "Node-94", type: ss, server: 213.156.137.142, port: 43659, cipher: chacha20-ietf-poly1305, password: "a8201bbd740420bb"}
-  - {name: "Node-95", type: ss, server: 125.224.227.94, port: 50099, cipher: chacha20-ietf-poly1305, password: "a9a0d092-6f0e-4701-81ee-454643d6d5067"}
-  - {name: "Node-96", type: ss, server: 104.156.233.234, port: 27116, cipher: chacha20-ietf-poly1305, password: "bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E"}
-  - {name: "Node-97", type: ss, server: 213.156.137.142, port: 43660, cipher: chacha20-ietf-poly1305, password: "cc27a3012d81a44c"}
-  - {name: "Node-98", type: ss, server: 102.129.229.85, port: 31700, cipher: chacha20-ietf-poly1305, password: "d7zh2lMrXNH5+8+8pKzlxiCU9NN022ih+uAyxj5d4qo="}
-  - {name: "Node-99", type: ss, server: 20.107.197.108, port: 443, cipher: chacha20-ietf-poly1305, password: "dNJkXSaaUL3JWz4b"}
-  - {name: "Node-100", type: ss, server: 137.74.119.18, port: 10443, cipher: chacha20-ietf-poly1305, password: "diOMBU5IDvJcFqyNPbRjYR"}
-  - {name: "Node-101", type: ss, server: 167.99.216.236, port: 50250, cipher: chacha20-ietf-poly1305, password: "dztoRRL2VPJrNpy4XlNFt1"}
-  - {name: "Node-102", type: ss, server: 94.131.123.86, port: 35361, cipher: chacha20-ietf-poly1305, password: "g0UgfsdXOhn8McpdHpWcmo"}
-  - {name: "Node-103", type: ss, server: tinkered-pennies-puppies.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "hbGrpfvNrJsUmKmPbR3iY2"}
-  - {name: "Node-104", type: ss, server: 205.134.180.145, port: 443, cipher: chacha20-ietf-poly1305, password: "hgLCgfLRgB6d7"}
-  - {name: "Node-105", type: ss, server: 178.128.86.181, port: 51435, cipher: chacha20-ietf-poly1305, password: "i8asar9lrxhavh38"}
-  - {name: "Node-106", type: ss, server: e4.cover20.ir, port: 16156, cipher: chacha20-ietf-poly1305, password: "jVPjyNGgOAfv4b4e8dUK693et27aKkLJp1TxTRUIgHs="}
-  - {name: "Node-107", type: ss, server: mmd.radanjami.org, port: 37309, cipher: chacha20-ietf-poly1305, password: "jjmjdvnkfy9al8jb"}
-  - {name: "Node-108", type: ss, server: 193.29.139.198, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-109", type: ss, server: 193.29.139.223, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-110", type: ss, server: 82.38.31.183, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-111", type: ss, server: 82.38.31.185, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-112", type: ss, server: 82.38.31.186, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-113", type: ss, server: 82.38.31.187, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-114", type: ss, server: 82.38.31.189, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-115", type: ss, server: 82.38.31.190, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-116", type: ss, server: 82.38.31.192, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-117", type: ss, server: 82.38.31.193, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-118", type: ss, server: 82.38.31.198, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-119", type: ss, server: 82.38.31.199, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-120", type: ss, server: 82.38.31.200, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-121", type: ss, server: 82.38.31.202, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-122", type: ss, server: 82.38.31.203, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-123", type: ss, server: 82.38.31.205, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-124", type: ss, server: 82.38.31.206, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-125", type: ss, server: 82.38.31.207, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-126", type: ss, server: 82.38.31.208, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-127", type: ss, server: 82.38.31.210, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-128", type: ss, server: 82.38.31.211, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-129", type: ss, server: 82.38.31.212, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-130", type: ss, server: 82.38.31.214, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-131", type: ss, server: 82.38.31.215, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-132", type: ss, server: 82.38.31.216, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-133", type: ss, server: 82.38.31.218, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-134", type: ss, server: 82.38.31.219, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-135", type: ss, server: 57.129.140.88, port: 8388, cipher: chacha20-ietf-poly1305, password: "k1v5g9FefdoO"}
-  - {name: "Node-136", type: ss, server: 20.108.15.110, port: 443, cipher: chacha20-ietf-poly1305, password: "kaQH3hGdcP80XEDI"}
-  - {name: "Node-137", type: ss, server: admin.c2.havij.co, port: 443, cipher: chacha20-ietf-poly1305, password: "kaQH3hGdcP80XEDI"}
-  - {name: "Node-138", type: ss, server: 141.98.169.248, port: 25757, cipher: chacha20-ietf-poly1305, password: "kywNKLOlAakmgRxa9xqvHU"}
-  - {name: "Node-139", type: ss, server: 20.107.208.165, port: 443, cipher: chacha20-ietf-poly1305, password: "l0nfi2bLizWdG117"}
-  - {name: "Node-140", type: ss, server: 205.134.180.139, port: 443, cipher: chacha20-ietf-poly1305, password: "lWaGPVFjmnag7"}
-  - {name: "Node-141", type: ss, server: 128.251.12.23, port: 443, cipher: chacha20-ietf-poly1305, password: "lghX3rcG7bqSQ8L6"}
-  - {name: "Node-142", type: ss, server: 3.112.130.53, port: 8316, cipher: chacha20-ietf-poly1305, password: "ljqdalu13.."}
-  - {name: "Node-143", type: ss, server: 13.41.90.159, port: 443, cipher: chacha20-ietf-poly1305, password: "mps3FwmDjLrWaOVg"}
-  - {name: "Node-144", type: ss, server: 89.23.103.21, port: 51584, cipher: chacha20-ietf-poly1305, password: "oYQ8JwEldYn4KT2gfZ6eNl"}
-  - {name: "Node-145", type: ss, server: 193.29.139.144, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-146", type: ss, server: 193.29.139.204, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-147", type: ss, server: 82.38.31.10, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-148", type: ss, server: 82.38.31.11, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-149", type: ss, server: 82.38.31.122, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-150", type: ss, server: 82.38.31.162, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-151", type: ss, server: 82.38.31.164, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-152", type: ss, server: 82.38.31.174, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-153", type: ss, server: 82.38.31.18, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-154", type: ss, server: 82.38.31.32, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-155", type: ss, server: 82.38.31.35, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-156", type: ss, server: 82.38.31.35, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-157", type: ss, server: 82.38.31.39, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-158", type: ss, server: 82.38.31.3, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-159", type: ss, server: 82.38.31.47, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-160", type: ss, server: 82.38.31.57, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-161", type: ss, server: 82.38.31.7, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-162", type: ss, server: 82.38.31.9, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-163", type: ss, server: 109.122.251.86, port: 20700, cipher: chacha20-ietf-poly1305, password: "pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa"}
-  - {name: "Node-164", type: ss, server: 20.164.210.215, port: 443, cipher: chacha20-ietf-poly1305, password: "pUYJnwYMpalrqy9L"}
-  - {name: "Node-165", type: ss, server: 140.174.184.5, port: 8388, cipher: chacha20-ietf-poly1305, password: "qItG8SueYQcP"}
-  - {name: "Node-166", type: ss, server: 20.223.176.12, port: 443, cipher: chacha20-ietf-poly1305, password: "rCgmq658vc2ej3SE"}
-  - {name: "Node-167", type: ss, server: 38.54.80.160, port: 16292, cipher: chacha20-ietf-poly1305, password: "r_NRe-+WRq2zVqMpCnJtTESlT8WyffHyFy"}
-  - {name: "Node-168", type: ss, server: 77.91.123.173, port: 18332, cipher: chacha20-ietf-poly1305, password: "rdJmGi2CT1xUnXE3hAZHJE"}
-  - {name: "Node-169", type: ss, server: 20.87.210.108, port: 443, cipher: chacha20-ietf-poly1305, password: "ssLTldyF3CUrQvwP"}
-  - {name: "Node-170", type: ss, server: 78.38.246.150, port: 8446, cipher: chacha20-poly1305, password: "6e3e43f4-12b7-42f1-8b93-41a152d5612d"}
-  - {name: "Node-171", type: ss, server: 184.170.241.194, port: 443, cipher: aes-128-cfb, password: "shadowsocks7"}
-  - {name: "Node-172", type: ss, server: didiaosanwan.fkfkd.cn, port: 11696, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
-  - {name: "Node-173", type: ss, server: didiaosanwan.fkfkd.cn, port: 22039, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
-  - {name: "Node-174", type: ss, server: didiaosanwan.fkfkd.cn, port: 27186, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
-  - {name: "Node-175", type: ss, server: didiaosanwan.fkfkd.cn, port: 29586, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
-  - {name: "Node-176", type: ss, server: 127.0.0.1, port: 443, cipher: aes-128-gcm, password: "6601fb90e9b3"}
-  - {name: "Node-177", type: ss, server: 86.106.84.196, port: 13263, cipher: aes-128-gcm, password: "lvxuj11x8sfgt9gt6mjf7"}
-  - {name: "Node-178", type: ss, server: 141.98.101.181, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-179", type: ss, server: 149.22.87.204, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-180", type: ss, server: 149.22.87.240, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-181", type: ss, server: 149.22.87.241, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-182", type: ss, server: 156.146.38.167, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-183", type: ss, server: 156.146.62.162, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-184", type: ss, server: 173.244.56.9, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-185", type: ss, server: 212.102.53.198, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-186", type: ss, server: 37.19.198.160, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-187", type: ss, server: 141.98.101.178, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-188", type: ss, server: 158.173.20.171, port: 443, cipher: aes-128-gcm, password: "shadowsocks"}
-  - {name: "Node-189", type: ss, server: 158.173.20.208, port: 443, cipher: aes-128-gcm, password: "shadowsocks"}
-  - {name: "Node-190", type: ss, server: 37.19.198.236, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-191", type: ss, server: 45.89.52.66, port: 9041, cipher: aes-256-cfb, password: "U6qnYRhfyDmn8sgn"}
-  - {name: "Node-192", type: ss, server: 163.172.64.22, port: 989, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
-  - {name: "Node-193", type: ss, server: 192.71.249.78, port: 989, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
-  - {name: "Node-194", type: ss, server: 195.154.185.174, port: 989, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
-  - {name: "Node-195", type: ss, server: 46.183.185.15, port: 989, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
-  - {name: "Node-196", type: ss, server: 45.89.52.66, port: 9040, cipher: aes-256-cfb, password: "p9z5BVADH2YFs3MN"}
-  - {name: "Node-197", type: ss, server: 162.19.25.207, port: 34232, cipher: aes-256-gcm, password: "3b9ktZGztC"}
-  - {name: "Node-198", type: ss, server: 185.22.154.254, port: 6018, cipher: aes-256-gcm, password: "32c0ea6e823341a2"}
-  - {name: "Node-199", type: ss, server: 46.29.163.30, port: 30129, cipher: aes-256-gcm, password: "32c0ea6e823341a2"}
-  - {name: "Node-200", type: ss, server: 212.192.13.214, port: 30129, cipher: aes-256-gcm, password: "7e1dd4c55bf85da5"}
-  - {name: "Node-201", type: ss, server: 212.192.15.59, port: 1092, cipher: aes-256-gcm, password: "7e1dd4c55bf85da5"}
-  - {name: "Node-202", type: ss, server: 94.183.124.95, port: 82, cipher: aes-256-gcm, password: "EMIruFl6nN37LDQxCIwstG09haCBkyjvZVjWIMOQ0Jk="}
-  - {name: "Node-203", type: ss, server: 15.204.87.225, port: 7306, cipher: aes-256-gcm, password: "FoOiGlkAA9yPEGP"}
-  - {name: "Node-204", type: ss, server: 15.204.87.222, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-205", type: ss, server: 23.157.40.120, port: 8000, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-206", type: ss, server: 23.157.40.120, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-207", type: ss, server: 38.68.134.9, port: 5500, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-208", type: ss, server: 51.77.53.200, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-209", type: ss, server: 185.196.61.82, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-210", type: ss, server: 194.87.10.37, port: 8388, cipher: aes-256-gcm, password: "IevNoGNQJV6L"}
-  - {name: "Node-211", type: ss, server: 0.0.0.0, port: 443, cipher: aes-256-gcm, password: "Leviko_v2ray"}
-  - {name: "Node-212", type: ss, server: 95.38.186.235, port: 11116, cipher: aes-256-gcm, password: "MTRkMDQ3YmQzYzU1ZGVhMmRmODIyNzAwYmYwZWI5"}
-  - {name: "Node-213", type: ss, server: 37.32.10.251, port: 9114, cipher: aes-256-gcm, password: "NDI4MjYwOWJmYzJhZTliMTFmZjRkZjA3YjQ3M2Jk"}
-  - {name: "Node-214", type: ss, server: 95.38.186.235, port: 9130, cipher: aes-256-gcm, password: "NzgxNzEwODFhNTcwNjMwZjRhYTRkM2EwMGUyYTM3"}
-  - {name: "Node-215", type: ss, server: 23.157.40.5, port: 8091, cipher: aes-256-gcm, password: "PCnnH6SQSnfoS27"}
-  - {name: "Node-216", type: ss, server: 141.164.45.187, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
-  - {name: "Node-217", type: ss, server: 38.114.114.69, port: 7002, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
-  - {name: "Node-218", type: ss, server: 69.50.95.124, port: 6697, cipher: aes-256-gcm, password: "TEzjfAYq2IjtuoS"}
-  - {name: "Node-219", type: ss, server: 212.192.13.95, port: 8388, cipher: aes-256-gcm, password: "VJescVWup8PR"}
-  - {name: "Node-220", type: ss, server: 142.202.49.84, port: 8008, cipher: aes-256-gcm, password: "XKFKl2rULjIp747"}
-  - {name: "Node-221", type: ss, server: 23.157.40.120, port: 8008, cipher: aes-256-gcm, password: "XKFKl2rULjIp747"}
-  - {name: "Node-222", type: ss, server: 23.157.40.120, port: 8009, cipher: aes-256-gcm, password: "XKFKl2rULjIp747"}
-  - {name: "Node-223", type: ss, server: 142.202.49.111, port: 5000, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-224", type: ss, server: 15.204.87.225, port: 9090, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-225", type: ss, server: 23.150.152.24, port: 5600, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-226", type: ss, server: 38.110.1.105, port: 5601, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-227", type: ss, server: 38.121.43.71, port: 3306, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-228", type: ss, server: 38.121.43.71, port: 3389, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-229", type: ss, server: 38.143.66.87, port: 3389, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-230", type: ss, server: 38.75.136.21, port: 5000, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-231", type: ss, server: 69.50.93.10, port: 9090, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-232", type: ss, server: 69.50.93.80, port: 3306, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-233", type: ss, server: 69.50.95.86, port: 8888, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-234", type: ss, server: 92.118.205.211, port: 5600, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
-  - {name: "Node-235", type: ss, server: 212.192.13.126, port: 8388, cipher: aes-256-gcm, password: "YiqNxOsg30MS"}
-  - {name: "Node-236", type: ss, server: 23.157.40.120, port: 8119, cipher: aes-256-gcm, password: "cdBIDV42DCwnfIN"}
-  - {name: "Node-237", type: ss, server: 38.121.43.71, port: 8119, cipher: aes-256-gcm, password: "cdBIDV42DCwnfIN"}
-  - {name: "Node-238", type: ss, server: 38.180.113.194, port: 8119, cipher: aes-256-gcm, password: "cdBIDV42DCwnfIN"}
-  - {name: "Node-239", type: ss, server: 38.68.134.9, port: 8119, cipher: aes-256-gcm, password: "cdBIDV42DCwnfIN"}
-  - {name: "Node-240", type: ss, server: 46.29.163.176, port: 30888, cipher: aes-256-gcm, password: "b24a80e79cee1d1f"}
-  - {name: "Node-241", type: ss, server: 38.114.114.69, port: 9102, cipher: aes-256-gcm, password: "e4FCWrgpkji3QY7"}
-  - {name: "Node-242", type: ss, server: 23.154.136.247, port: 2376, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
-  - {name: "Node-243", type: ss, server: 23.157.88.61, port: 2376, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
-  - {name: "Node-244", type: ss, server: 38.121.43.71, port: 2375, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
-  - {name: "Node-245", type: ss, server: 38.121.43.71, port: 2376, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
-  - {name: "Node-246", type: ss, server: 149.202.82.172, port: 5004, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-247", type: ss, server: 15.204.87.225, port: 5003, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-248", type: ss, server: 169.197.143.232, port: 5004, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-249", type: ss, server: 38.121.43.71, port: 5004, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-250", type: ss, server: 23.154.136.132, port: 8881, cipher: aes-256-gcm, password: "kDWvXYZoTBcGkC4"}
-  - {name: "Node-251", type: ss, server: 38.75.137.66, port: 8882, cipher: aes-256-gcm, password: "kDWvXYZoTBcGkC4"}
-  - {name: "Node-252", type: ss, server: 15.204.87.222, port: 5499, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV7"}
-  - {name: "Node-253", type: ss, server: 23.154.136.132, port: 5498, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV7"}
-  - {name: "Node-254", type: ss, server: 69.50.95.203, port: 5499, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV7"}
-  - {name: "Node-255", type: ss, server: 38.244.132.14, port: 5499, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV"}
-  - {name: "Node-256", type: ss, server: 89.125.244.179, port: 8388, cipher: aes-256-gcm, password: "uqUZFOD3fjsW"}
-  - {name: "Node-257", type: ss, server: 149.202.82.172, port: 6379, cipher: aes-256-gcm, password: "zDNVedRFPQexG9v"}
-  - {name: "Node-258", type: ss, server: 127.0.0.1, port: 1080, cipher: none, password: "bbaaacc-aacb-abac-adbc-bbcbaaccbaca"}
-  - {name: "Node-259", type: ss, server: free.2weradf.xyz, port: 36241, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MDY4MzgxZi0zZDYzLTRjMzQtYWEwNy03ODUyYjI0ODQyMjA"}
-  - {name: "Node-260", type: ss, server: free.2apzhfa.xyz, port: 31217, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1MDIxOTAxYS02MzNiLTRlMzItODgwOC0zODY5NmVkM2E4MjU"}
-  - {name: "Node-261", type: ss, server: free.2weradf.xyz, port: 36611, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4NWE5Njg0OS03NDBmLTQ2MDEtOWIzMS1kM2FjMjVmZDQ2NTI"}
-  - {name: "Node-262", type: ss, server: soskeynets.2weradf.xyz, port: 36611, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4NWE5Njg0OS03NDBmLTQ2MDEtOWIzMS1kM2FjMjVmZDQ2NTI"}
-  - {name: "Node-263", type: ss, server: free.2apzhfa.xyz, port: 31245, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
-  - {name: "Node-264", type: ss, server: free.2apzhfa.xyz, port: 31441, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
-  - {name: "Node-265", type: ss, server: free.2apzhfa.xyz, port: 31471, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
-  - {name: "Node-266", type: ss, server: 35.85.56.3, port: 443, cipher: ss, password: "//YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU"}
-  - {name: "Node-2230", type: vmess, server: 74.211.102.179, port: 20001, uuid: "7f5f0705-3dfb-4f56-9657-c95cade2ba83", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2231", type: vmess, server: 178.63.237.158, port: 2053, uuid: "2d4dd672-180f-415c-9035-e2fc461dd95a", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/AdamBarfi"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2232", type: vmess, server: 104.26.14.137, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com."}
-  - {name: "Node-2233", type: vmess, server: 45.38.19.114, port: 54013, uuid: "5a03b16d-461a-432a-a044-f57d4966a60a", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Join-us-netprotects"}, tls: true, skip-cert-verify: true, sni: "play.google.com"}
-  - {name: "Node-2234", type: vmess, server: 45.39.60.199, port: 30231, uuid: "01776332-63b6-478b-8d7f-4d997317aa75", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Join-us-netprotects"}, tls: true, skip-cert-verify: true, sni: "play.google.com"}
-  - {name: "Node-2235", type: vmess, server: nlt.reata.ir, port: 1020, uuid: "6244c41a-f4c1-4733-a654-c38f7729b13c", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2236", type: vmess, server: 104.19.38.62, port: 2086, uuid: "29eebb60-b27b-4a9d-bba5-947763d9205e", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "github.com/Alvin9999"}, tls: false, skip-cert-verify: true, sni: "ip006.freegradely.xyz"}
-  - {name: "Node-2237", type: vmess, server: 107.148.192.149, port: 41911, uuid: "418048af-a293-4b99-9b0c-98ca3580dd24", alterId: 64, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2238", type: vmess, server: 108.181.200.220, port: 50613, uuid: "09e81eaa-d298-432c-e7b6-17add32d14fc", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2239", type: vmess, server: 127.1.1.127, port: 80, uuid: "602736e4-a2e8-4eb3-9fc9-7c7082925365", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2240", type: vmess, server: 104.21.7.101, port: 80, uuid: "4e45c1b4-9107-45dd-9995-cdf7cbb44d9d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/iSRWSKUJKNuXvVzsYHmsMrnO"}, tls: false, skip-cert-verify: true, sni: "gbnh.0nn.ccwu.cc"}
-  - {name: "Node-2241", type: vmess, server: 154.17.234.39, port: 2086, uuid: "7e25875e-50bb-47ed-9627-261e6d232f69", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "7e25875e-50bb-47ed-9627-261e6d232f69-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
-  - {name: "Node-2242", type: vmess, server: 132.145.80.230, port: 80, uuid: "5155860e-d07d-46c3-9128-3afbd84626c7", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/cctv13.m3u8"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2243", type: vmess, server: 104.17.77.77, port: 8443, uuid: "60441548-b68e-43b2-8191-e3b884be4b3c", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/lMnsZUN4/"}, tls: true, skip-cert-verify: true, sni: "v2ray1.dozapp.xyz"}
-  - {name: "Node-2244", type: vmess, server: 173.249.200.68, port: 8080, uuid: "79a295f7-8cfe-46ca-aed6-ebef1f3be53b", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/79a295f7-8cfe-46ca-aed6-ebef1f3be53b-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
-  - {name: "Node-2245", type: vmess, server: 38.91.107.49, port: 18000, uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2246", type: vmess, server: 43.173.74.241, port: 10086, uuid: "bd7e0c40-79c7-4db1-ba27-43894d59a4a1", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2247", type: vmess, server: 45.133.74.248, port: 39425, uuid: "0e922e9e-d464-49a2-8095-625e1a60b2fa", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2248", type: vmess, server: 45.15.170.237, port: 80, uuid: "820d4b4f-3357-4dc7-9381-6e5fd52b5f39", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/vmess/"}, tls: false, skip-cert-verify: true, sni: "pelang.org"}
-  - {name: "Node-2249", type: vmess, server: 47.251.91.241, port: 42899, uuid: "0925b355-2bcd-4eae-9720-d2709e4f7e36", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2250", type: vmess, server: 5.188.190.252, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2251", type: vmess, server: 51.83.52.172, port: 2085, uuid: "2c72c667-093c-47a5-a108-493c93282b57", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "fast.com"}
-  - {name: "Node-2252", type: vmess, server: 51.195.235.71, port: 2052, uuid: "59e28f78-c31b-4613-9d9f-1e6732a31f46", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2253", type: vmess, server: 57.129.28.64, port: 443, uuid: "03fcc618-b93d-6796-6aed-8a38c975d581", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "linkvws"}, tls: true, skip-cert-verify: true, sni: "serkat.org"}
-  - {name: "Node-2254", type: vmess, server: 65.109.189.255, port: 35492, uuid: "Telegram-Cooonfig-Cooonfig", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "play.google.com"}
-  - {name: "Node-2255", type: vmess, server: 65.109.218.60, port: 8088, uuid: "65488bcf-8573-44ee-9b4f-9abf4390acca", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2256", type: vmess, server: 66.163.117.58, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2257", type: vmess, server: 67.220.72.237, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2258", type: vmess, server: 69.84.182.49, port: 80, uuid: "f8975871-a7a0-4906-8835-a23c1258ca1e", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir."}
-  - {name: "Node-2259", type: vmess, server: 8103.shomaparvazroyadetonnist-bypassishere.lat, port: 8103, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ad80f8ec-4861-11f0-a948-6a75f667b472ed2048"}, tls: true, skip-cert-verify: true, sni: "ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
-  - {name: "Node-2260", type: vmess, server: 85.90.217.42, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2261", type: vmess, server: 91.107.139.186, port: 51459, uuid: "500cdc83-b189-4d79-b06b-139c7972a57f", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2262", type: vmess, server: 94.131.108.36, port: 443, uuid: "9855f1f0-a800-40d4-8b38-c7d3eb79302d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2263", type: vmess, server: 102.177.189.101, port: 443, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/4fc128ce-4845-11f0-a948-6a75f667b472ed2365"}, tls: true, skip-cert-verify: true, sni: "4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
-  - {name: "Node-2264", type: vmess, server: 103.179.142.212, port: 22047, uuid: "948763b5-a064-453c-a015-185cb183bbfe", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2265", type: vmess, server: 104.16.90.120, port: 8443, uuid: "01c0530f-168d-4645-a74c-f2b3b015c217", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws"}, tls: true, skip-cert-verify: true, sni: "node-de-1.e4e3e2.top"}
-  - {name: "Node-2266", type: vmess, server: 12812.shomaparvazroyadetonnist-bypassishere.lat, port: 12812, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ad80f8ec-4861-11f0-a948-6a75f667b472ed2048"}, tls: true, skip-cert-verify: true, sni: "ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
-  - {name: "Node-2267", type: vmess, server: 129.226.157.220, port: 59121, uuid: "d9865d63-d95c-454b-ba07-8e88b838a801", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2268", type: vmess, server: 131.186.63.89, port: 11655, uuid: "4bf075f5-4d5e-4d39-f5ab-b32a86250f0e", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/aa"}, tls: true, skip-cert-verify: true, sni: "hk.nbee.pp.ua"}
-  - {name: "Node-2269", type: vmess, server: 168.138.43.75, port: 80, uuid: "11c3627f-31e8-4695-dfbd-34076e2f1f5d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/cctv13.m3u8"}, tls: false, skip-cert-verify: true, sni: "None"}
-  - {name: "Node-2270", type: vmess, server: 185.104.189.38, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "185.104.189.38"}
-  - {name: "Node-2271", type: vmess, server: 188.114.96.145, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
-  - {name: "Node-2272", type: vmess, server: 188.114.96.42, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
-  - {name: "Node-2273", type: vmess, server: 188.114.96.9, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
-  - {name: "Node-2274", type: vmess, server: 2.26.231.123, port: 110, uuid: "154c02b9-0f7e-44ed-9f41-b0a5ae83e827", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2275", type: vmess, server: 20.193.153.19, port: 15834, uuid: "39a8c374-76b1-4e90-ab85-85cd9a42ded2", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: "TABRIZ.NET"}
-  - {name: "Node-2276", type: vmess, server: 20.193.153.19, port: 15834, uuid: "39a8c374-76b1-4e90-ab85-85cd9a42ded2", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "TABRIZ.NET"}
-  - {name: "Node-2277", type: vmess, server: 221.204.41.88, port: 443, uuid: "1c503beb-4589-409b-bddf-5190925f72f0", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "1c503beb-4589-409b-bddf-5190925f72f0-vm"}, tls: true, skip-cert-verify: true, sni: "speeches-obligations-view-epinions.trycloudflare.com"}
-  - {name: "Node-2278", type: vmess, server: tr1-smart.adelping.com, port: 80, uuid: "68c8f462-8468-4931-90a8-680c3d6cb3c1", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
-  - {name: "Node-2279", type: vmess, server: tr1-smart.adelping.com, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "TM_AZARBAYJAB1.new.99.workers.dev"}
-  - {name: "Node-2280", type: vmess, server: turk1.net.net, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "TM_AZARBAYJAB1.new.99.workers.dev"}
-  - {name: "Node-2281", type: vmess, server: v24.hdacd.com, port: 30824, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2282", type: vmess, server: v35.hdacd.com, port: 30835, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2283", type: vmess, server: v9.hdacd.com, port: 30809, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2284", type: vmess, server: vip1314.vip, port: 443, uuid: "5f72f180-b21b-4b7a-8484-240759012606", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/5f72f180-b21b-4b7a-8484-240759096785"}, tls: true, skip-cert-verify: true, sni: "vip1314.vip"}
-  - {name: "Node-2285", type: vmess, server: www.speedtest.net, port: 443, uuid: "c8b3fd38-cb60-434c-bd7e-63638226f4a8", alterId: 0, cipher: auto, network: httpupgrade, ws-opts: {path: "/custom_configed2560"}, tls: true, skip-cert-verify: true, sni: "grade.dgclix.ir"}
-  - {name: "Node-2286", type: vmess, server: www.speedtest.net, port: 8080, uuid: "72f5bd85-6d92-4644-a1c4-542a92896a8b", alterId: 0, cipher: auto, network: httpupgrade, ws-opts: {path: "/custom_configed2560"}, tls: false, skip-cert-verify: true, sni: "up.dgclix.ir"}
-  - {name: "Node-2287", type: vmess, server: www.speedtest.net, port: 443, uuid: "c8b3fd38-cb60-434c-bd7e-63638226f4a8", alterId: 0, cipher: auto, network: xhttp, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "x.dgclix.ir"}
-  - {name: "Node-2288", type: vmess, server: TM_AZARBAYJAB1.SERV.9.pagES.DEV, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
-  - {name: "Node-2289", type: vmess, server: de.connfull.org, port: 2053, uuid: "f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2290", type: vmess, server: e0349a52-sv8cg0-t7uinf-i8ie.hk3.p5pv.com, port: 80, uuid: "990e8f34-bd4f-11ef-bdb9-f23c91cfbbc9", alterId: 2, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "broadcastlv.chat.bilibili.com"}
-  - {name: "Node-2291", type: vmess, server: fr.connfull.org, port: 2053, uuid: "500e29aa-c40b-43e1-905c-e6e7ac4a5b83", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2292", type: vmess, server: heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca, port: 80, uuid: "e2923bc6-8204-4768-98ea-379d48ea8a7a", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/1awNzxRSwKsdkPVKP0ZQqlHjt10sp"}, tls: false, skip-cert-verify: true, sni: "heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca"}
-  - {name: "Node-2293", type: vmess, server: ipa.xn--220ba84am6g99wihgilau3ar1g.info, port: 2053, uuid: "b04868f0-b54d-4f48-aad4-e5543d03c909", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "cdn.xn--220ba84am6g99wihgilau3ar1g.info"}
-  - {name: "Node-2294", type: ss, server: 92.112.126.90, port: 443, cipher: chacha20-ietf-poly1305, password: "RFK38Cg7APneSB5cWDcpbm"}
-  - {name: "Node-2295", type: ss, server: 91.107.135.249, port: 40810, cipher: 2022-blake3-aes-256-gcm, password: "UptATXzUdmqLVxcxxmPpRbKqAaX5hcHB3pQtrgU7tzE="}
-  - {name: "Node-2296", type: ss, server: r3mrcg00129437x.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c47"}
-  - {name: "Node-2297", type: ss, server: 157.22.240.141, port: 57925, cipher: chacha20-ietf-poly1305, password: "FXpDf7WV6lfD6n9hpz7HF2"}
-  - {name: "Node-2298", type: ss, server: e3.cover20.ir, port: 56985, cipher: chacha20-ietf-poly1305, password: "RoGkvMmQuo8vJj+92uF2cLPW9fmNEvl6alL0MyLgeI0="}
-  - {name: "Node-2299", type: ss, server: 154.46.31.106, port: 443, cipher: chacha20-ietf-poly1305, password: "QFWzCw2uX9B9i6qAYeFBIE"}
-  - {name: "Node-2300", type: ss, server: 108.181.57.93, port: 8388, cipher: chacha20-ietf-poly1305, password: "RSo52SbxW40r"}
-  - {name: "Node-2301", type: ss, server: bogging-eyeteeth-fly.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "QFWzCw2uX9B9i6qAYeFBIE"}
-  - {name: "Node-2302", type: ss, server: 31.76.80.205, port: 8388, cipher: chacha20-ietf-poly1305, password: "UZQY9hNjVNWwamajrXAf1vt8u63nj0fF"}
-  - {name: "Node-2303", type: ss, server: 45.77.232.213, port: 15675, cipher: chacha20-ietf-poly1305, password: "TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH"}
-  - {name: "Node-2304", type: ss, server: 213.109.147.242, port: 62685, cipher: chacha20-ietf-poly1305, password: "VpKABcOpNNA0l5G2AVOmw8"}
-  - {name: "Node-2305", type: ss, server: 103.111.114.61, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
-  - {name: "Node-2306", type: ss, server: 103.111.114.71, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
-  - {name: "Node-2307", type: ss, server: 103.111.114.80, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
-  - {name: "Node-2308", type: ss, server: 103.111.114.82, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
-  - {name: "Node-2309", type: ss, server: 103.111.114.55, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
-  - {name: "Node-2310", type: ss, server: 130.49.189.158, port: 10792, cipher: chacha20-ietf-poly1305, password: "WR5Ho8vVqnDaH49WLh98Nc"}
-  - {name: "Node-2311", type: ss, server: 102.37.156.224, port: 443, cipher: chacha20-ietf-poly1305, password: "aduB9HGxQHjA2SBMRjkHX6"}
-  - {name: "Node-2312", type: ss, server: 198.98.53.130, port: 443, cipher: chacha20-ietf-poly1305, password: "eDfN7SODQceIOmIAbtJJtK"}
-  - {name: "Node-2313", type: ss, server: 82.38.31.181, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2314", type: ss, server: 82.38.31.184, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2315", type: ss, server: 82.38.31.180, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2316", type: ss, server: 82.38.31.182, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2317", type: ss, server: 82.38.31.195, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2318", type: ss, server: 82.38.31.213, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2319", type: ss, server: 193.29.139.151, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2320", type: ss, server: 82.38.31.26, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2321", type: ss, server: 82.38.31.174, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2322", type: ss, server: 82.38.31.15, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2323", type: ss, server: 82.38.31.16, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2324", type: ss, server: 82.38.31.28, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2325", type: ss, server: 82.38.31.29, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2326", type: ss, server: 82.38.31.34, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2664", type: vmess, server: 165.140.216.142, port: 443, uuid: "b65a2d69-5634-42a2-e4be-54e8a6176900", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2715", type: ss, server: azure-sto.edgeservers.org, port: 48172, cipher: chacha20-ietf-poly1305, password: "51yloQC8D9w1Wae7FHtI65"}
-  - {name: "Node-2716", type: ss, server: 82.38.31.179, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2717", type: ss, server: 82.38.31.191, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2718", type: ss, server: 82.38.31.194, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2719", type: ss, server: 82.38.31.217, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
-  - {name: "Node-2720", type: ss, server: 173.244.56.6, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2721", type: ss, server: 108.181.118.10, port: 8388, cipher: chacha20-ietf-poly1305, password: "G5p6ww4o67HB7"}
-  - {name: "Node-2722", type: ss, server: 149.22.95.183, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2723", type: ss, server: 193.29.139.235, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2724", type: ss, server: 37.19.198.243, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2725", type: ss, server: 37.19.198.244, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2726", type: ss, server: 138.199.42.68, port: 8080, cipher: rc4-md5, password: "14fFPrbezE3HDZzsMOr6"}
-  - {name: "Node-2728", type: ss, server: 82.38.31.2, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2729", type: ss, server: 137.184.174.93, port: 8080, cipher: rc4-md5, password: "14fFPrbezE3HDZzsMOr6"}
-  - {name: "Node-2731", type: ss, server: 82.38.31.149, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2732", type: ss, server: 34.207.112.128, port: 443, cipher: aes-256-cfb, password: "amazonskr057"}
-  - {name: "Node-2734", type: ss, server: 109.201.152.181, port: 443, cipher: aes-128-cfb, password: "shadowsocks7"}
-  - {name: "Node-2736", type: ss, server: 54.197.30.38, port: 443, cipher: aes-256-cfb, password: "amazonskr057"}
-  - {name: "Node-2740", type: ss, server: 82.38.31.48, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2741", type: vmess, server: 45.76.202.45, port: 4010, uuid: "071a8a71-c656-4fb6-a908-4e42eb72243d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/liksuzcp"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2752", type: ss, server: 108.181.126.122, port: 8388, cipher: chacha20-ietf-poly1305, password: "CJmTCCx7Ltud7"}
-  - {name: "Node-2757", type: vmess, server: vps123.kbxa.top, port: 443, uuid: "cd07d6e6-f631-4757-a03c-b8727c568c85", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/123"}, tls: true, skip-cert-verify: true, sni: "vps123.kbxa.top"}
-  - {name: "Node-2763", type: ss, server: 82.38.31.49, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2764", type: ss, server: 209.46.102.22, port: 8388, cipher: chacha20-ietf-poly1305, password: "1hhrqrokj3ag7"}
-  - {name: "Node-2771", type: ss, server: 102.133.165.160, port: 16233, cipher: chacha20-ietf-poly1305, password: "Xsy8Ox4yOV3xLlpxtjzs3X"}
-  - {name: "Node-2773", type: ss, server: namrcg001640lrm.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "a9a0d092-6f0e-4701-81ee-454643d6d5067"}
-  - {name: "Node-2774", type: vmess, server: 140.83.51.161, port: 25686, uuid: "6733c357-ba11-4e9f-f00f-7d87f2776ff9", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/cctv13.m3u8"}, tls: false, skip-cert-verify: true, sni: "jp02.a0a.xyz"}
-  - {name: "Node-2775", type: vmess, server: 152.67.218.38, port: 443, uuid: "b5e9480a-b7aa-40a4-f9a7-5299b5e363b4", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2776", type: ss, server: 156.146.38.169, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2777", type: ss, server: 156.146.38.168, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2778", type: ss, server: 156.146.38.170, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2779", type: ss, server: 94.156.250.148, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
-  - {name: "Node-2780", type: ss, server: 103.141.221.101, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
-  - {name: "Node-2781", type: ss, server: 103.141.221.124, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
-  - {name: "Node-2782", type: ss, server: 103.149.182.105, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
-  - {name: "Node-2783", type: ss, server: p141.panda001.net, port: 4652, cipher: aes-256-cfb, password: "qwerREWQ@@"}
-  - {name: "Node-2784", type: ss, server: 141.98.101.179, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2785", type: ss, server: 141.98.101.182, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
-  - {name: "Node-2786", type: vmess, server: 152.67.8.205, port: 80, uuid: "9db4c708-aef8-4359-821b-38e47990be0d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "152.67.8.205"}
-  - {name: "Node-2787", type: vmess, server: 47.244.120.197, port: 44867, uuid: "845e6b08-2919-4290-ade0-5dc7dcea59ca", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/arkied2048"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2788", type: ss, server: 221.139.79.57, port: 13979, cipher: aes-256-cfb, password: "qwerREWQ@@"}
-  - {name: "Node-2789", type: vmess, server: 47.244.120.197, port: 36703, uuid: "45b83519-9c4f-4052-a11b-02e017b636d4", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/arkied2048"}, tls: false, skip-cert-verify: true, sni: ""}
-  - {name: "Node-2790", type: ss, server: 211.178.105.134, port: 6123, cipher: aes-256-cfb, password: "qwerREWQ@@"}
-  - {name: "Node-2791", type: vmess, server: n1747624274.4u9ma.icu, port: 443, uuid: "d8daf507-a4ac-4eea-8399-8f0cd071eb52", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "n1747624274.4u9ma.icu"}
-  - {name: "Node-2792", type: ss, server: 8.210.171.48, port: 443, cipher: aes-256-gcm, password: "a172cf0d-ae89-42f3-8505-0c51dae293a1"}
-  - {name: "Node-2793", type: ss, server: 172.99.188.99, port: 5000, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-2795", type: ss, server: 82.38.31.46, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {name: "Node-2796", type: ss, server: 146.70.61.37, port: 8080, cipher: rc4-md5, password: "14fFPrbezE3HDZzsMOr6"}
-  - {name: "Node-2797", type: ss, server: 54.167.54.100, port: 443, cipher: aes-256-cfb, password: "amazonskr057"}
-  - {name: "Node-2803", type: ss, server: 145.239.1.100, port: 8090, cipher: aes-256-gcm, password: "PCnnH6SQSnfoS27"}
-  - {name: "Node-2804", type: ss, server: 212.38.189.174, port: 5001, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
-  - {name: "Node-2805", type: ss, server: 169.197.142.187, port: 5003, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-2806", type: ss, server: 169.197.142.187, port: 8882, cipher: aes-256-gcm, password: "kDWvXYZoTBcGkC4"}
-  - {name: "Node-2807", type: ss, server: 134.195.196.128, port: 5003, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
-  - {name: "Node-2808", type: ss, server: 169.197.142.187, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
-  - {name: "Node-2809", type: ss, server: 169.197.142.187, port: 8119, cipher: aes-256-gcm, password: "cdBIDV42DCwnfIN"}
-  - {name: "Node-2810", type: ss, server: 145.239.1.100, port: 7002, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
+  - {name: "Node-23", type: ss, server: 172.67.2.238, port: 80, cipher: 0fb53a60-2372-412a-a693-5157b58ecc94, password: ""}
+  - {name: "Node-24", type: ss, server: 46.38.143.236, port: 60633, cipher: 2022-blake3-chacha20-poly1305, password: "HnzIN1CLGGEh+mD/uzbbvTQc/Alq+hkmrC7Po3D4k4E=7"}
+  - {name: "Node-25", type: ss, server: 80.91.86.179, port: 1070, cipher: 2022-blake3-aes-256-gcm, password: "5MnYSugw6Dp/r4HIhoRkoQI6jM3SwL9+i7GNRLxBWHo="}
+  - {name: "Node-26", type: ss, server: 46.226.166.205, port: 50067, cipher: 2022-blake3-aes-256-gcm, password: "6ncWtmCwIfwIDIkev6+JZlnwNViNaH1gbUf1RDTSFHo="}
+  - {name: "Node-27", type: ss, server: 46.226.166.205, port: 56324, cipher: 2022-blake3-aes-256-gcm, password: "Elufj0iAypXyPyJLiMqnxvK9fOXO1irCvGXNhV1fQ7E="}
+  - {name: "Node-28", type: ss, server: 46.226.166.205, port: 49524, cipher: 2022-blake3-aes-256-gcm, password: "T73rpHreF4NQ4xsX+iEtrw3ixAfp14InmsBitIZ8K6A="}
+  - {name: "Node-29", type: ss, server: 46.226.166.205, port: 39531, cipher: 2022-blake3-aes-256-gcm, password: "nzRy+FIxLQFXe3w1pBWhOSMmD/iRpeHK1PwRRBMrIVM="}
+  - {name: "Node-30", type: ss, server: 46.226.166.205, port: 49901, cipher: 2022-blake3-aes-256-gcm, password: "sNqCa2WMqZxVHiievQwCpdAKP5QlJQ9/WRQHfXrthco="}
+  - {name: "Node-31", type: ss, server: 65.109.219.124, port: 18269, cipher: 2022-blake3-aes-256-gcm, password: "uXSgW2m4sbfoYckTbFiGnaVnP1ygIULi12LPQvUZNjM="}
+  - {name: "Node-32", type: ss, server: 46.226.166.205, port: 45811, cipher: 2022-blake3-aes-256-gcm, password: "xyltkuaLgr326prx6V8juqH3bWk6jJIeP45b7sPT8rQ="}
+  - {name: "Node-33", type: ss, server: 104.16.60.79, port: 2082, cipher: 2b4bed25-a5ef-439d-93b1-395b7bcec58b, password: ""}
+  - {name: "Node-34", type: ss, server: 172.67.204.84, port: 443, cipher: 68a79909-65f2-4341-942e-ad75a6bd33f8, password: ""}
+  - {name: "Node-35", type: ss, server: e1.cover20.ir, port: 51570, cipher: chacha20-ietf-poly1305, password: "4KRL+3VEsmo6uKND1pwQ6m+baVdOgS3GZ11o/wWKDbA="}
+  - {name: "Node-36", type: ss, server: 205.134.180.151, port: 443, cipher: chacha20-ietf-poly1305, password: "5cp9Z3iWnJZ27"}
+  - {name: "Node-37", type: ss, server: 89.223.88.33, port: 11201, cipher: chacha20-ietf-poly1305, password: "7c31a67b41b18c26"}
+  - {name: "Node-38", type: ss, server: 36.224.184.245, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c47"}
+  - {name: "Node-39", type: ss, server: r3mrcg00129437x.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c47"}
+  - {name: "Node-40", type: ss, server: r3mrcg001286ek2.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {name: "Node-41", type: ss, server: soskeynets.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {name: "Node-42", type: ss, server: 23.100.56.187, port: 443, cipher: chacha20-ietf-poly1305, password: "m9Qdbt9Iu35IxyqN"}
+  - {name: "Node-43", type: ss, server: switcher-nick-croquet.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "9tqhMdIrTkgQ46PvhyAtMH"}
+  - {name: "Node-44", type: ss, server: coco2.farajet.net, port: 2020, cipher: chacha20-ietf-poly1305, password: "0u47xJvp2_pGbA5c13ASHK87DxDwk5zm"}
+  - {name: "Node-45", type: ss, server: 51.89.119.213, port: 11201, cipher: chacha20-ietf-poly1305, password: "15b0573830081d01"}
+  - {name: "Node-46", type: ss, server: 45.87.175.178, port: 8080, cipher: chacha20-ietf-poly1305, password: "1RWwXhwfAB5gAEozU4G2Pg"}
+  - {name: "Node-47", type: ss, server: 45.87.175.199, port: 8080, cipher: chacha20-ietf-poly1305, password: "1RWwXhwfAB5gAEozU4G2Pg"}
+  - {name: "Node-48", type: ss, server: 20.166.58.64, port: 443, cipher: chacha20-ietf-poly1305, password: "217Fg9zpgpVS4DGE"}
+  - {name: "Node-49", type: ss, server: 185.5.38.89, port: 57327, cipher: chacha20-ietf-poly1305, password: "2KAu9eMmGwShWTWcuyynmLE81PVkoKDvQ3fb29dPScc1bMUW5y6hpprXqVWqSqjTi234hFGdDf3ArCuWtBw5FA6zV5wBgWTP"}
+  - {name: "Node-50", type: ss, server: 57.129.121.230, port: 10443, cipher: chacha20-ietf-poly1305, password: "uROuEqsL8IUMMVb4wDwnGU"}
+  - {name: "Node-51", type: ss, server: 20.107.187.192, port: 443, cipher: chacha20-ietf-poly1305, password: "nHCcsXK2rEcs9lRi"}
+  - {name: "Node-52", type: ss, server: batman4.kovira2.ir, port: 25026, cipher: chacha20-ietf-poly1305, password: "xha7ina7ws1ws6yx"}
+  - {name: "Node-53", type: ss, server: best.kovira2.ir, port: 25026, cipher: chacha20-ietf-poly1305, password: "xp6qduya33bvl863"}
+  - {name: "Node-54", type: ss, server: 68.168.222.210, port: 1234, cipher: chacha20-ietf-poly1305, password: "zz0dHjDfoaSaZuRFLGH-hNfBALSEJUYD"}
+  - {name: "Node-55", type: ss, server: 185.213.23.63, port: 990, cipher: chacha20-ietf-poly1305, password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {name: "Node-56", type: ss, server: 108.181.58.239, port: 8388, cipher: chacha20-ietf-poly1305, password: "CJmTCCx7Ltud7"}
+  - {name: "Node-57", type: ss, server: 103.120.178.193, port: 31348, cipher: chacha20-ietf-poly1305, password: "EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz7"}
+  - {name: "Node-58", type: ss, server: 108.181.0.177, port: 8388, cipher: chacha20-ietf-poly1305, password: "G5p6ww4o67HB7"}
+  - {name: "Node-59", type: ss, server: 20.164.116.218, port: 443, cipher: chacha20-ietf-poly1305, password: "GTSymW4ysHcaqH70"}
+  - {name: "Node-60", type: ss, server: 20.223.136.202, port: 443, cipher: chacha20-ietf-poly1305, password: "HeC2HzINHb4SUY8S"}
+  - {name: "Node-61", type: ss, server: 62.133.63.169, port: 37096, cipher: chacha20-ietf-poly1305, password: "Y5EJZojVMENvkDVFYliEqE"}
+  - {name: "Node-62", type: ss, server: 192.248.180.96, port: 1080, cipher: chacha20-ietf-poly1305, password: "LXMsoygg8tcTSYSbTr6ttA"}
+  - {name: "Node-63", type: ss, server: 168.63.68.5, port: 443, cipher: chacha20-ietf-poly1305, password: "MfUPdkoEXSwf6JuM"}
+  - {name: "Node-64", type: ss, server: 20.164.210.196, port: 443, cipher: chacha20-ietf-poly1305, password: "NTkLWTsAFItdIwnF"}
+  - {name: "Node-65", type: ss, server: 154.46.31.106, port: 443, cipher: chacha20-ietf-poly1305, password: "QFWzCw2uX9B9i6qAYeFBIE"}
+  - {name: "Node-66", type: ss, server: bogging-eyeteeth-fly.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "QFWzCw2uX9B9i6qAYeFBIE"}
+  - {name: "Node-67", type: ss, server: 108.181.57.93, port: 8388, cipher: chacha20-ietf-poly1305, password: "RSo52SbxW40r"}
+  - {name: "Node-68", type: ss, server: 20.223.208.167, port: 443, cipher: chacha20-ietf-poly1305, password: "ScZd18TGj83TS1Wo"}
+  - {name: "Node-69", type: ss, server: 147.45.124.227, port: 30488, cipher: chacha20-ietf-poly1305, password: "SlJ5hitSE4MftV9eZHRtpZ"}
+  - {name: "Node-70", type: ss, server: 45.77.232.213, port: 15675, cipher: chacha20-ietf-poly1305, password: "TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH"}
+  - {name: "Node-71", type: ss, server: 20.254.21.147, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
+  - {name: "Node-72", type: ss, server: admin.c1.webramz.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
+  - {name: "Node-73", type: ss, server: series-a1.samanehha.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
+  - {name: "Node-74", type: ss, server: series-a2.samanehha.co, port: 443, cipher: chacha20-ietf-poly1305, password: "W74XFALLLuw6m5IA"}
+  - {name: "Node-75", type: ss, server: 108.181.121.226, port: 8388, cipher: chacha20-ietf-poly1305, password: "WSyL4XTwNsdv"}
+  - {name: "Node-76", type: ss, server: 146.70.222.126, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-77", type: ss, server: 146.70.254.238, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-78", type: ss, server: 185.210.217.94, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-79", type: ss, server: 188.119.149.27, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-80", type: ss, server: 194.54.80.37, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-81", type: ss, server: 212.83.51.81, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-82", type: ss, server: 37.120.139.234, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-83", type: ss, server: 84.247.48.78, port: 1080, cipher: chacha20-ietf-poly1305, password: "XF0klw7870vXn3uQIxe19Q"}
+  - {name: "Node-84", type: ss, server: 161.118.204.193, port: 56927, cipher: chacha20-ietf-poly1305, password: "Y2QwZTQ0MDYzOWFhNjA5YmE0NTZhNWFkODkzMWNmODU="}
+  - {name: "Node-85", type: ss, server: 158.180.12.17, port: 45819, cipher: chacha20-ietf-poly1305, password: "YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM="}
+  - {name: "Node-86", type: ss, server: 4.210.67.30, port: 443, cipher: chacha20-ietf-poly1305, password: "sCw2bhRZmJhpmgrL"}
+  - {name: "Node-87", type: ss, server: 213.156.137.142, port: 43659, cipher: chacha20-ietf-poly1305, password: "a8201bbd740420bb"}
+  - {name: "Node-88", type: ss, server: 125.224.227.94, port: 50099, cipher: chacha20-ietf-poly1305, password: "a9a0d092-6f0e-4701-81ee-454643d6d5067"}
+  - {name: "Node-89", type: ss, server: namrcg001640lrm.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "a9a0d092-6f0e-4701-81ee-454643d6d5067"}
+  - {name: "Node-90", type: ss, server: 104.156.233.234, port: 27116, cipher: chacha20-ietf-poly1305, password: "bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E"}
+  - {name: "Node-91", type: ss, server: 213.156.137.142, port: 43660, cipher: chacha20-ietf-poly1305, password: "cc27a3012d81a44c"}
+  - {name: "Node-92", type: ss, server: 20.107.197.108, port: 443, cipher: chacha20-ietf-poly1305, password: "dNJkXSaaUL3JWz4b"}
+  - {name: "Node-93", type: ss, server: 198.98.53.130, port: 443, cipher: chacha20-ietf-poly1305, password: "eDfN7SODQceIOmIAbtJJtK"}
+  - {name: "Node-94", type: ss, server: 94.131.123.86, port: 35361, cipher: chacha20-ietf-poly1305, password: "g0UgfsdXOhn8McpdHpWcmo"}
+  - {name: "Node-95", type: ss, server: coco3.farajet.net, port: 3030, cipher: chacha20-ietf-poly1305, password: "h7bWcCtTVXuZmgdKLdKJ2xfdURWC4w9N"}
+  - {name: "Node-96", type: ss, server: 216.105.168.18, port: 443, cipher: chacha20-ietf-poly1305, password: "hCCWOcIsK5wrFz4OX70rWf"}
+  - {name: "Node-97", type: ss, server: 68.219.211.7, port: 443, cipher: chacha20-ietf-poly1305, password: "hWOFgnq7l5oqBDQW"}
+  - {name: "Node-98", type: ss, server: tinkered-pennies-puppies.freesocks.work, port: 443, cipher: chacha20-ietf-poly1305, password: "hbGrpfvNrJsUmKmPbR3iY2"}
+  - {name: "Node-99", type: ss, server: 205.134.180.145, port: 443, cipher: chacha20-ietf-poly1305, password: "hgLCgfLRgB6d7"}
+  - {name: "Node-100", type: ss, server: 178.128.86.181, port: 51435, cipher: chacha20-ietf-poly1305, password: "i8asar9lrxhavh38"}
+  - {name: "Node-101", type: ss, server: e4.cover20.ir, port: 16156, cipher: chacha20-ietf-poly1305, password: "jVPjyNGgOAfv4b4e8dUK693et27aKkLJp1TxTRUIgHs="}
+  - {name: "Node-102", type: ss, server: mmd.radanjami.org, port: 37309, cipher: chacha20-ietf-poly1305, password: "jjmjdvnkfy9al8jb"}
+  - {name: "Node-103", type: ss, server: 98.71.82.228, port: 443, cipher: chacha20-ietf-poly1305, password: "juTczuCI9LbM8MUw"}
+  - {name: "Node-104", type: ss, server: 82.38.31.183, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-105", type: ss, server: 82.38.31.185, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-106", type: ss, server: 82.38.31.187, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-107", type: ss, server: 82.38.31.189, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-108", type: ss, server: 82.38.31.190, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-109", type: ss, server: 82.38.31.192, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-110", type: ss, server: 82.38.31.193, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-111", type: ss, server: 82.38.31.198, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-112", type: ss, server: 82.38.31.199, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-113", type: ss, server: 82.38.31.200, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-114", type: ss, server: 82.38.31.202, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-115", type: ss, server: 82.38.31.203, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-116", type: ss, server: 82.38.31.206, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-117", type: ss, server: 82.38.31.207, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-118", type: ss, server: 82.38.31.208, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-119", type: ss, server: 82.38.31.210, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-120", type: ss, server: 82.38.31.211, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-121", type: ss, server: 82.38.31.212, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-122", type: ss, server: 82.38.31.213, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-123", type: ss, server: 82.38.31.214, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-124", type: ss, server: 82.38.31.215, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-125", type: ss, server: 82.38.31.216, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-126", type: ss, server: 82.38.31.218, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-127", type: ss, server: 82.38.31.219, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-128", type: ss, server: 57.129.140.88, port: 8388, cipher: chacha20-ietf-poly1305, password: "k1v5g9FefdoO"}
+  - {name: "Node-129", type: ss, server: 20.108.15.110, port: 443, cipher: chacha20-ietf-poly1305, password: "kaQH3hGdcP80XEDI"}
+  - {name: "Node-130", type: ss, server: admin.c2.havij.co, port: 443, cipher: chacha20-ietf-poly1305, password: "kaQH3hGdcP80XEDI"}
+  - {name: "Node-131", type: ss, server: 20.107.208.165, port: 443, cipher: chacha20-ietf-poly1305, password: "l0nfi2bLizWdG117"}
+  - {name: "Node-132", type: ss, server: 128.251.12.23, port: 443, cipher: chacha20-ietf-poly1305, password: "lghX3rcG7bqSQ8L6"}
+  - {name: "Node-133", type: ss, server: 3.112.130.53, port: 8316, cipher: chacha20-ietf-poly1305, password: "ljqdalu13.."}
+  - {name: "Node-134", type: ss, server: 89.23.103.21, port: 51584, cipher: chacha20-ietf-poly1305, password: "oYQ8JwEldYn4KT2gfZ6eNl"}
+  - {name: "Node-135", type: ss, server: 82.38.31.10, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-136", type: ss, server: 82.38.31.11, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-137", type: ss, server: 82.38.31.122, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-138", type: ss, server: 82.38.31.162, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-139", type: ss, server: 82.38.31.164, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-140", type: ss, server: 82.38.31.174, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-141", type: ss, server: 82.38.31.26, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-142", type: ss, server: 82.38.31.29, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-143", type: ss, server: 82.38.31.32, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-144", type: ss, server: 82.38.31.34, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-145", type: ss, server: 82.38.31.35, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-146", type: ss, server: 82.38.31.35, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-147", type: ss, server: 82.38.31.3, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-148", type: ss, server: 82.38.31.47, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-149", type: ss, server: 82.38.31.57, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-150", type: ss, server: 82.38.31.7, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-151", type: ss, server: 109.122.251.86, port: 20700, cipher: chacha20-ietf-poly1305, password: "pLGCPnj2WgzxX1IedW8yd7trwRlXqjLa"}
+  - {name: "Node-152", type: ss, server: 20.164.210.215, port: 443, cipher: chacha20-ietf-poly1305, password: "pUYJnwYMpalrqy9L"}
+  - {name: "Node-153", type: ss, server: 140.174.184.5, port: 8388, cipher: chacha20-ietf-poly1305, password: "qItG8SueYQcP"}
+  - {name: "Node-154", type: ss, server: 20.223.176.12, port: 443, cipher: chacha20-ietf-poly1305, password: "rCgmq658vc2ej3SE"}
+  - {name: "Node-155", type: ss, server: 20.87.210.108, port: 443, cipher: chacha20-ietf-poly1305, password: "ssLTldyF3CUrQvwP"}
+  - {name: "Node-156", type: ss, server: 78.38.246.150, port: 8446, cipher: chacha20-poly1305, password: "6e3e43f4-12b7-42f1-8b93-41a152d5612d"}
+  - {name: "Node-157", type: ss, server: didiaosanwan.fkfkd.cn, port: 11696, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
+  - {name: "Node-158", type: ss, server: didiaosanwan.fkfkd.cn, port: 22039, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
+  - {name: "Node-159", type: ss, server: didiaosanwan.fkfkd.cn, port: 27186, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
+  - {name: "Node-160", type: ss, server: didiaosanwan.fkfkd.cn, port: 29586, cipher: aes-128-gcm, password: "62c4f4a7-5289-4a0f-98f0-407da8103dc0"}
+  - {name: "Node-161", type: ss, server: 86.106.84.196, port: 13263, cipher: aes-128-gcm, password: "lvxuj11x8sfgt9gt6mjf7"}
+  - {name: "Node-162", type: ss, server: 149.22.87.204, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-163", type: ss, server: 149.22.87.240, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-164", type: ss, server: 149.22.87.241, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-165", type: ss, server: 156.146.38.167, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-166", type: ss, server: 156.146.62.162, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-167", type: ss, server: 212.102.53.196, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-168", type: ss, server: 212.102.53.198, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-169", type: ss, server: 37.19.198.160, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-170", type: ss, server: 37.19.198.236, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-171", type: ss, server: 37.19.198.243, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-172", type: ss, server: 37.19.198.244, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-173", type: ss, server: 141.98.101.178, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-174", type: ss, server: 158.173.20.171, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-175", type: ss, server: 158.173.20.208, port: 443, cipher: aes-128-gcm, password: "shadowsocks"}
+  - {name: "Node-176", type: ss, server: 158.173.24.73, port: 443, cipher: aes-128-gcm, password: "shadowsocks"}
+  - {name: "Node-177", type: ss, server: 45.89.52.66, port: 9041, cipher: aes-256-cfb, password: "U6qnYRhfyDmn8sgn"}
+  - {name: "Node-178", type: ss, server: 195.154.185.174, port: 989, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
+  - {name: "Node-179", type: ss, server: 45.89.52.66, port: 9040, cipher: aes-256-cfb, password: "p9z5BVADH2YFs3MN"}
+  - {name: "Node-180", type: ss, server: 162.19.25.207, port: 34232, cipher: aes-256-gcm, password: "3b9ktZGztC"}
+  - {name: "Node-181", type: ss, server: 50.114.177.134, port: 10210, cipher: aes-256-gcm, password: "2803361d6c196af8"}
+  - {name: "Node-182", type: ss, server: 185.22.154.254, port: 6018, cipher: aes-256-gcm, password: "32c0ea6e823341a2"}
+  - {name: "Node-183", type: ss, server: 46.29.163.30, port: 30129, cipher: aes-256-gcm, password: "32c0ea6e823341a2"}
+  - {name: "Node-184", type: ss, server: 212.192.13.214, port: 30129, cipher: aes-256-gcm, password: "7e1dd4c55bf85da5"}
+  - {name: "Node-185", type: ss, server: 23.157.40.120, port: 8000, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
+  - {name: "Node-186", type: ss, server: 23.157.40.120, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
+  - {name: "Node-187", type: ss, server: 185.196.61.82, port: 8080, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
+  - {name: "Node-188", type: ss, server: 194.87.10.37, port: 8388, cipher: aes-256-gcm, password: "IevNoGNQJV6L"}
+  - {name: "Node-189", type: ss, server: 37.32.10.251, port: 9114, cipher: aes-256-gcm, password: "NDI4MjYwOWJmYzJhZTliMTFmZjRkZjA3YjQ3M2Jk"}
+  - {name: "Node-190", type: ss, server: 95.38.186.235, port: 9130, cipher: aes-256-gcm, password: "NzgxNzEwODFhNTcwNjMwZjRhYTRkM2EwMGUyYTM3"}
+  - {name: "Node-191", type: ss, server: 141.164.45.187, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
+  - {name: "Node-192", type: ss, server: 213.202.208.199, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
+  - {name: "Node-193", type: ss, server: 23.157.40.113, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
+  - {name: "Node-194", type: ss, server: 94.156.250.148, port: 7001, cipher: aes-256-gcm, password: "RexnBgU7EV5ADxG"}
+  - {name: "Node-195", type: ss, server: 212.192.13.95, port: 8388, cipher: aes-256-gcm, password: "VJescVWup8PR"}
+  - {name: "Node-196", type: ss, server: 23.157.40.120, port: 8008, cipher: aes-256-gcm, password: "XKFKl2rULjIp747"}
+  - {name: "Node-197", type: ss, server: 23.157.40.120, port: 8009, cipher: aes-256-gcm, password: "XKFKl2rULjIp747"}
+  - {name: "Node-198", type: ss, server: 38.121.43.71, port: 3389, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
+  - {name: "Node-199", type: ss, server: 38.143.66.87, port: 3389, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
+  - {name: "Node-200", type: ss, server: 69.50.93.80, port: 3306, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC7"}
+  - {name: "Node-201", type: ss, server: 103.106.229.69, port: 9090, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
+  - {name: "Node-202", type: ss, server: 103.106.231.82, port: 5600, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
+  - {name: "Node-203", type: ss, server: 141.164.45.187, port: 8888, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
+  - {name: "Node-204", type: ss, server: 92.118.205.211, port: 5600, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
+  - {name: "Node-205", type: ss, server: 188.121.100.157, port: 11117, cipher: aes-256-gcm, password: "YWY1NmE5ZWY0YWNmNjFlM2VmNDM1NWNmMjgxMmI2"}
+  - {name: "Node-206", type: ss, server: 212.192.13.126, port: 8388, cipher: aes-256-gcm, password: "YiqNxOsg30MS"}
+  - {name: "Node-207", type: ss, server: 46.29.163.176, port: 30888, cipher: aes-256-gcm, password: "b24a80e79cee1d1f"}
+  - {name: "Node-208", type: ss, server: 185.123.101.64, port: 2376, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
+  - {name: "Node-209", type: ss, server: 23.157.88.61, port: 2376, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
+  - {name: "Node-210", type: ss, server: 15.204.87.222, port: 5499, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV7"}
+  - {name: "Node-211", type: ss, server: 23.154.136.132, port: 5498, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV7"}
+  - {name: "Node-212", type: ss, server: 38.244.132.14, port: 5499, cipher: aes-256-gcm, password: "lGqs95QkFHo2NV"}
+  - {name: "Node-213", type: ss, server: 89.125.244.179, port: 8388, cipher: aes-256-gcm, password: "uqUZFOD3fjsW"}
+  - {name: "Node-214", type: ss, server: 149.202.82.172, port: 6379, cipher: aes-256-gcm, password: "zDNVedRFPQexG9v"}
+  - {name: "Node-215", type: ss, server: free.2weradf.xyz, port: 36241, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MDY4MzgxZi0zZDYzLTRjMzQtYWEwNy03ODUyYjI0ODQyMjA"}
+  - {name: "Node-216", type: ss, server: free.2apzhfa.xyz, port: 31245, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
+  - {name: "Node-217", type: ss, server: free.2apzhfa.xyz, port: 31441, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
+  - {name: "Node-218", type: ss, server: free.2apzhfa.xyz, port: 31471, cipher: ss, password: "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphN2E2OTY5Ni0xYjg0LTQ5NzAtODRhZS1jODM2OTIzZTQ2MDM"}
+  - {name: "Node-219", type: ss, server: 35.85.56.3, port: 443, cipher: ss, password: "//YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU"}
+  - {name: "Node-220", type: ss, server: channel.tradeip.store, port: 8443, cipher: undefined, password: "undefined"}
+  - {name: "Node-221", type: ss, server: soskeynets.tradeip.store, port: 8443, cipher: undefined, password: "undefined"}
+  - {name: "Node-2233", type: vmess, server: us1.levikogjgfdd.ir, port: 2082, uuid: "542bd1db-f5e7-4c81-a08a-d95da62a914b", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "542bd1db-f5e7-4c81-a08a-d95da62a914b-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2234", type: vmess, server: 178.63.237.158, port: 2053, uuid: "2d4dd672-180f-415c-9035-e2fc461dd95a", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/AdamBarfi"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2235", type: vmess, server: 104.26.14.137, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com."}
+  - {name: "Node-2236", type: vmess, server: 154.17.238.183, port: 8880, uuid: "b7479b73-8cea-4a82-97e8-bacf9bd86605", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "b7479b73-8cea-4a82-97e8-bacf9bd86605-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2237", type: vmess, server: 91.107.139.186, port: 51459, uuid: "500cdc83-b189-4d79-b06b-139c7972a57f", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2238", type: vmess, server: 45.38.19.114, port: 54013, uuid: "5a03b16d-461a-432a-a044-f57d4966a60a", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Join-us-netprotects"}, tls: true, skip-cert-verify: true, sni: "play.google.com"}
+  - {name: "Node-2239", type: vmess, server: 45.39.60.199, port: 30231, uuid: "01776332-63b6-478b-8d7f-4d997317aa75", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Join-us-netprotects"}, tls: true, skip-cert-verify: true, sni: "play.google.com"}
+  - {name: "Node-2240", type: vmess, server: nlt.reata.ir, port: 1020, uuid: "6244c41a-f4c1-4733-a654-c38f7729b13c", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2241", type: vmess, server: 46.226.166.205, port: 27343, uuid: "f3cb1cd4-4e56-444d-8d6b-4759fa69dae3", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2242", type: vmess, server: 104.21.7.101, port: 80, uuid: "4e45c1b4-9107-45dd-9995-cdf7cbb44d9d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/iSRWSKUJKNuXvVzsYHmsMrnO"}, tls: false, skip-cert-verify: true, sni: "gbnh.0nn.ccwu.cc"}
+  - {name: "Node-2243", type: vmess, server: 154.17.234.39, port: 2086, uuid: "7e25875e-50bb-47ed-9627-261e6d232f69", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "7e25875e-50bb-47ed-9627-261e6d232f69-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2244", type: vmess, server: 93ucrn4i0pffuabk.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "93ucrn4i0PffUAbk.v.3dns.vip"}
+  - {name: "Node-2245", type: vmess, server: 2b9hwy8ocx7q74nm.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "2b9hwY8oCx7Q74NM.v.3dns.vip"}
+  - {name: "Node-2246", type: vmess, server: u2frxj0g13vdi0wo.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "U2FRxj0G13vDI0Wo.v.3dns.vip"}
+  - {name: "Node-2247", type: vmess, server: wwafj5lhl6bi8au9.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "wwafj5LHl6bI8aU9.v.3dns.vip"}
+  - {name: "Node-2248", type: vmess, server: 61.245.11.60, port: 80, uuid: "a3e3a710-79f8-4ae0-b83c-607aab40d197", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/vmess/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2249", type: vmess, server: 104.17.77.77, port: 8443, uuid: "60441548-b68e-43b2-8191-e3b884be4b3c", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/lMnsZUN4/"}, tls: true, skip-cert-verify: true, sni: "v2ray1.dozapp.xyz"}
+  - {name: "Node-2250", type: vmess, server: 38.91.107.49, port: 18000, uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2251", type: vmess, server: 115.89.98.231, port: 10509, uuid: "4f1c1ca1-a422-4014-9423-04e39ed73b03", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/arki"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2252", type: vmess, server: 47.244.120.197, port: 44867, uuid: "845e6b08-2919-4290-ade0-5dc7dcea59ca", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/arkied2048"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2253", type: vmess, server: 64.186.253.113, port: 2095, uuid: "3df54c90-5cc4-4a70-98f7-52245f25230b", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "3df54c90-5cc4-4a70-98f7-52245f25230b-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2254", type: vmess, server: atiins.com.tr, port: 443, uuid: "97775936-05ea-4fea-8562-e9eb98559790", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: "atiins.com.tr"}
+  - {name: "Node-2255", type: vmess, server: 43.173.74.241, port: 10086, uuid: "bd7e0c40-79c7-4db1-ba27-43894d59a4a1", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN/Begoo_VPN"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2256", type: vmess, server: 45.15.170.237, port: 80, uuid: "820d4b4f-3357-4dc7-9381-6e5fd52b5f39", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/vmess/"}, tls: false, skip-cert-verify: true, sni: "pelang.org"}
+  - {name: "Node-2257", type: vmess, server: 47.244.120.197, port: 36703, uuid: "45b83519-9c4f-4052-a11b-02e017b636d4", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/arkied2048"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2258", type: vmess, server: 47.251.91.241, port: 42899, uuid: "0925b355-2bcd-4eae-9720-d2709e4f7e36", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2259", type: vmess, server: 51.83.52.172, port: 2085, uuid: "2c72c667-093c-47a5-a108-493c93282b57", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "fast.com"}
+  - {name: "Node-2260", type: vmess, server: 51.195.235.71, port: 2052, uuid: "59e28f78-c31b-4613-9d9f-1e6732a31f46", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2261", type: vmess, server: 57.129.28.64, port: 443, uuid: "03fcc618-b93d-6796-6aed-8a38c975d581", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "linkvws"}, tls: true, skip-cert-verify: true, sni: "serkat.org"}
+  - {name: "Node-2262", type: vmess, server: 65.109.218.60, port: 8088, uuid: "65488bcf-8573-44ee-9b4f-9abf4390acca", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2263", type: vmess, server: 66.163.117.58, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2264", type: vmess, server: 67.220.72.237, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2265", type: vmess, server: 67.220.95.3, port: 18000, uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2266", type: vmess, server: 69.84.182.49, port: 80, uuid: "f8975871-a7a0-4906-8835-a23c1258ca1e", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir."}
+  - {name: "Node-2267", type: vmess, server: 74.211.102.179, port: 20001, uuid: "7f5f0705-3dfb-4f56-9657-c95cade2ba83", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2268", type: vmess, server: 8103.shomaparvazroyadetonnist-bypassishere.lat, port: 8103, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ad80f8ec-4861-11f0-a948-6a75f667b472ed2048"}, tls: true, skip-cert-verify: true, sni: "ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
+  - {name: "Node-2269", type: vmess, server: 91.107.139.186, port: 51459, uuid: "500cdc83-b189-4d79-b06b-139c7972a57f", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2270", type: vmess, server: 102.177.189.101, port: 443, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/4fc128ce-4845-11f0-a948-6a75f667b472ed2365"}, tls: true, skip-cert-verify: true, sni: "4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
+  - {name: "Node-2271", type: vmess, server: 103.179.142.212, port: 22047, uuid: "948763b5-a064-453c-a015-185cb183bbfe", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2272", type: vmess, server: 104.16.90.120, port: 8443, uuid: "01c0530f-168d-4645-a74c-f2b3b015c217", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws"}, tls: true, skip-cert-verify: true, sni: "node-de-1.e4e3e2.top"}
+  - {name: "Node-2273", type: vmess, server: 12812.shomaparvazroyadetonnist-bypassishere.lat, port: 12812, uuid: "8f74ec8a-971c-11ed-a8fc-0242ac120002", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ad80f8ec-4861-11f0-a948-6a75f667b472ed2048"}, tls: true, skip-cert-verify: true, sni: "ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"}
+  - {name: "Node-2274", type: vmess, server: 129.226.157.220, port: 59121, uuid: "d9865d63-d95c-454b-ba07-8e88b838a801", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2275", type: vmess, server: 152.67.218.38, port: 443, uuid: "b5e9480a-b7aa-40a4-f9a7-5299b5e363b4", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2276", type: vmess, server: 185.104.189.38, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "185.104.189.38"}
+  - {name: "Node-2277", type: vmess, server: 188.114.96.145, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
+  - {name: "Node-2278", type: vmess, server: 188.114.96.42, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
+  - {name: "Node-2279", type: vmess, server: 188.114.96.9, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
+  - {name: "Node-2280", type: vmess, server: 192.220.32.219, port: 40913, uuid: "cc247516-d2cd-4ad4-a984-c4ae8ad9074a", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/cc247516-d2cd-4ad4-a984-c4ae8ad9074a-vm"}, tls: true, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2281", type: vmess, server: 20.193.153.19, port: 15834, uuid: "39a8c374-76b1-4e90-ab85-85cd9a42ded2", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: "TABRIZ.NET"}
+  - {name: "Node-2282", type: vmess, server: 20.193.153.19, port: 15834, uuid: "39a8c374-76b1-4e90-ab85-85cd9a42ded2", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "TABRIZ.NET"}
+  - {name: "Node-2283", type: vmess, server: 216.106.183.35, port: 22324, uuid: "04621bae-ab36-11ec-b909-0242ac120002", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2284", type: vmess, server: 221.204.41.88, port: 443, uuid: "1c503beb-4589-409b-bddf-5190925f72f0", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "1c503beb-4589-409b-bddf-5190925f72f0-vm"}, tls: true, skip-cert-verify: true, sni: "speeches-obligations-view-epinions.trycloudflare.com"}
+  - {name: "Node-2285", type: vmess, server: 23.162.200.198, port: 18000, uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2286", type: vmess, server: 38.110.1.246, port: 18000, uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2287", type: vmess, server: tr1-smart.adelping.com, port: 80, uuid: "68c8f462-8468-4931-90a8-680c3d6cb3c1", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
+  - {name: "Node-2288", type: vmess, server: tr1-smart.adelping.com, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "TM_AZARBAYJAB1.new.99.workers.dev"}
+  - {name: "Node-2289", type: vmess, server: turk1.net.net, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "TM_AZARBAYJAB1.new.99.workers.dev"}
+  - {name: "Node-2290", type: vmess, server: v24.hdacd.com, port: 30824, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2291", type: vmess, server: v35.hdacd.com, port: 30835, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2292", type: vmess, server: v9.hdacd.com, port: 30809, uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484", alterId: 2, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2293", type: vmess, server: vip1314.vip, port: 443, uuid: "5f72f180-b21b-4b7a-8484-240759012606", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/5f72f180-b21b-4b7a-8484-240759096785"}, tls: true, skip-cert-verify: true, sni: "vip1314.vip"}
+  - {name: "Node-2294", type: vmess, server: www.speedtest.net, port: 443, uuid: "c8b3fd38-cb60-434c-bd7e-63638226f4a8", alterId: 0, cipher: auto, network: httpupgrade, ws-opts: {path: "/custom_configed2560"}, tls: true, skip-cert-verify: true, sni: "grade.dgclix.ir"}
+  - {name: "Node-2295", type: vmess, server: www.speedtest.net, port: 8080, uuid: "72f5bd85-6d92-4644-a1c4-542a92896a8b", alterId: 0, cipher: auto, network: httpupgrade, ws-opts: {path: "/custom_configed2560"}, tls: false, skip-cert-verify: true, sni: "up.dgclix.ir"}
+  - {name: "Node-2296", type: vmess, server: www.speedtest.net, port: 443, uuid: "c8b3fd38-cb60-434c-bd7e-63638226f4a8", alterId: 0, cipher: auto, network: xhttp, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "x.dgclix.ir"}
+  - {name: "Node-2297", type: vmess, server: TM_AZARBAYJAB1.SERV.9.pagES.DEV, port: 80, uuid: "43dcdce1-3cea-4193-bc8d-90b92071d779", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/BIA_TELEGRAMAZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/de2560"}, tls: false, skip-cert-verify: true, sni: "tr1-smart.adelping.com"}
+  - {name: "Node-2298", type: vmess, server: de.connfull.org, port: 2053, uuid: "f2ff4ae6-cf2d-4d15-9f0d-b6d9980df9aa", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2299", type: vmess, server: e0349a52-sv8cg0-t7uinf-i8ie.hk3.p5pv.com, port: 80, uuid: "990e8f34-bd4f-11ef-bdb9-f23c91cfbbc9", alterId: 2, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "broadcastlv.chat.bilibili.com"}
+  - {name: "Node-2300", type: vmess, server: fr.connfull.org, port: 2053, uuid: "500e29aa-c40b-43e1-905c-e6e7ac4a5b83", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: true, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2301", type: vmess, server: heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca, port: 80, uuid: "e2923bc6-8204-4768-98ea-379d48ea8a7a", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/1awNzxRSwKsdkPVKP0ZQqlHjt10sp"}, tls: false, skip-cert-verify: true, sni: "heu83ujieiwoeu83j2ewjehuwehu8.dentiscan.ca"}
+  - {name: "Node-2302", type: vmess, server: i2psm3knof5qjjix.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "I2PSm3Knof5qjjix.v.3dns.vip"}
+  - {name: "Node-2303", type: vmess, server: ipa.xn--220ba84am6g99wihgilau3ar1g.info, port: 2053, uuid: "b04868f0-b54d-4f48-aad4-e5543d03c909", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "cdn.xn--220ba84am6g99wihgilau3ar1g.info"}
+  - {name: "Node-2304", type: ss, server: 137.74.119.18, port: 10443, cipher: chacha20-ietf-poly1305, password: "diOMBU5IDvJcFqyNPbRjYR"}
+  - {name: "Node-2305", type: ss, server: 103.111.114.82, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
+  - {name: "Node-2306", type: ss, server: 103.111.114.80, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
+  - {name: "Node-2307", type: ss, server: 102.37.156.224, port: 443, cipher: chacha20-ietf-poly1305, password: "aduB9HGxQHjA2SBMRjkHX6"}
+  - {name: "Node-2308", type: ss, server: 193.29.139.223, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2309", type: ss, server: 82.38.31.180, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2310", type: ss, server: 82.38.31.181, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2311", type: ss, server: 82.38.31.182, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2312", type: ss, server: 82.38.31.184, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2313", type: ss, server: 82.38.31.186, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2314", type: ss, server: 82.38.31.195, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2315", type: ss, server: 82.38.31.205, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2316", type: ss, server: 193.29.139.151, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2685", type: vmess, server: 165.140.216.142, port: 443, uuid: "b65a2d69-5634-42a2-e4be-54e8a6176900", alterId: 0, cipher: auto, network: tcp, ws-opts: {path: ""}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2687", type: vmess, server: 6jdvarazgu3qqr6q.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "6JDvArazgU3qQR6Q.v.3dns.vip"}
+  - {name: "Node-2689", type: vmess, server: m01c7b2z26dtqgee.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "M01c7B2z26DtQGEe.v.3dns.vip"}
+  - {name: "Node-2690", type: vmess, server: lcv8v9l7oyamxxfz.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "lcv8v9l7OyamxxfZ.v.3dns.vip"}
+  - {name: "Node-2691", type: vmess, server: mtckundigepwu3up.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "mTCKUNDiGePwU3uP.v.3dns.vip"}
+  - {name: "Node-2692", type: vmess, server: ejomsxptp19apygl.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "ejOMsxPtP19APyGL.v.3dns.vip"}
+  - {name: "Node-2693", type: vmess, server: vah4urdzl3jdx5r2.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "VAH4URdZL3jDX5r2.v.3dns.vip"}
+  - {name: "Node-2694", type: vmess, server: zudssgtmrqg9lpvi.v.3dns.vip, port: 443, uuid: "f23bb427c1f94373876c2f43e9f790f3", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/ws-vmess"}, tls: true, skip-cert-verify: true, sni: "zUDssgTMRqg9LpvI.v.3dns.vip"}
+  - {name: "Node-2695", type: vmess, server: www.nextkyc.com, port: 8443, uuid: "60441548-b68e-43b2-8191-e3b884be4b3c", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/lMnsZUN4/"}, tls: true, skip-cert-verify: true, sni: "v2ray1.dozapp.xyz"}
+  - {name: "Node-2745", type: ss, server: azure-sto.edgeservers.org, port: 48172, cipher: chacha20-ietf-poly1305, password: "51yloQC8D9w1Wae7FHtI65"}
+  - {name: "Node-2746", type: ss, server: 82.38.31.179, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2747", type: ss, server: 82.38.31.191, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2748", type: ss, server: 82.38.31.194, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2749", type: ss, server: 82.38.31.217, port: 8080, cipher: chacha20-ietf-poly1305, password: "k1dBOmOB4oqi7Ump37a1bQ"}
+  - {name: "Node-2750", type: ss, server: 34.207.112.128, port: 443, cipher: aes-256-cfb, password: "amazonskr057"}
+  - {name: "Node-2751", type: ss, server: 138.199.42.68, port: 8080, cipher: rc4-md5, password: "14fFPrbezE3HDZzsMOr6"}
+  - {name: "Node-2752", type: ss, server: 82.38.31.149, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2753", type: ss, server: 82.38.31.46, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2754", type: ss, server: 193.29.139.204, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2755", type: ss, server: 156.146.38.168, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2756", type: ss, server: 156.146.38.170, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2757", type: ss, server: 82.38.31.2, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2758", type: ss, server: 156.146.38.169, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2759", type: ss, server: 82.38.31.49, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2760", type: ss, server: 193.29.139.235, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2761", type: ss, server: 82.38.31.48, port: 8080, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2762", type: ss, server: 109.201.152.181, port: 443, cipher: aes-128-cfb, password: "shadowsocks7"}
+  - {name: "Node-2763", type: ss, server: 82.38.31.174, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2764", type: ss, server: 173.244.56.9, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2766", type: vmess, server: 69.63.204.31, port: 2082, uuid: "542bd1db-f5e7-4c81-a08a-d95da62a914b", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "542bd1db-f5e7-4c81-a08a-d95da62a914b-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2768", type: ss, server: 173.244.56.6, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2772", type: ss, server: 82.38.31.15, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2773", type: ss, server: 209.46.102.22, port: 8388, cipher: chacha20-ietf-poly1305, password: "1hhrqrokj3ag7"}
+  - {name: "Node-2774", type: ss, server: 108.181.118.10, port: 8388, cipher: chacha20-ietf-poly1305, password: "G5p6ww4o67HB7"}
+  - {name: "Node-2775", type: ss, server: 108.181.126.122, port: 8388, cipher: chacha20-ietf-poly1305, password: "CJmTCCx7Ltud7"}
+  - {name: "Node-2776", type: ss, server: 149.22.95.183, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2799", type: vmess, server: 94.131.108.36, port: 443, uuid: "9855f1f0-a800-40d4-8b38-c7d3eb79302d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2802", type: vmess, server: 161.33.139.138, port: 58905, uuid: "1610f8dc-0661-4032-ac6a-a7250603f608", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/1610f8dc-0661-4032-ac6a-a7250603f608-vm"}, tls: false, skip-cert-verify: true, sni: "161.33.139.138"}
+  - {name: "Node-2803", type: vmess, server: 85.113.71.85, port: 2086, uuid: "ba58ca0c-0411-444e-80f7-e361ce49012d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "ba58ca0c-0411-444e-80f7-e361ce49012d-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2804", type: ss, server: 102.133.165.160, port: 16233, cipher: chacha20-ietf-poly1305, password: "Xsy8Ox4yOV3xLlpxtjzs3X"}
+  - {name: "Node-2807", type: ss, server: 82.38.31.36, port: 443, cipher: chacha20-ietf-poly1305, password: "oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {name: "Node-2808", type: ss, server: 103.111.114.71, port: 28061, cipher: chacha20-ietf-poly1305, password: "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"}
+  - {name: "Node-2809", type: ss, server: r3mrcg001287h3p.cybervena.com, port: 50099, cipher: chacha20-ietf-poly1305, password: "7e731ec3-f8e1-43f6-92cf-3978d14705c47"}
+  - {name: "Node-2810", type: ss, server: 213.109.147.242, port: 62685, cipher: chacha20-ietf-poly1305, password: "VpKABcOpNNA0l5G2AVOmw8"}
+  - {name: "Node-2811", type: ss, server: 103.149.182.105, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
+  - {name: "Node-2812", type: vmess, server: 152.67.8.205, port: 80, uuid: "9db4c708-aef8-4359-821b-38e47990be0d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: "152.67.8.205"}
+  - {name: "Node-2813", type: vmess, server: 172.111.146.64, port: 80, uuid: "05b8c783-7f59-47f9-9923-06a465679f6a", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/vmess/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2814", type: vmess, server: 45.76.202.45, port: 4010, uuid: "071a8a71-c656-4fb6-a908-4e42eb72243d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/liksuzcp"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2815", type: ss, server: 141.98.101.181, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2816", type: ss, server: 141.164.45.187, port: 6679, cipher: aes-256-gcm, password: "TEzjfAYq2IjtuoS"}
+  - {name: "Node-2817", type: ss, server: 141.98.101.179, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2818", type: ss, server: 141.98.101.182, port: 443, cipher: aes-128-gcm, password: "shadowsocks7"}
+  - {name: "Node-2819", type: vmess, server: 154.26.183.5, port: 8880, uuid: "f4a047d5-f419-4e3f-9054-bd2a087e1dc2", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "f4a047d5-f419-4e3f-9054-bd2a087e1dc2-vm"}, tls: false, skip-cert-verify: true, sni: "www.bing.com"}
+  - {name: "Node-2820", type: ss, server: 211.178.105.134, port: 6123, cipher: aes-256-cfb, password: "qwerREWQ@@"}
+  - {name: "Node-2821", type: ss, server: 218.237.185.230, port: 4652, cipher: aes-256-cfb, password: "qwerREWQ@@"}
+  - {name: "Node-2822", type: vmess, server: n1747624274.4u9ma.icu, port: 443, uuid: "d8daf507-a4ac-4eea-8399-8f0cd071eb52", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "n1747624274.4u9ma.icu"}
+  - {name: "Node-2823", type: ss, server: 221.139.79.57, port: 13979, cipher: aes-256-cfb, password: "qwerREWQ@@"}
+  - {name: "Node-2824", type: vmess, server: 66.235.200.21, port: 443, uuid: "56a2188b-2ab7-402c-b9b8-34847fdf0958", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/5QNROSRV"}, tls: true, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2825", type: ss, server: 149.202.82.172, port: 8091, cipher: aes-256-gcm, password: "PCnnH6SQSnfoS27"}
+  - {name: "Node-2828", type: ss, server: 103.141.221.101, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
+  - {name: "Node-2829", type: vmess, server: vps123.kbxa.top, port: 443, uuid: "cd07d6e6-f631-4757-a03c-b8727c568c85", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: true, skip-cert-verify: true, sni: "vps123.kbxa.top"}
+  - {name: "Node-2830", type: vmess, server: 45.76.202.45, port: 4010, uuid: "071a8a71-c656-4fb6-a908-4e42eb72243d", alterId: 0, cipher: auto, network: ws, ws-opts: {path: "/"}, tls: false, skip-cert-verify: true, sni: ""}
+  - {name: "Node-2832", type: ss, server: 103.141.221.124, port: 8388, cipher: chacha20-ietf, password: "asd1234567"}
+  - {name: "Node-2833", type: ss, server: 54.197.30.38, port: 443, cipher: aes-256-cfb, password: "amazonskr057"}
+  - {name: "Node-2834", type: ss, server: p141.panda001.net, port: 4652, cipher: aes-256-cfb, password: "qwerREWQ@@"}
+  - {name: "Node-2836", type: ss, server: 137.184.174.93, port: 8080, cipher: rc4-md5, password: "14fFPrbezE3HDZzsMOr6"}
 
 proxy-groups:
   - {name: "🚀 节点选择", type: select, proxies: ["DIRECT"]}
